@@ -2,17 +2,28 @@
   @include hidden-text(96px, 24px, url("../images/ic-logo-aloha.svg"));
 }
 .image--cover {
-  position: absolute;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   top: 0;
   bottom: 0;
 }
-
+.object--cover{
+  object-fit: cover;
+}
 
 /* 區塊命名 */
 .section {
+  &__banner{
+    height: 320px;
+    background-image: url("../images/index-banner.jpg");
+  }
+  &__search{
+    transform:translateY(-25%);
+    @include media-breakpoint-up(lg){
+      transform:translateY(-50%);
+    }
+  }
   &__subscribe{
     height: 149px;
     @include media-breakpoint-up(md){
