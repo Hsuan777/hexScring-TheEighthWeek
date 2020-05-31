@@ -1,0 +1,33 @@
+// 瀏覽器可能為20px
+html{
+  font-size: 16px;
+}
+body{
+  overflow-x: hidden;
+}
+
+h1, .h1 {
+  font-size: 48px;
+}
+h2, .h2 {
+  font-size: 32px;  
+}
+h3, .h3 {
+  font-size: 24px;  
+}
+h4, .h4 {
+  font-size: 16px;  
+}
+h5, .h5 {
+  font-size: 14px;  
+}
+
+
+
+h1, .h1,h2, .h2,h3, .h3,h4, .h4,h5, .h5{
+  line-height: 1.5;
+}
+h1, h2, h3, h4, h5{
+  font-family: 'Raleway', serif;
+  color: #000000DE;
+} 
