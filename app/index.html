@@ -5,6 +5,7 @@ engine: ejs
 current: index
 ---
 <main>
+  <!-- Banner -->
   <section class="section__banner image--cover d-flex align-items-center">
     <div class="container ">
       <div class="row justify-content-center align-items-center">
@@ -16,7 +17,7 @@ current: index
                 <h2 class="mb-0 text-white text-center d-md-none">Discover your ideal hotel</h2>
               </div>
             </div>
-        
+
             <!-- If we need navigation buttons -->
             <div class="swiper-button-prev text-white"></div>
             <div class="swiper-button-next text-white"></div>
@@ -26,6 +27,7 @@ current: index
     </div>
   </section>
 
+  <!-- SEARCH -->
   <section class="section__search container">
     <div class="row no-gutters justify-content-center">
       <div class="col-10 bg-secondary rounded">
@@ -34,29 +36,182 @@ current: index
             <label for="destination" class="input-group-prepend mb-0">
               <span class="material-icons input-group-text bg-white"> place </span>
             </label>
-            <input type="text" id="destination" class="form-control border-left-0 pl-0" placeholder="Destination" aria-label="Destination" aria-describedby="basic-addon1">
+            <input type="text" id="destination" class="form-control border-left-0 pl-0" placeholder="Destination"
+              aria-label="Destination" aria-describedby="basic-addon1">
           </div>
           <div class="input-group input-group-lg mr-0 mr-lg-2 mb-2 mb-lg-0">
             <label for="dateRange" class="input-group-prepend mb-0">
               <span class="material-icons input-group-text bg-white"> date_range </span>
             </label>
             <!-- TODO:日曆 JS -->
-            <input type="text" id="dateRange" class="form-control border-left-0 pl-0" placeholder="Check-in / Check-out" aria-label="Check-in / Check-out" aria-describedby="basic-addon1">
+            <input type="text" id="dateRange" class="form-control border-left-0 pl-0" placeholder="Check-in / Check-out"
+              aria-label="Check-in / Check-out" aria-describedby="basic-addon1">
           </div>
           <div class="input-group input-group-lg mr-0 mr-lg-2 mb-2 mb-lg-0">
             <label for="person" class="input-group-prepend mb-0">
               <span class="material-icons input-group-text bg-white"> person </span>
             </label>
-            <input type="number" id="person" class="form-control border-left-0 pl-0" placeholder="Guests" aria-label="Guests" aria-describedby="basic-addon1">
+            <input type="number" id="person" class="form-control border-left-0 pl-0" placeholder="Guests"
+              aria-label="Guests" aria-describedby="basic-addon1">
           </div>
           <button type="button" class="btn btn-primary btn-lg px-4 d-lg-block d-none"> SEARCH </button>
-          <button type="button" class="btn btn-primary btn-lg px-4 w-100 d-lg-none"> SEARCH </button>
+          <button type="button" class="btn btn-primary btn-lg px-4 btn-block d-lg-none"> SEARCH </button>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Top Choices -->
+  <section class="section__topChoices container">
+    <h2 class="mb-3">Top Choices</h2>
+    <div class="row">
+      <!-- 地點選擇清單 -->
+      <div class="col-5 mb-3">
+        <div class="list-group flex-row" id="list-tab" role="tablist">
+          <a class="list-group-item list-group-item-action text-center border-0 rounded-0 h3 font-weight-bold active"
+            id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">
+            Bali<sup>128</sup>
+          </a>
+          <a class="list-group-item list-group-item-action text-center border-0 rounded-0 h3 font-weight-bold"
+            id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">
+            Okinawa<sup>67</sup>
+          </a>
+          <a class="list-group-item list-group-item-action text-center border-0 rounded-0 h3 font-weight-bold"
+            id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">
+            Taipei<sup>53</sup>
+          </a>
+        </div>
+      </div>
+      <div class="col-12">
+        <!-- TODO: 寬度比例保持一致 -->
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide ">
+              <div class="row">
+                <div class="col-3">
+                  <div class="card border-0">
+                    <img src="assets/images/top1.jpg" alt="" class="inner__img card-img-top rounded">
+                    <div class="card-body pl-0 pt-1">
+                      <p class="mb-1 text-info font-weight-bold">Hotel Aqua</p>
+                      <p class="mb-1"> 
+                        <span class="text-info">★★★★★</span>   
+                        5.0
+                        <small class="text-muted">・2k reviews</small>
+                      </p>
+                      <p class="mb-1">TWD 2,480<small class="text-muted ml-1"><del>TWD 3,980</del></small></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="card border-0">
+                    <img src="assets/images/top2.jpg" alt="" class="inner__img card-img-top rounded">
+                    <div class="card-body pl-0 pt-1">
+                      <p class="mb-1 text-info font-weight-bold">Mr. Kawasaki Inn</p>
+                      <p class="mb-1"> 
+                        <span class="text-info">★★★★</span>   
+                        4.0
+                        <small class="text-muted">・500 reviews</small>
+                      </p>
+                      <p class="mb-1">TWD 3,380</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="card border-0">
+                    <img src="assets/images/top3.jpg" alt="" class="inner__img card-img-top rounded">
+                    <div class="card-body pl-0 pt-1">
+                      <p class="mb-1 text-info font-weight-bold">Weekly Paradise</p>
+                      <p class="mb-1"> 
+                        <span class="text-info">★★★★</span>   
+                        4.0
+                        <small class="text-muted">・470 reviews</small>
+                      </p>
+                      <p class="mb-1">TWD 4,780</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="card border-0">
+                    <img src="assets/images/top4.jpg" alt="" class="inner__img card-img-top rounded">
+                    <div class="card-body pl-0 pt-1">
+                      <p class="mb-1 text-info font-weight-bold">Beast Hotel</p>
+                      <p class="mb-1"> 
+                        <span class="text-info">★★★★</span>   
+                        4.0
+                        <small class="text-muted">・283 reviews</small>
+                      </p>
+                      <p class="mb-1">TWD 1,980</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- Popular Destinations -->
+  <section class="section__destinations container">
+    <h2 class="mb-3">Popular Destinations</h2>
+    <div class="row">
+      <div class="col-12 col-md-6 col-lg-4 mb-1 mb-md-3">
+        <button type="button" class="image--cover inner__img inner__img__Osaka btn btn-block border-0 rounded px-3 py-2 d-flex justify-content-between align-items-center">
+          <div class="inner__text d-flex flex-column">
+            <small class="text-muted text-left font-weight-bold">JAPAN</small> 
+            <h3 class="mb-0 text-white">Osaka</h3>
+          </div>
+          <span class="material-icons text-white"> keyboard_arrow_down </span>
+        </button>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 mb-1 mb-md-3">
+        <button type="button" class="image--cover inner__img inner__img__Kyoto btn btn-block border-0 rounded px-3 py-2 d-flex justify-content-between align-items-center">
+          <div class="inner__text d-flex flex-column">
+            <small class="text-muted text-left font-weight-bold">JAPAN</small> 
+            <h3 class="mb-0 text-white">Kyoto</h3>
+          </div>
+          <span class="material-icons text-white"> keyboard_arrow_down </span>
+        </button>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 mb-1 mb-md-3">
+        <button type="button" class="image--cover inner__img inner__img__Reykjavic btn btn-block border-0 rounded px-3 py-2 d-flex justify-content-between align-items-center">
+          <div class="inner__text d-flex flex-column">
+            <small class="text-muted text-left font-weight-bold">ICELAND</small> 
+            <h3 class="mb-0 text-white">Reykjavík</h3>
+          </div>
+          <span class="material-icons text-white"> keyboard_arrow_down </span>
+        </button>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 mb-1 mb-md-3">
+        <button type="button" class="image--cover inner__img inner__img__Paris btn btn-block border-0 rounded px-3 py-2 d-flex justify-content-between align-items-center">
+          <div class="inner__text d-flex flex-column">
+            <small class="text-muted text-left font-weight-bold">LONDON</small> 
+            <h3 class="mb-0 text-white">Paric</h3>
+          </div>
+          <span class="material-icons text-white"> keyboard_arrow_down </span>
+        </button>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 mb-1 mb-md-3">
+        <button type="button" class="image--cover inner__img inner__img__Roma btn btn-block border-0 rounded px-3 py-2 d-flex justify-content-between align-items-center">
+          <div class="inner__text d-flex flex-column">
+            <small class="text-muted text-left font-weight-bold">ITALY</small> 
+            <h3 class="mb-0 text-white">Roma</h3>
+          </div>
+          <span class="material-icons text-white"> keyboard_arrow_down </span>
+        </button>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <button type="button" class="image--cover inner__img inner__img__Bangkok btn btn-block border-0 rounded px-3 py-2 d-flex justify-content-between align-items-center">
+          <div class="inner__text d-flex flex-column">
+            <small class="text-muted text-left font-weight-bold">THAILAND</small> 
+            <h3 class="mb-0 text-white">Bangkok</h3>
+          </div>
+          <span class="material-icons text-white"> keyboard_arrow_down </span>
+        </button>
+      </div>
+    </div>
+  </section>
 
 
 
