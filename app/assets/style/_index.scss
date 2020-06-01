@@ -9,6 +9,18 @@
     @include media-breakpoint-up(lg) {
       transform: translateY(-50%);
     }
+    &__result{
+      .inner{
+        &__btn {
+          position: relative;
+          &__text {
+            position: absolute;
+            top:-5px;
+            left: 0;
+          }
+        }
+      }
+    }
   }
   &__topChoices {
     .inner {
