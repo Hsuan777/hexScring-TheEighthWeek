@@ -62,149 +62,158 @@ current: index
   </section>
 
   <!-- Top Choices -->
-  <section class="section__topChoices container">
-    <h2 class="mb-3">Top Choices</h2>
+  <section class="section__topChoices container mb-5 mb-lg-7">
+    <h2 class="mb-3 d-md-block d-none">Top Choices</h2>
+    <h3 class="mb-3 d-md-none">Top Choices</h3>
     <div class="row">
       <!-- 地點選擇清單 -->
       <div class="col-5 mb-3">
         <div class="list-group flex-row" id="list-tab" role="tablist">
-          <a class="list-group-item list-group-item-action text-center border-0 rounded-0 h3 font-weight-bold active"
+          <a class="list-group-item list-group-item-action text-center border-0 rounded-0 h4 font-weight-bold active"
             id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">
             Bali<sup>128</sup>
           </a>
-          <a class="list-group-item list-group-item-action text-center border-0 rounded-0 h3 font-weight-bold"
+          <a class="list-group-item list-group-item-action text-center border-0 rounded-0 h4 font-weight-bold"
             id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">
             Okinawa<sup>67</sup>
           </a>
-          <a class="list-group-item list-group-item-action text-center border-0 rounded-0 h3 font-weight-bold"
+          <a class="list-group-item list-group-item-action text-center border-0 rounded-0 h4 font-weight-bold"
             id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">
             Taipei<sup>53</sup>
           </a>
         </div>
       </div>
-      <div class="col-12">
-        <!-- TODO: 寬度比例保持一致 -->
-        <div class="swiper-container">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide ">
-              <div class="row">
-                <div class="col-3">
-                  <div class="card border-0">
-                    <img src="assets/images/top1.jpg" alt="" class="inner__img card-img-top rounded">
-                    <div class="card-body pl-0 pt-1">
-                      <p class="mb-1 text-info font-weight-bold">Hotel Aqua</p>
-                      <p class="mb-1"> 
-                        <span class="text-info">★★★★★</span>   
-                        5.0
-                        <small class="text-muted">・2k reviews</small>
-                      </p>
-                      <p class="mb-1">TWD 2,480<small class="text-muted ml-1"><del>TWD 3,980</del></small></p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-3">
-                  <div class="card border-0">
-                    <img src="assets/images/top2.jpg" alt="" class="inner__img card-img-top rounded">
-                    <div class="card-body pl-0 pt-1">
-                      <p class="mb-1 text-info font-weight-bold">Mr. Kawasaki Inn</p>
-                      <p class="mb-1"> 
-                        <span class="text-info">★★★★</span>   
-                        4.0
-                        <small class="text-muted">・500 reviews</small>
-                      </p>
-                      <p class="mb-1">TWD 3,380</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-3">
-                  <div class="card border-0">
-                    <img src="assets/images/top3.jpg" alt="" class="inner__img card-img-top rounded">
-                    <div class="card-body pl-0 pt-1">
-                      <p class="mb-1 text-info font-weight-bold">Weekly Paradise</p>
-                      <p class="mb-1"> 
-                        <span class="text-info">★★★★</span>   
-                        4.0
-                        <small class="text-muted">・470 reviews</small>
-                      </p>
-                      <p class="mb-1">TWD 4,780</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-3">
-                  <div class="card border-0">
-                    <img src="assets/images/top4.jpg" alt="" class="inner__img card-img-top rounded">
-                    <div class="card-body pl-0 pt-1">
-                      <p class="mb-1 text-info font-weight-bold">Beast Hotel</p>
-                      <p class="mb-1"> 
-                        <span class="text-info">★★★★</span>   
-                        4.0
-                        <small class="text-muted">・283 reviews</small>
-                      </p>
-                      <p class="mb-1">TWD 1,980</p>
-                    </div>
-                  </div>
-                </div>
+       
+      <!-- TODO: 寬度比例保持一致 -->
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="card border-0">
+              <img src="assets/images/top1.jpg" alt="" class="inner__img card-img-top rounded">
+              <div class="card-body pl-0 pt-1">
+                <p class="mb-1 text-info font-weight-bold">Hotel Aqua</p>
+                <p class="mb-1">
+                  <span class="text-info">★★★★★</span>
+                  5.0
+                  <small class="text-muted">・2k reviews</small>
+                </p>
+                <p class="mb-1">TWD 2,480<small class="text-muted ml-1"><del>TWD 3,980</del></small></p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card border-0">
+              <img src="assets/images/top2.jpg" alt="" class="inner__img card-img-top rounded">
+              <div class="card-body pl-0 pt-1">
+                <p class="mb-1 text-info font-weight-bold">Mr. Kawasaki Inn</p>
+                <p class="mb-1">
+                  <span class="text-info">★★★★</span>
+                  4.0
+                  <small class="text-muted">・500 reviews</small>
+                </p>
+                <p class="mb-1">TWD 3,380</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card border-0">
+              <img src="assets/images/top3.jpg" alt="" class="inner__img card-img-top rounded">
+              <div class="card-body pl-0 pt-1">
+                <p class="mb-1 text-info font-weight-bold">Weekly Paradise</p>
+                <p class="mb-1">
+                  <span class="text-info">★★★★</span>
+                  4.0
+                  <small class="text-muted">・470 reviews</small>
+                </p>
+                <p class="mb-1">TWD 4,780</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card border-0">
+              <img src="assets/images/top4.jpg" alt="" class="inner__img card-img-top rounded">
+              <div class="card-body pl-0 pt-1">
+                <p class="mb-1 text-info font-weight-bold">Beast Hotel</p>
+                <p class="mb-1">
+                  <span class="text-info">★★★★</span>
+                  4.0
+                  <small class="text-muted">・283 reviews</small>
+                </p>
+                <p class="mb-1">TWD 1,980</p>
               </div>
             </div>
           </div>
         </div>
+        <!-- Add Arrows -->
+        <button class="swiper-button-next btn btn-secondary btn-sm  rounded-circle">
+
+        </button>
       </div>
+
     </div>
+
   </section>
 
   <!-- Popular Destinations -->
-  <section class="section__destinations container">
-    <h2 class="mb-3">Popular Destinations</h2>
+  <section class="section__destinations container mb-5 mb-lg-7">
+    <h2 class="mb-3 d-md-block d-none">Popular Destinations</h2>
+    <h3 class="mb-3 d-md-none">Popular Destinations</h3>
     <div class="row">
       <div class="col-12 col-md-6 col-lg-4 mb-1 mb-md-3">
-        <button type="button" class="image--cover inner__img inner__img__Osaka btn btn-block border-0 rounded px-3 py-2 d-flex justify-content-between align-items-center">
+        <button type="button"
+          class="image--cover inner__img inner__img__Osaka btn btn-block border-0 rounded px-3 py-2 d-flex justify-content-between align-items-center">
           <div class="inner__text d-flex flex-column">
-            <small class="text-muted text-left font-weight-bold">JAPAN</small> 
+            <small class="text-muted text-left font-weight-bold">JAPAN</small>
             <h3 class="mb-0 text-white">Osaka</h3>
           </div>
           <span class="material-icons text-white"> keyboard_arrow_down </span>
         </button>
       </div>
       <div class="col-12 col-md-6 col-lg-4 mb-1 mb-md-3">
-        <button type="button" class="image--cover inner__img inner__img__Kyoto btn btn-block border-0 rounded px-3 py-2 d-flex justify-content-between align-items-center">
+        <button type="button"
+          class="image--cover inner__img inner__img__Kyoto btn btn-block border-0 rounded px-3 py-2 d-flex justify-content-between align-items-center">
           <div class="inner__text d-flex flex-column">
-            <small class="text-muted text-left font-weight-bold">JAPAN</small> 
+            <small class="text-muted text-left font-weight-bold">JAPAN</small>
             <h3 class="mb-0 text-white">Kyoto</h3>
           </div>
           <span class="material-icons text-white"> keyboard_arrow_down </span>
         </button>
       </div>
       <div class="col-12 col-md-6 col-lg-4 mb-1 mb-md-3">
-        <button type="button" class="image--cover inner__img inner__img__Reykjavic btn btn-block border-0 rounded px-3 py-2 d-flex justify-content-between align-items-center">
+        <button type="button"
+          class="image--cover inner__img inner__img__Reykjavic btn btn-block border-0 rounded px-3 py-2 d-flex justify-content-between align-items-center">
           <div class="inner__text d-flex flex-column">
-            <small class="text-muted text-left font-weight-bold">ICELAND</small> 
+            <small class="text-muted text-left font-weight-bold">ICELAND</small>
             <h3 class="mb-0 text-white">Reykjavík</h3>
           </div>
           <span class="material-icons text-white"> keyboard_arrow_down </span>
         </button>
       </div>
       <div class="col-12 col-md-6 col-lg-4 mb-1 mb-md-3">
-        <button type="button" class="image--cover inner__img inner__img__Paris btn btn-block border-0 rounded px-3 py-2 d-flex justify-content-between align-items-center">
+        <button type="button"
+          class="image--cover inner__img inner__img__Paris btn btn-block border-0 rounded px-3 py-2 d-flex justify-content-between align-items-center">
           <div class="inner__text d-flex flex-column">
-            <small class="text-muted text-left font-weight-bold">LONDON</small> 
+            <small class="text-muted text-left font-weight-bold">LONDON</small>
             <h3 class="mb-0 text-white">Paric</h3>
           </div>
           <span class="material-icons text-white"> keyboard_arrow_down </span>
         </button>
       </div>
       <div class="col-12 col-md-6 col-lg-4 mb-1 mb-md-3">
-        <button type="button" class="image--cover inner__img inner__img__Roma btn btn-block border-0 rounded px-3 py-2 d-flex justify-content-between align-items-center">
+        <button type="button"
+          class="image--cover inner__img inner__img__Roma btn btn-block border-0 rounded px-3 py-2 d-flex justify-content-between align-items-center">
           <div class="inner__text d-flex flex-column">
-            <small class="text-muted text-left font-weight-bold">ITALY</small> 
+            <small class="text-muted text-left font-weight-bold">ITALY</small>
             <h3 class="mb-0 text-white">Roma</h3>
           </div>
           <span class="material-icons text-white"> keyboard_arrow_down </span>
         </button>
       </div>
       <div class="col-12 col-md-6 col-lg-4">
-        <button type="button" class="image--cover inner__img inner__img__Bangkok btn btn-block border-0 rounded px-3 py-2 d-flex justify-content-between align-items-center">
+        <button type="button"
+          class="image--cover inner__img inner__img__Bangkok btn btn-block border-0 rounded px-3 py-2 d-flex justify-content-between align-items-center">
           <div class="inner__text d-flex flex-column">
-            <small class="text-muted text-left font-weight-bold">THAILAND</small> 
+            <small class="text-muted text-left font-weight-bold">THAILAND</small>
             <h3 class="mb-0 text-white">Bangkok</h3>
           </div>
           <span class="material-icons text-white"> keyboard_arrow_down </span>
@@ -213,6 +222,55 @@ current: index
     </div>
   </section>
 
+  <!-- Get Inspiration -->
+  <section class="section__inspiration container mb-5 mb-lg-7">
+    <div class="d-md-block d-none">
+      <h2 class="mb-3 d-flex justify-content-between align-items-center"> Get Inspiration
+        <button class="btn btn-outline-primary px-2">SEE MORE</button>
+      </h2>
+    </div>
+    <div class="d-md-none">
+      <h3 class="mb-3 d-flex justify-content-between align-items-center"> Get Inspiration
+        <button class="btn btn-outline-primary px-2">SEE MORE</button>
+      </h3>
+    </div>
+    
+     <!-- TODO: 寬度比例保持一致，視窗 resize更改顯示數量 -->
+     <div class=" swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="card border-0">
+            <img src="assets/images/italy.jpg" alt="" class="inner__img card-img-top rounded mb-3">
+            <div class="card-body px-0">
+              <h3 class="mb-1">The fifth most visited country</h3>
+              <p>Italy is the fifth most visited country in the world, with a total of 52.3 million…</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card border-0">
+            <img src="assets/images/Thailand.jpg" alt="" class="inner__img card-img-top rounded mb-3">
+            <div class="card-body px-0">
+              <h3 class="mb-1">Visit Thailand for Bangkok</h3>
+              <p>Asian tourists primarily visit Thailand for Bangkok and the historical, natural, and…</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card border-0">
+            <img src="assets/images/NewZealand.jpg" alt="" class="inner__img card-img-top rounded mb-3">
+            <div class="card-body px-0">
+              <h3 class="mb-1">Lord of the Rings Tour</h3>
+              <p>The national cuisine has been described as Pacific Rim, incorporating the native Māori…</p>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+     
+    </div>
+
+  </section>
 
 
 </main>

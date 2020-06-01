@@ -26,6 +26,7 @@
     .inner {
       &__img {
         object-fit: cover;
+        width: 255px;
         height: 164px;
         @include media-breakpoint-up(md) {
           height: 185px;
@@ -54,6 +55,17 @@
       &::after{
         background: map-get($theme-colors , primary );
       }
+    }
+    .swiper-button-next{
+      width: 40px;
+      height: 40px;
+      top: 30%;
+      transform: translateX(20%);
+      &::after{
+        font-size: 16px;
+        font-weight: bold;
+      }
+    
     }
   }
   &__destinations {
@@ -100,6 +112,23 @@
       }
     }
   }
+  &__inspiration {
+    .inner {
+      &__img {
+        object-fit: cover;
+        width: 240px;
+        height: 181px;
+        @include media-breakpoint-up(md) {
+          width: 210px;
+          height: 158px;
+        }
+        @include media-breakpoint-up(lg) {
+          width: 350px;
+          height: 263px;
+        }
+      }
+    }
+  }
   &__subscribe {
     height: 149px;
     @include media-breakpoint-up(md) {
@@ -107,3 +136,4 @@
     }
   }
 }
+
