@@ -20,8 +20,8 @@ current: result
               <button type="button" id="destination" class="inner__btn form-control border-left-0 p-0 text-left"
                 aria-label="Destination" aria-describedby="basic-addon1">
                 <div class="inner__btn__text">
-                  <small class="text-small text-info font-weight-bold" >Destination</small>
-                  <p class="text-muted mb-0">Bangkok, Thailand</p> 
+                  <small class="text-small text-info font-weight-bold">Destination</small>
+                  <p class="text-muted mb-0">Bangkok, Thailand</p>
                 </div>
               </button>
             </div>
@@ -35,15 +35,15 @@ current: result
               <button type="button" class="inner__btn form-control border-left-0 p-0 text-left"
                 aria-label="Check-in / Check-out" aria-describedby="basic-addon1">
                 <div class="inner__btn__text">
-                  <small class="text-small text-info font-weight-bold" >CHECK-IN</small>
-                  <p class="text-muted mb-0">17 June</p> 
+                  <small class="text-small text-info font-weight-bold">CHECK-IN</small>
+                  <p class="text-muted mb-0">17 June</p>
                 </div>
               </button>
               <button type="button" class="inner__btn form-control border-left-0 p-0 text-left"
                 aria-label="Check-in / Check-out" aria-describedby="basic-addon1">
                 <div class="inner__btn__text">
-                  <small class="text-small text-info font-weight-bold" >CHECK-OUT</small>
-                  <p class="text-muted mb-0">19 June</p> 
+                  <small class="text-small text-info font-weight-bold">CHECK-OUT</small>
+                  <p class="text-muted mb-0">19 June</p>
                 </div>
               </button>
             </div>
@@ -56,8 +56,8 @@ current: result
               <button type="button" id="person" class="inner__btn form-control border-left-0 p-0 text-left"
                 aria-label="Guests" aria-describedby="basic-addon1">
                 <div class="inner__btn__text">
-                  <small class="text-small text-info font-weight-bold" >GUESTS</small>
-                  <p class="text-muted mb-0">2 adults・1 room</p> 
+                  <small class="text-small text-info font-weight-bold">GUESTS</small>
+                  <p class="text-muted mb-0">2 adults・1 room</p>
                 </div>
               </button>
             </div>
@@ -74,9 +74,158 @@ current: result
     <div class="row">
       <div class="col-4">
         <h2 class="mb-3">Bangkok<sup class="text-primary">3,240</sup></h2>
+        <!-- 選項列表 -->
+        <form class="p-3 bg-secondary">
+          <!-- Deals -->
+          <p class="text-info font-weight-bold">Deals</p>
+          <ul class="list-unstyled mb-3 pb-3 border-bottom border-white">
+            <li class="form-check pl-0 mb-1">
+              <input class="checkbox form-check-input" type="checkbox" value="" id="cancellation">
+              <label class="checkbox__label form-check-label" for="cancellation">
+                Free cancellation
+              </label>
+            </li>
+            <li class="form-check pl-0 mb-1">
+              <input class="checkbox form-check-input" type="checkbox" value="" id="prepayment">
+              <label class="checkbox__label form-check-label" for="prepayment">
+                No prepayment
+              </label>
+            </li>
+            <li class="form-check pl-0">
+              <input class="checkbox form-check-input" type="checkbox" value="" id="specialOffers">
+              <label class="checkbox__label form-check-label" for="specialOffers">
+                Special offers
+              </label>
+            </li>
+          </ul>
+
+          <!-- Popular filter -->
+          <p class="text-info font-weight-bold">Popular filter</p>
+          <ul class="list-unstyled mb-3 pb-3 border-bottom border-white">
+            <li class="form-check pl-0 mb-1">
+              <input class="checkbox form-check-input" type="checkbox" value="" id="breakfast">
+              <label class="checkbox__label form-check-label" for="breakfast">
+                Breakfast included
+              </label>
+            </li>
+            <li class="form-check pl-0 mb-1">
+              <input class="checkbox form-check-input" type="checkbox" value="" id="wifi">
+              <label class="checkbox__label form-check-label" for="wifi">
+                Free Wi-Fi
+              </label>
+            </li>
+            <li class="form-check pl-0">
+              <input class="checkbox form-check-input" type="checkbox" value="" id="swimmingPool">
+              <label class="checkbox__label form-check-label" for="swimmingPool">
+                Swimming pool
+              </label>
+            </li>
+          </ul>
+
+          <!-- Budget -->
+          <p class="text-info font-weight-bold">Budget</p>
+          <!-- TODO:範圍拉條調整 -->
+          <ul class="list-unstyled mb-3 pb-3 border-bottom border-white">
+            <li class="form-group">
+              <input type="range" class="form-control-range" value="100" id="budgetRange">
+            </li>
+            <li class="input-group input-group-lg">
+              <button type="button" class="inner__btn form-control border-left-0 p-0 text-left" aria-label="Min Price"
+                aria-describedby="basic-addon1">
+                <div class="inner__btn__text">
+                  <small class="text-small text-info font-weight-bold">MIN PRICE</small>
+                  <p class="text-muted mb-0">TWD 800</p>
+                </div>
+              </button>
+              <button type="button" class="inner__btn form-control border-left-0 p-0 text-left" aria-label="MAX Price"
+                aria-describedby="basic-addon1">
+                <div class="inner__btn__text">
+                  <small class="text-small text-info font-weight-bold">MAX PRICE</small>
+                  <p class="text-muted mb-0">TWD 4,000+</p>
+                </div>
+              </button>
+            </li>
+          </ul>
+
+          <!-- Rating -->
+          <p class="text-info font-weight-bold">Rating</p>
+          <ul class="list-unstyled mb-3 pb-3 border-bottom border-white">
+            <li class="form-check pl-0 mb-1">
+              <input class="checkbox form-check-input" type="checkbox" value="" id="fiveRating">
+              <label class="checkbox__label form-check-label" for="fiveRating">
+                <span class="text-info">★★★★★</span>
+                5.0
+              </label>
+            </li>
+            <li class="form-check pl-0 mb-1">
+              <input class="checkbox form-check-input" type="checkbox" value="" id="fourRating">
+              <label class="checkbox__label form-check-label" for="fourRating">
+                <span class="text-info">★★★★</span>
+                4.0
+              </label>
+            </li>
+            <li class="form-check pl-0 mb-1">
+              <input class="checkbox form-check-input" type="checkbox" value="" id="threeRating">
+              <label class="checkbox__label form-check-label" for="threeRating">
+                <span class="text-info">★★★</span>
+                3.0
+              </label>
+            </li>
+            <li class="form-check pl-0 mb-1">
+              <input class="checkbox form-check-input" type="checkbox" value="" id="twoRating">
+              <label class="checkbox__label form-check-label" for="twoRating">
+                <span class="text-info">★★</span>
+                2.0
+              </label>
+            </li>
+            <li class="form-check pl-0 mb-1">
+              <input class="checkbox form-check-input" type="checkbox" value="" id="oneRating">
+              <label class="checkbox__label form-check-label" for="oneRating">
+                <span class="text-info">★</span>
+                1.0
+              </label>
+            </li>
+            <li class="form-check pl-0">
+              <input class="checkbox form-check-input" type="checkbox" value="" id="Unrated">
+              <label class="checkbox__label form-check-label" for="Unrated">
+                Unrated
+              </label>
+            </li>
+          </ul>
+
+          <!-- Stay type -->
+          <p class="text-info font-weight-bold">Stay Type</p>
+          <ul class="list-unstyled pb-3">
+            <li class="form-check pl-0 mb-1">
+              <input class="checkbox form-check-input" type="checkbox" value="" id="hotel">
+              <label class="checkbox__label form-check-label" for="hotel">
+                Hotel
+              </label>
+            </li>
+            <li class="form-check pl-0 mb-1">
+              <input class="checkbox form-check-input" type="checkbox" value="" id="apartment">
+              <label class="checkbox__label form-check-label" for="apartment">
+                Apartment
+              </label>
+            </li>
+            <li class="form-check pl-0 mb-1">
+              <input class="checkbox form-check-input" type="checkbox" value="" id="unique">
+              <label class="checkbox__label form-check-label" for="unique">
+                Unique
+              </label>
+            </li>
+            <li class="form-check pl-0">
+              <input class="checkbox form-check-input" type="checkbox" value="" id="hostel">
+              <label class="checkbox__label form-check-label" for="hostel">
+                Hostel
+              </label>
+            </li>
+          </ul>
+        </form>
       </div>
-      <div class="col-8">
-        <ul class="nav">
+      <!-- 搜尋結果 -->
+      <div class="col-md-8 col-12">
+        <ul class="nav mb-3 mt-1">
           <li class="nav-item ">
             <a class="nav-link active pl-0" href="#">Recommended</a>
           </li>
@@ -90,162 +239,41 @@ current: result
             <a class="nav-link" href="#">Distance to City Center</a>
           </li>
         </ul>
+
+        <ul class="list-unstyled">
+          <li class="media pb-3 border-bottom border-dark">
+            <img src="assets/images/Rachada1.jpg" alt="" class="image--cover inner__img img-fluid rounded-left">
+            <div class="media-body p-1">
+              <div class="d-flex justify-content-between align-items-center">
+                <small> <span class="text-primary"> Rachada, Bangkok</span>・2 km from center</small>
+                <!-- TODO:用 EJS插入星號 -->
+                <p class="text-muted mb-0"><span class="text-info">★★★★</span> 4.0 (283)</p>
+              </div>
+              <h3 class="mb-2">Rachada Hotel</h3>
+              <p class="mb-1 text-muted font-weight-bold">Deluxe Double Room</p>
+              <p class="text-small">2 guests・1 bed (Queen size)</p>
+              <footer class="d-flex justify-content-between align-items-center">
+                <div class="d-flex flex-column flex-lg-row">
+                  <small class="badge badge-pill badge-secondary text-muted text-small py-1 mb-1 mb-lg-0 mr-1">Free
+                    cancellation</small>
+                  <small class="badge badge-pill badge-secondary text-muted text-small py-1">No prepayment</small>
+                </div>
+                <h3 class="inner__price mb-0 active"> 
+                  <span class="text-info">TWD </span>
+                  1,980 
+                  <del class="inner__price__origin text-right">TWD 1,980</del>  
+                </h3>
+              </footer>
+            </div>
+          </li>
+        </ul>
       </div>
     </div>
-    <div class="row">
-      <!-- 選項列表 -->
-      <div class="col-4">
-        <form class="p-3 bg-secondary">
-          <!-- Deals -->
-          <p class="text-info font-weight-bold">Deals</p>
-          <div class="form-check pl-0 mb-1">
-            <input class="checkbox form-check-input" type="checkbox" value="" id="cancellation">
-            <label class="checkbox__label form-check-label" for="cancellation">
-              Free cancellation
-            </label>
-          </div>
-          <div class="form-check pl-0 mb-1">
-            <input class="checkbox form-check-input" type="checkbox" value="" id="prepayment">
-            <label class="checkbox__label form-check-label" for="prepayment">
-              No prepayment
-            </label>
-          </div>
-          <div class="form-check pl-0 mb-3 pb-3 border-bottom border-white">
-            <input class="checkbox form-check-input" type="checkbox" value="" id="specialOffers">
-            <label class="checkbox__label form-check-label" for="specialOffers">
-              Special offers
-            </label>
-          </div>
 
-          <!-- Popular filter -->
-          <p class="text-info font-weight-bold">Popular filter</p>
-          <div class="form-check pl-0 mb-1">
-            <input class="checkbox form-check-input" type="checkbox" value="" id="breakfast">
-            <label class="checkbox__label form-check-label" for="breakfast">
-              Breakfast included
-            </label>
-          </div>
-          <div class="form-check pl-0 mb-1">
-            <input class="checkbox form-check-input" type="checkbox" value="" id="wifi">
-            <label class="checkbox__label form-check-label" for="wifi">
-              Free Wi-Fi
-            </label>
-          </div>
-          <div class="form-check pl-0 mb-3 pb-3 border-bottom border-white">
-            <input class="checkbox form-check-input" type="checkbox" value="" id="swimmingPool">
-            <label class="checkbox__label form-check-label" for="swimmingPool">
-              Swimming pool
-            </label>
-          </div>
 
-          <!-- Budget -->
-          <p class="text-info font-weight-bold">Budget</p>
-          <!-- TODO:範圍拉條調整 -->
-          <div class="form-group">
-            <input type="range" class="form-control-range" value="100" id="budgetRange">
-          </div>
-          <div class="input-group input-group-lg mb-3 pb-3 border-bottom border-white">
-            <button type="button" class="inner__btn form-control border-left-0 p-0 text-left"
-              aria-label="Min Price" aria-describedby="basic-addon1">
-              <div class="inner__btn__text">
-                <small class="text-small text-info font-weight-bold">MIN PRICE</small>
-                <p class="text-muted mb-0">TWD 800</p> 
-              </div>
-            </button>
-            <button type="button" class="inner__btn form-control border-left-0 p-0 text-left"
-              aria-label="MAX Price" aria-describedby="basic-addon1">
-              <div class="inner__btn__text">
-                <small class="text-small text-info font-weight-bold">MAX PRICE</small>
-                <p class="text-muted mb-0">TWD 4,000+</p> 
-              </div>
-            </button>
-          </div>
 
-          <!-- Rating -->
-          <p class="text-info font-weight-bold">Rating</p>
-          <div class="form-check pl-0 mb-1">
-            <input class="checkbox form-check-input" type="checkbox" value="" id="fiveRating">
-            <label class="checkbox__label form-check-label" for="fiveRating">
-              <span class="text-info">★★★★★</span>
-              5.0
-            </label>
-          </div>
-          <div class="form-check pl-0 mb-1">
-            <input class="checkbox form-check-input" type="checkbox" value="" id="fourRating">
-            <label class="checkbox__label form-check-label" for="fourRating">
-              <span class="text-info">★★★★</span>
-              4.0
-            </label>
-          </div>
-          <div class="form-check pl-0 mb-1">
-            <input class="checkbox form-check-input" type="checkbox" value="" id="threeRating">
-            <label class="checkbox__label form-check-label" for="threeRating">
-              <span class="text-info">★★★</span>
-              3.0
-            </label>
-          </div>
-          <div class="form-check pl-0 mb-1">
-            <input class="checkbox form-check-input" type="checkbox" value="" id="twoRating">
-            <label class="checkbox__label form-check-label" for="twoRating">
-              <span class="text-info">★★</span>
-              2.0
-            </label>
-          </div>
-          <div class="form-check pl-0 mb-1">
-            <input class="checkbox form-check-input" type="checkbox" value="" id="oneRating">
-            <label class="checkbox__label form-check-label" for="oneRating">
-              <span class="text-info">★</span>
-              1.0
-            </label>
-          </div>
-          <div class="form-check pl-0 mb-3 pb-3 border-bottom border-white">
-            <input class="checkbox form-check-input" type="checkbox" value="" id="Unrated">
-            <label class="checkbox__label form-check-label" for="Unrated">
-              Unrated
-            </label>
-          </div>
-
-          <!-- Stay type -->
-          <p class="text-info font-weight-bold">Stay Type</p>
-          <div class="form-check pl-0 mb-1">
-            <input class="checkbox form-check-input" type="checkbox" value="" id="hotel">
-            <label class="checkbox__label form-check-label" for="hotel">
-              Hotel
-            </label>
-          </div>
-          <div class="form-check pl-0 mb-1">
-            <input class="checkbox form-check-input" type="checkbox" value="" id="apartment">
-            <label class="checkbox__label form-check-label" for="apartment">
-              Apartment
-            </label>
-          </div>
-          <div class="form-check pl-0 mb-1">
-            <input class="checkbox form-check-input" type="checkbox" value="" id="unique">
-            <label class="checkbox__label form-check-label" for="unique">
-              Unique
-            </label>
-          </div>
-          <div class="form-check pl-0">
-            <input class="checkbox form-check-input" type="checkbox" value="" id="hostel">
-            <label class="checkbox__label form-check-label" for="hostel">
-              Hostel
-            </label>
-          </div>
-        </form>
-      </div>
-
-      <!-- 搜尋結果 -->
-      <div class="col-md-8 col-12">
-        <div class="media">
-          <img src="assets/images/Rachada1.jpg" alt="" class="image--cover inner__img img-fluid rounded-left">
-          <div class="media-body">
-
-          </div>
-        </div>
-      </div>
-    </div>
   </section>
-  
+
 
 
 </main>
