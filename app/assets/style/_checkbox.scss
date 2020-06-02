@@ -1,0 +1,33 @@
+
+
+.checkbox {
+  display: none;
+  &__label {
+    cursor: pointer;
+    @include media-breakpoint-only(md){
+      font-size: 14px;
+    }
+    &::before {
+      content: "\2714";
+      border: 2px solid map-get($theme-colors , dark );
+      border-radius: 10%;
+      display: inline-block;
+    
+      width: 24px;
+      height: 10px;
+      // transform: translateY(0px);
+      padding: 0px 0 20px 4px;
+      margin-right: 4px;
+      color:transparent;
+    }
+  }
+
+  &:checked {
+    + .checkbox__label::before {
+      border: 2px solid  map-get($theme-colors , primary );
+      background-color:  map-get($theme-colors , primary );
+      color: white;
+    }
+  }
+}
+
