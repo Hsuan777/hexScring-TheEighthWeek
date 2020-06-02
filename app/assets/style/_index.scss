@@ -170,6 +170,11 @@
           right: 0;
         }
       }
+      &__badge{
+        @include media-breakpoint-only(md){
+          font-size: 10px;
+        }
+      }
     }
   }
   &__subscribe {
