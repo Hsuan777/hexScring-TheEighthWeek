@@ -18,16 +18,15 @@ h3, .h3 {
 h4, .h4 {
   font-size: 16px;  
 }
-h5, .h5 {
-  font-size: 14px;  
+small{
+  font-size: 12px;
 }
 
 
-
-h1, .h1,h2, .h2,h3, .h3,h4, .h4,h5, .h5{
+h1, .h1,h2, .h2,h3, .h3,h4, .h4{
   line-height: 1.5;
 }
-h1, h2, h3, h4, h5{
+h1, h2, h3, h4{
   font-family: 'Raleway', serif;
   color: #000000DE;
 } 
@@ -35,11 +34,9 @@ input::placeholder{
   font-size: 16px;;
 }
 
+
 // TODO:重新整理 small標籤運用
 .text-muted{
   font-size: 14px;
-  line-height: 0.5;
 }
-.text-small{
-  font-size: 12px;
-}
+
