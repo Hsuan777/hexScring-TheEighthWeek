@@ -129,6 +129,20 @@
       }
     }
   }
+  &__resultList{
+    a.nav-link{
+      color: map-get($theme-colors , info );
+      &.active{
+        color: map-get($theme-colors , primary );
+      }
+    }
+    .inner{
+      &__img{
+        width: 255px;
+        height: 175px;
+      }
+    }
+  }
   &__subscribe {
     height: 149px;
     @include media-breakpoint-up(md) {
