@@ -1,6 +1,7 @@
 /* 區塊命名 */
 .section {
   &__banner {
+    margin-top: 58px;
     height: 320px;
     background-image: url("../images/index-banner.jpg");
   }
@@ -10,6 +11,8 @@
       transform: translateY(-50%);
     }
     &__result{
+      // TODO:之後設定為固定，現在方便維護
+      margin-top: 58px;
       .inner{
         &__btn {
           position: relative;
