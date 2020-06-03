@@ -59,6 +59,7 @@
         background: map-get($theme-colors , primary );
       }
     }
+    // TODO:考慮是否獨立出來
     .swiper-button-next{
       width: 40px;
       height: 40px;
@@ -140,9 +141,21 @@
       }
     }
     .inner{
+      &__item{
+        margin: 0px -15px;
+        border-bottom: 4px solid map-get($theme-colors , secondary );
+        @include media-breakpoint-up(sm) {
+          margin: 0px;
+          border-bottom: 1px solid map-get($theme-colors , dark );
+        }
+      }
       &__img{
         width: 150px;
         height: 150px;
+        border-radius: 0;
+        @include media-breakpoint-up(sm) {
+          border-radius: 8px 0px 0px 8px;
+        }
         @include media-breakpoint-up(lg) {
           width: 255px;
           height: 175px;
@@ -150,13 +163,17 @@
       }
       &__price{
         position: relative;
-        &::before{
-          position: absolute;
-          content: 'per night';
-          font-size: 12px;
-          color: #00000099;
-          top:-15px;
-          right: 0;
+        font-size: 16px;
+        @include media-breakpoint-up(lg){
+          font-size: 24px;
+          &::before{
+            position: absolute;
+            content: 'per night';
+            font-size: 12px;
+            color: #00000099;
+            top:-15px;
+            right: 0;
+          }
         }
         &.active{
           color: map-get($theme-colors , primary );
@@ -166,11 +183,18 @@
         }
         &__origin{
           position: absolute;
-          font-size: 16px;
+          font-size: 12px;
           color: #00000099;
           width: 100%;
-          top: -20px;
+          top: -15px;
           right: 0;
+          @include media-breakpoint-up(md){
+           top: -20px;
+           font-size: 14px;
+          }
+          @include media-breakpoint-up(lg){
+           font-size: 16px;
+          }
         }
       }
       // &__badge{
