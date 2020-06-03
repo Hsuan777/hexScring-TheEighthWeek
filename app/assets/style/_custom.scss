@@ -10,6 +10,23 @@
   object-fit: cover;
 }
 
+.modal--fluid {
+  max-width: 100%;
+  margin: 0;
+}
+.lineSeparator{
+  position: relative;
+  &::before{
+    position: absolute;
+    content: '';
+    top: 12.5px;
+    right: -1px;
+    width: 1px;
+    height: 33px;
+    background-color: map-get($theme-colors , secondary );
+  }
+}
+
 // input[type="range"]::-webkit-slider-runnable-track{
 //   background-color: map-get($theme-colors , primary );
 //   border-radius: 8px;
