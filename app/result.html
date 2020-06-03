@@ -7,66 +7,85 @@ current: result
 <main>
 
   <!-- SEARCH -->
-  <div class="bg-secondary">
+  <div class="bg-secondary d-md-block d-none">
     <section class="section__search__result container mb-2 mb-md-3">
-      <div class="row no-gutters justify-content-center">
-        <div class="col-12">
-          <div class="d-flex flex-column flex-lg-row align-items-center justify-content-between py-3">
-            <!-- Destination -->
-            <div class="input-group input-group-lg mr-0 mr-lg-2 mb-2 mb-lg-0">
-              <label for="destination" class="input-group-prepend mb-0">
-                <span class="material-icons input-group-text bg-white"> place </span>
-              </label>
-              <button type="button" id="destination" class="inner__btn form-control border-left-0 p-0 text-left"
-                aria-label="Destination" aria-describedby="basic-addon1">
-                <div class="inner__btn__text">
-                  <small class="text-small text-info font-weight-bold">Destination</small>
-                  <p class="text-muted mb-0">Bangkok, Thailand</p>
-                </div>
-              </button>
-            </div>
-
-            <!-- Date Range -->
-            <div class="input-group input-group-lg mr-0 mr-lg-2 mb-2 mb-lg-0">
-              <label for="dateRange" class="input-group-prepend mb-0">
-                <span class="material-icons input-group-text bg-white"> date_range </span>
-              </label>
-              <!-- TODO:日曆 JS -->
-              <button type="button" class="inner__btn form-control border-left-0 p-0 text-left"
-                aria-label="Check-in / Check-out" aria-describedby="basic-addon1">
-                <div class="inner__btn__text">
-                  <small class="text-small text-info font-weight-bold">CHECK-IN</small>
-                  <p class="text-muted mb-0">17 June</p>
-                </div>
-              </button>
-              <button type="button" class="inner__btn form-control border-left-0 p-0 text-left"
-                aria-label="Check-in / Check-out" aria-describedby="basic-addon1">
-                <div class="inner__btn__text">
-                  <small class="text-small text-info font-weight-bold">CHECK-OUT</small>
-                  <p class="text-muted mb-0">19 June</p>
-                </div>
-              </button>
-            </div>
-
-            <!-- GUESTS -->
-            <div class="input-group input-group-lg mr-0 mr-lg-2 mb-2 mb-lg-0">
-              <label for="person" class="input-group-prepend mb-0">
-                <span class="material-icons input-group-text bg-white"> person </span>
-              </label>
-              <button type="button" id="person" class="inner__btn form-control border-left-0 p-0 text-left"
-                aria-label="Guests" aria-describedby="basic-addon1">
-                <div class="inner__btn__text">
-                  <small class="text-small text-info font-weight-bold">GUESTS</small>
-                  <p class="text-muted mb-0">2 adults・1 room</p>
-                </div>
-              </button>
-            </div>
-            <button type="button" class="btn btn-primary btn-lg px-4 d-lg-block d-none"> SEARCH </button>
-            <button type="button" class="btn btn-primary btn-lg px-4 btn-block d-lg-none"> SEARCH </button>
+      <div class="form-row justify-content-between py-3">
+        <!-- Destination -->
+        <div class="col-3 ">
+          <div class="inner__btn input-group input-group-lg">
+            <label for="destination" class="input-group-prepend mb-0">
+              <span class="material-icons input-group-text bg-white"> place </span>
+            </label>
+            <button type="button" id="destination" class="form-control h-100 border-left-0 text-left"
+              aria-label="Destination" aria-describedby="basic-addon1">
+              <div class="inner__btn__text">
+                <small class="text-info font-weight-bold">Destination</small>
+                <p class="text-muted">Bangkok, Thailand</p>
+              </div>
+            </button>
           </div>
+        </div>
+        <!-- Date Range -->
+        <div class="col-3">
+          <div class="inner__btn input-group input-group-lg">
+            <label for="dateRange" class="input-group-prepend mb-0">
+              <span class="material-icons input-group-text bg-white"> date_range </span>
+            </label>
+            <!-- TODO:日曆 JS -->
+            <button type="button" class="inner__btn h-100 form-control border-left-0 text-left"
+              aria-label="Check-in / Check-out" aria-describedby="basic-addon1">
+              <div class="inner__btn__text">
+                <small class="text-info font-weight-bold">CHECK-IN</small>
+                <p class="text-muted">17 June</p>
+              </div>
+            </button>
+            <button type="button" class="inner__btn h-100 form-control border-left-0 text-left"
+              aria-label="Check-in / Check-out" aria-describedby="basic-addon1">
+              <div class="inner__btn__text">
+                <small class="text-info font-weight-bold">CHECK-OUT</small>
+                <p class="text-muted">19 June</p>
+              </div>
+            </button>
+          </div>
+        </div>
+        <!-- GUESTS -->
+        <div class="col-3">
+          <div class="inner__btn input-group input-group-lg">
+            <label for="person" class="input-group-prepend mb-0">
+              <span class="material-icons input-group-text bg-white"> person </span>
+            </label>
+            <button type="button" id="person" class="form-control h-100 border-left-0 text-left"
+              aria-label="Guests" aria-describedby="basic-addon1">
+              <div class="inner__btn__text">
+                <small class="text-info font-weight-bold">GUESTS</small>
+                <p class="text-muted">2 adults・1 room</p>
+              </div>
+            </button>
+          </div>
+        </div>
+        <div class="col-2">
+          <button type="button" class="btn btn-primary py-2 px-4 border-0"> SEARCH </button>
+          <button type="button" class="btn btn-primary py-2 px-4 border-0 btn-block d-lg-none"> SEARCH </button>
         </div>
       </div>
     </section>
+  </div>
+
+  <div class="section__search__result container-fluid bg-secondary  p-0 d-md-none">
+    <ul class="nav no-gutters justify-content-center align-items-center">
+      <li class="col-4">
+        <button class="btn btn-link text-decoration-none text-reset btn-block p-2"><small>Bangkok</small></button>
+      </li>
+      <li class="col-4">
+        <button class="btn btn-link text-decoration-none text-reset btn-block p-2 text-nowrap"><small>17 June - 19
+            June</small></button>
+      </li>
+      <li class="col-4">
+        <button class="btn btn-link text-decoration-none text-reset btn-block p-2 text-nowrap"><small>2 adults・1
+            room</small></button>
+      </li>
+      </nav>
+    </ul>
   </div>
 
   <!-- Result List -->
@@ -77,6 +96,7 @@ current: result
           <!-- 搜尋地點名稱 -->
           <h2 class="mb-1 mb-md-3">Bangkok<sup class="text-primary">3,240</sup></h2>
           <!-- mobile 功能按鈕 -->
+          <!-- TODO:左右寬度不太對 -->
           <div class="btn-group d-md-none" role="group">
             <button
               class="lineSeparator btn btn-link py-2 px-5 text-info font-weight-bold d-flex align-items-center text-decoration-none rounded-0"
@@ -84,7 +104,7 @@ current: result
               <span class="material-icons mr-1"> filter_list </span>FILTER
             </button>
             <button
-              class="btn btn-link py-2 px-5 text-info font-weight-bold d-flex align-items-center text-decoration-none "
+              class="btn btn-link py-2 px-5 text-info font-weight-bold d-flex align-items-center text-decoration-none"
               data-toggle="dropdown" data-display="static">
               <span class="material-icons mr-1"> sort </span>SORT
             </button>
@@ -380,8 +400,7 @@ current: result
     </div>
 
     <!-- FILTER Modal -->
-    <div class="modal fade" id="filter" tabindex="-1" role="dialog" aria-labelledby="filter"
-      aria-hidden="true">
+    <div class="modal fade" id="filter" tabindex="-1" role="dialog" aria-labelledby="filter" aria-hidden="true">
       <div class="modal--fluid modal-dialog" role="document">
         <div class="modal-content rounded-0">
           <div class="modal-header border-0 rounded-0">
@@ -416,7 +435,7 @@ current: result
                   </label>
                 </li>
               </ul>
-  
+
               <!-- Popular filter -->
               <p class="text-info font-weight-bold">Popular filter</p>
               <ul class="list-unstyled mb-3 pb-3 border-bottom border-white">
@@ -439,7 +458,7 @@ current: result
                   </label>
                 </li>
               </ul>
-  
+
               <!-- Budget -->
               <p class="text-info font-weight-bold">Budget</p>
               <!-- TODO:範圍拉條調整 -->
@@ -448,15 +467,15 @@ current: result
                   <input type="range" class="form-control-range" value="100" id="mobile__budgetRange">
                 </li>
                 <li class="input-group input-group-lg">
-                  <button type="button" class="inner__btn form-control border-left-0 p-0 text-left" aria-label="Min Price"
-                    aria-describedby="basic-addon1">
+                  <button type="button" class="inner__btn form-control border-left-0 p-0 text-left"
+                    aria-label="Min Price" aria-describedby="basic-addon1">
                     <div class="inner__btn__text">
                       <small class="text-small text-info font-weight-bold">MIN PRICE</small>
                       <p class="text-muted mb-0">TWD 800</p>
                     </div>
                   </button>
-                  <button type="button" class="inner__btn form-control border-left-0 p-0 text-left" aria-label="MAX Price"
-                    aria-describedby="basic-addon1">
+                  <button type="button" class="inner__btn form-control border-left-0 p-0 text-left"
+                    aria-label="MAX Price" aria-describedby="basic-addon1">
                     <div class="inner__btn__text">
                       <small class="text-small text-info font-weight-bold">MAX PRICE</small>
                       <p class="text-muted mb-0">TWD 4,000+</p>
@@ -464,7 +483,7 @@ current: result
                   </button>
                 </li>
               </ul>
-  
+
               <!-- Rating -->
               <p class="text-info font-weight-bold">Rating</p>
               <ul class="list-unstyled mb-3 pb-3 border-bottom border-white">
@@ -510,7 +529,7 @@ current: result
                   </label>
                 </li>
               </ul>
-  
+
               <!-- Stay type -->
               <p class="text-info font-weight-bold">Stay Type</p>
               <ul class="list-unstyled pb-3">

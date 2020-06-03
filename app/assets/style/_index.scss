@@ -16,10 +16,11 @@
       .inner{
         &__btn {
           position: relative;
+          height: 56px;
           &__text {
             position: absolute;
-            top:-5px;
-            left: 0;
+            top:0px;
+            left:0px;
           }
         }
       }
