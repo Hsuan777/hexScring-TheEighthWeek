@@ -248,10 +248,17 @@
   }
   &__selectRoom{
     .inner{
-      &__img{
+      &__img {
         width: 150px;
         height: 150px;
-        border-radius: 8px 0 0 8px;
+        border-radius: 0;
+        @include media-breakpoint-up(sm) {
+          border-radius: 8px 0px 0px 8px;
+        }
+        @include media-breakpoint-up(lg) {
+          width: 255px;
+          height: 175px;
+        }
       }
     }
   }
