@@ -5,26 +5,58 @@
     height: 320px;
     background-image: url("../images/index-banner.jpg");
   }
+  &__detailBanner {
+    .inner {
+      &__img {
+        border-radius: 4px;
+        &__primary {
+          height: 247px;
+          @include media-breakpoint-up(md) {
+            height: 268px;
+          }
+          @include media-breakpoint-up(lg) {
+            height: 434px;
+          }
+        }
+        &__secondary{
+          @include media-breakpoint-up(md) {
+            height: 132px;
+          }
+          @include media-breakpoint-up(lg) {
+            height: 213px;
+          }
+        }
+        &__third{
+          @include media-breakpoint-up(md) {
+            height: 93px;
+          }
+          @include media-breakpoint-up(lg) {
+            height: 151px;
+          }
+        }
+      }
+    }
+  }
   &__search {
     transform: translateY(-25%);
     @include media-breakpoint-up(lg) {
       transform: translateY(-50%);
     }
-    &__result{
+    &__result {
       // TODO:之後設定為固定，現在方便維護
       margin-top: 58px;
-      .inner{
+      .inner {
         &__searchBtn {
           transition: all 0.35s;
           &__text {
             position: absolute;
-            top:0px;
-            left:0px;
+            top: 0px;
+            left: 0px;
           }
         }
       }
-      .lineSeparator{
-        &::before{
+      .lineSeparator {
+        &::before {
           background-color: white;
         }
       }
@@ -44,81 +76,80 @@
         }
       }
     }
-    .list-group-item{
+    .list-group-item {
       position: relative;
-      &::after{
+      &::after {
         position: absolute;
-        content: '';
+        content: "";
         width: 100%;
         height: 2px;
         bottom: 0;
         left: 0;
-        background: #F1F0F8;
+        background: #f1f0f8;
       }
     }
-    .list-group-item.active{
+    .list-group-item.active {
       background-color: white;
-      color: map-get($theme-colors , primary );
+      color: map-get($theme-colors, primary);
       transition: all 0.35s;
-      &::after{
-        background: map-get($theme-colors , primary );
+      &::after {
+        background: map-get($theme-colors, primary);
       }
     }
     // TODO:考慮是否獨立出來
-    .swiper-button-next{
+    .swiper-button-next {
       width: 40px;
       height: 40px;
       top: 30%;
       transform: translateX(20%);
-      &::after{
+      &::after {
         font-size: 16px;
         font-weight: bold;
       }
-    
     }
   }
   &__destinations {
-    .inner{
-      &__img{
+    .inner {
+      &__img {
         position: relative;
-        &::after{
+        &::after {
           position: absolute;
-          content: '';
+          content: "";
           top: 0;
           bottom: 0;
           right: 0;
           left: 0;
           border-radius: 8px;
-          background:linear-gradient(270deg, #00000000 0%, #000000 100%);
+          background: linear-gradient(270deg, #00000000 0%, #000000 100%);
         }
         // TODO:圖片或許可以獨立出來使用
-        &__Osaka{
+        &__Osaka {
           background-image: url("../images/Osaka.jpg");
         }
-        &__Kyoto{
+        &__Kyoto {
           background-image: url("../images/Kyoto.jpg");
         }
-        &__Reykjavic{
+        &__Reykjavic {
           background-image: url("../images/Reykjavic.jpg");
         }
-        &__Paris{
+        &__Paris {
           background-image: url("../images/Paris.jpg");
         }
-        &__Roma{
+        &__Roma {
           background-image: url("../images/Roman.jpg");
         }
-        &__Bangkok{
+        &__Bangkok {
           background-image: url("../images/Bangkok.jpg");
         }
       }
-      &__text{
+      &__text {
         text-align: left;
         z-index: 9;
       }
     }
-    .btn{
-      &:focus{
-        box-shadow:none;
+    .btn {
+      &:focus {
+        box-shadow: none;
       }
     }
   }
@@ -139,23 +170,33 @@
       }
     }
   }
-  &__resultList{
-    a.nav-link{
-      color: map-get($theme-colors , info );
-      &.active{
-        color: map-get($theme-colors , primary );
+  &__resultList {
+    a.nav-link {
+      color: map-get($theme-colors, info);
+      &.active {
+        color: map-get($theme-colors, primary);
       }
     }
-    .inner{
-      &__item{
+    .inner {
+      &__item {
         margin: 0px -15px;
-        border-bottom: 4px solid map-get($theme-colors , secondary );
+        border-bottom: 4px solid map-get($theme-colors, secondary);
         @include media-breakpoint-up(sm) {
           margin: 0px;
-          border-bottom: 1px solid map-get($theme-colors , dark );
+          border-bottom: 1px solid map-get($theme-colors, dark);
         }
       }
-      &__img{
+      &__link {
+        &:hover {
+          border-radius: 8px;
+          box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.075);
+          transition: all 0.35s;
+          .inner__title {
+            text-decoration: underline;
+          }
+        }
+      }
+      &__img {
         width: 150px;
         height: 150px;
         border-radius: 0;
@@ -167,39 +208,39 @@
           height: 175px;
         }
       }
-      &__price{
+      &__price {
         position: relative;
         font-size: 16px;
-        @include media-breakpoint-up(lg){
+        @include media-breakpoint-up(lg) {
           font-size: 24px;
-          &::before{
+          &::before {
             position: absolute;
-            content: 'per night';
+            content: "per night";
             font-size: 12px;
             color: #00000099;
-            top:-15px;
+            top: -15px;
             right: 0;
           }
         }
-        &.active{
-          color: map-get($theme-colors , primary );
-          &::before{
-            top:-40px;
+        &.active {
+          color: map-get($theme-colors, primary);
+          &::before {
+            top: -40px;
           }
         }
-        &__origin{
+        &__origin {
           position: absolute;
           font-size: 12px;
           color: #00000099;
           width: 100%;
           top: -15px;
           right: 0;
-          @include media-breakpoint-up(md){
-           top: -20px;
-           font-size: 14px;
+          @include media-breakpoint-up(md) {
+            top: -20px;
+            font-size: 14px;
           }
-          @include media-breakpoint-up(lg){
-           font-size: 16px;
+          @include media-breakpoint-up(lg) {
+            font-size: 16px;
           }
         }
       }
@@ -212,4 +253,3 @@
     }
   }
 }
-
