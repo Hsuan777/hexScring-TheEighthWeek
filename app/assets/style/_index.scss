@@ -15,14 +15,7 @@
       margin-top: 58px;
       .inner{
         &__searchBtn {
-          width: 180px;
           transition: all 0.35s;
-          @include media-breakpoint-up(lg) {
-            width: 252px;
-          }
-          @include media-breakpoint-up(xl) {
-            width: 312px;
-          }
           &__text {
             position: absolute;
             top:0px;

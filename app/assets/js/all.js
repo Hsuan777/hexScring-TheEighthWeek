@@ -27,7 +27,7 @@ $(document).ready(() => {
     }
   });
   var swiper__inspiration = new Swiper('.section__inspiration .swiper-container', {
-    slidesPerView: 3,
+    slidesPerView: 1,
     spaceBetween: 30,
     loop: true,
     loopFillGroupWithBlank: true,
@@ -42,9 +42,12 @@ $(document).ready(() => {
     breakpoints: {
       576: {
         slidesPerView: 2,
+        slidesPerGroup: 1,
+
       },
       768: {
         slidesPerView: 3,
+        slidesPerGroup: 3,
       },
     }
   });
