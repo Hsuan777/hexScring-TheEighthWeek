@@ -246,6 +246,15 @@
       }
     }
   }
+  &__selectRoom{
+    .inner{
+      &__img{
+        width: 150px;
+        height: 150px;
+        border-radius: 8px 0 0 8px;
+      }
+    }
+  }
   &__subscribe {
     height: 149px;
     @include media-breakpoint-up(md) {
