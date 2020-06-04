@@ -9,80 +9,89 @@ current: result
   <!-- SEARCH -->
   <div class="bg-secondary d-md-block d-none">
     <section class="section__search__result container mb-2 mb-md-3">
-      <div class="form-row justify-content-between py-3">
+      <ul class="list-unstyled d-flex justify-content-between py-3">
         <!-- Destination -->
-        <div class="col-3 ">
-          <div class="inner__btn input-group input-group-lg">
-            <label for="destination" class="input-group-prepend mb-0">
-              <span class="material-icons input-group-text bg-white"> place </span>
-            </label>
-            <button type="button" id="destination" class="form-control h-100 border-left-0 text-left"
-              aria-label="Destination" aria-describedby="basic-addon1">
-              <div class="inner__btn__text">
-                <small class="text-info font-weight-bold">Destination</small>
-                <p class="text-muted">Bangkok, Thailand</p>
-              </div>
-            </button>
-          </div>
-        </div>
+        <li class="inner__searchBtn input-group input-group-lg">
+          <label for="destination" class="input-group-prepend mb-0">
+            <span class="material-icons input-group-text bg-white"> place </span>
+          </label>
+          <button type="button" id="destination" class="form-control h-100 border-left-0 text-left"
+            aria-label="Destination" aria-describedby="basic-addon1">
+            <div class="inner__searchBtn__text">
+              <small class="text-info font-weight-bold">Destination</small>
+              <p class="text-muted">Bangkok, Thailand</p>
+            </div>
+          </button>
+        </li>
+
         <!-- Date Range -->
-        <div class="col-3">
-          <div class="inner__btn input-group input-group-lg">
-            <label for="dateRange" class="input-group-prepend mb-0">
-              <span class="material-icons input-group-text bg-white"> date_range </span>
-            </label>
-            <!-- TODO:日曆 JS -->
-            <button type="button" class="inner__btn h-100 form-control border-left-0 text-left"
-              aria-label="Check-in / Check-out" aria-describedby="basic-addon1">
-              <div class="inner__btn__text">
-                <small class="text-info font-weight-bold">CHECK-IN</small>
-                <p class="text-muted">17 June</p>
-              </div>
-            </button>
-            <button type="button" class="inner__btn h-100 form-control border-left-0 text-left"
-              aria-label="Check-in / Check-out" aria-describedby="basic-addon1">
-              <div class="inner__btn__text">
-                <small class="text-info font-weight-bold">CHECK-OUT</small>
-                <p class="text-muted">19 June</p>
-              </div>
-            </button>
-          </div>
-        </div>
+        <li class="inner__searchBtn input-group input-group-lg">
+          <label for="dateRange" class="input-group-prepend mb-0">
+            <span class="material-icons input-group-text bg-white"> date_range </span>
+          </label>
+          <!-- TODO:日曆 JS -->
+          <button type="button" class="form-control h-100 border-left-0 text-left d-lg-block d-none" aria-label="Check-in / Check-out"
+            aria-describedby="basic-addon1">
+            <div class="inner__searchBtn__text">
+              <small class="text-info font-weight-bold">CHECK-IN</small>
+              <p class="text-muted">17 June</p>
+            </div>
+          </button>
+          <button type="button" class="form-control h-100 border-left-0 text-left d-lg-block d-none rounded-right" aria-label="Check-in / Check-out"
+            aria-describedby="basic-addon1">
+            <div class="inner__searchBtn__text">
+              <small class="text-info font-weight-bold">CHECK-OUT</small>
+              <p class="text-muted">19 June</p>
+            </div>
+          </button>
+          <button type="button" class="form-control h-100 border-left-0 text-left d-lg-none" aria-label="Check-in / Check-out"
+            aria-describedby="basic-addon1">
+            <div class="inner__searchBtn__text">
+              <small class="text-info font-weight-bold">CHECK-IN / OUT</small>
+              <p class="text-muted">17 June - 19 June</p>
+            </div>
+          </button>
+        </li>
+
         <!-- GUESTS -->
-        <div class="col-3">
-          <div class="inner__btn input-group input-group-lg">
-            <label for="person" class="input-group-prepend mb-0">
-              <span class="material-icons input-group-text bg-white"> person </span>
-            </label>
-            <button type="button" id="person" class="form-control h-100 border-left-0 text-left"
-              aria-label="Guests" aria-describedby="basic-addon1">
-              <div class="inner__btn__text">
-                <small class="text-info font-weight-bold">GUESTS</small>
-                <p class="text-muted">2 adults・1 room</p>
-              </div>
-            </button>
-          </div>
-        </div>
-        <div class="col-2">
-          <button type="button" class="btn btn-primary py-2 px-4 border-0"> SEARCH </button>
+        <li class="inner__searchBtn input-group input-group-lg">
+          <label for="person" class="input-group-prepend mb-0">
+            <span class="material-icons input-group-text bg-white"> person </span>
+          </label>
+          <button type="button" id="person" class="form-control h-100 border-left-0 text-left" aria-label="Guests"
+            aria-describedby="basic-addon1">
+            <div class="inner__searchBtn__text">
+              <small class="text-info font-weight-bold">GUESTS</small>
+              <p class="text-muted">2 adults・1 room</p>
+            </div>
+          </button>
+        </li>
+
+        <li>
+          <button type="button" class="btn btn-primary py-2 px-4 border-0 d-lg-block d-none"> SEARCH </button>
           <button type="button" class="btn btn-primary py-2 px-4 border-0 btn-block d-lg-none"> SEARCH </button>
-        </div>
-      </div>
+        </li>
+      </ul>
+
     </section>
   </div>
 
-  <div class="section__search__result container-fluid bg-secondary  p-0 d-md-none">
+  <div class="section__search__result container-fluid bg-secondary p-0 mb-2 mb-md-3 d-md-none">
     <ul class="nav no-gutters justify-content-center align-items-center">
       <li class="col-4">
-        <button class="btn btn-link text-decoration-none text-reset btn-block p-2"><small>Bangkok</small></button>
+        <button class="btn btn-link text-decoration-none text-reset btn-block lineSeparator p-2">
+          <small>Bangkok</small>
+        </button>
       </li>
       <li class="col-4">
-        <button class="btn btn-link text-decoration-none text-reset btn-block p-2 text-nowrap"><small>17 June - 19
-            June</small></button>
+        <button class="btn btn-link text-decoration-none text-reset btn-block lineSeparator p-2 text-nowrap">
+          <small>17 June - 19 June</small>
+        </button>
       </li>
       <li class="col-4">
-        <button class="btn btn-link text-decoration-none text-reset btn-block p-2 text-nowrap"><small>2 adults・1
-            room</small></button>
+        <button class="btn btn-link text-decoration-none text-reset btn-block lineSeparator p-2 text-nowrap">
+          <small>2 adults・1 room</small>
+        </button>
       </li>
       </nav>
     </ul>

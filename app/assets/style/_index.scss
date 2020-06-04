@@ -14,14 +14,25 @@
       // TODO:之後設定為固定，現在方便維護
       margin-top: 58px;
       .inner{
-        &__btn {
-          position: relative;
-          height: 56px;
+        &__searchBtn {
+          width: 180px;
+          transition: all 0.35s;
+          @include media-breakpoint-up(lg) {
+            width: 252px;
+          }
+          @include media-breakpoint-up(xl) {
+            width: 312px;
+          }
           &__text {
             position: absolute;
             top:0px;
             left:0px;
           }
+        }
+      }
+      .lineSeparator{
+        &::before{
+          background-color: white;
         }
       }
     }
@@ -87,6 +98,7 @@
           border-radius: 8px;
           background:linear-gradient(270deg, #00000000 0%, #000000 100%);
         }
+        // TODO:圖片或許可以獨立出來使用
         &__Osaka{
           background-image: url("../images/Osaka.jpg");
         }
@@ -198,11 +210,6 @@
           }
         }
       }
-      // &__badge{
-      //   @include media-breakpoint-only(md){
-      //     font-size: 10px;
-      //   }
-      // }
     }
   }
   &__subscribe {

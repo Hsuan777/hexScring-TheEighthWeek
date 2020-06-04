@@ -9,7 +9,9 @@
 .object--cover {
   object-fit: cover;
 }
-
+.rounded--deepen{
+  border-radius: 8px;
+}
 .modal--fluid {
   max-width: 100%;
   margin: 0;
