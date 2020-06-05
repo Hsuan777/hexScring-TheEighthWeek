@@ -1,0 +1,35 @@
+---
+title: Reservation Details
+layout: ./app/layout.ejs
+engine: ejs
+current: checkout-info
+---
+
+<main>
+  <div class="container mt-6">
+    <div class="row justify-content-center">
+      <div class="col-4">
+        <h2 class="mb-3">Reservation details</h2>
+        <form action="" class="form">
+          <div class="form-group ">
+            <label for="userName" class="mb-0">Name</label>
+            <input type="text" id="userName" class="form-control form-control-lg">
+          </div>
+          <div class="form-group ">
+            <label for="userEmail">Email</label>
+            <input type="email" id="userEmail" class="form-control form-control-lg">
+          </div>
+          <div class="form-group ">
+            <label for="userPhone">Phone (optional)</label>
+            <input type="number" id="userPhone" class="form-control form-control-lg">
+          </div>
+          <input type="submit" value="RESERVE" class="btn btn-primary btn-block btn-lg mb-1">
+          <p class="text--muted text-primary text-center  ">Reserve now, pay at stay</p>
+        </form> 
+      </div>
+      <div class="col-4">
+        
+      </div>
+    </div>
+  </div>
+</main>
