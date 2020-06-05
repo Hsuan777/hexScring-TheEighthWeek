@@ -1,6 +1,8 @@
 .logo {
   @include hidden-text(96px, 24px, url("../images/ic-logo-aloha.svg"));
 }
+
+// 圖片類
 .image--cover {
   background-size: cover;
   background-position: center;
@@ -12,10 +14,14 @@
 .rounded--deepen{
   border-radius: 8px;
 }
+
+// modal
 .modal--fluid {
   max-width: 100%;
   margin: 0;
 }
+
+// 分隔線
 .lineSeparator{
   position: relative;
   &::before{
@@ -28,14 +34,27 @@
     background-color: map-get($theme-colors , secondary );
   }
 }
-.card-columns {
-  @include media-breakpoint-up(md) {
-    column-count: 1;
+
+// swiper 按鈕
+.swiper-button-next {
+  width: 40px;
+  height: 40px;
+  top: 30%;
+  transform: translateX(25%);
+  &::after {
+    font-size: 16px;
+    font-weight: bold;
   }
+}
+
+// 欄位設定
+.card-columns {
   @include media-breakpoint-up(lg) {
     column-count: 2;
   }
 }
+
+
 
 // input[type="range"]::-webkit-slider-runnable-track{
 //   background-color: map-get($theme-colors , primary );

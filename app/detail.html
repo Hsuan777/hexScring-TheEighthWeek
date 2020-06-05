@@ -6,9 +6,9 @@ current: result
 ---
 <main>
 
-  <!-- SEARCH -->
+  <!-- SEARCH Result-->
   <div class="bg-secondary d-md-block d-none">
-    <section class="section__search__result container mb-2 mb-md-3">
+    <section class="section__searchResult container mb-2 mb-md-3">
       <ul class="list-unstyled d-flex justify-content-between py-3">
         <!-- Destination -->
         <li class="inner__searchBtn input-group input-group-lg mr-1 mr-lg-2">
@@ -166,11 +166,11 @@ current: result
         <div class="table-responsive">
           <table class="table table-borderless">
             <thead>
-              <tr>
-                <th class="text-left text-info font-weight-bold pl-0">ROOM TYPE</th>
-                <th class="text-info font-weight-bold">SLEEPS</th>
-                <th class="text-info font-weight-bold">PRICE</th>
-                <th class="text-info font-weight-bold">ROOMS</th>
+              <tr class="border-bottom border-light">
+                <th scope="row" class="text-info font-weight-bold text-left pl-0 w-50">ROOM TYPE</th>
+                <th scope="row" class="text-info font-weight-bold text-center w-25">SLEEPS</th>
+                <th scope="row" class="text-info font-weight-bold text-center w-25">PRICE</th>
+                <th scope="row" class="text-info font-weight-bold text-center">ROOMS</th>
               </tr>
             </thead>
             <tbody>
@@ -178,58 +178,61 @@ current: result
                 <td class="pl-0">
                   <div class="media align-items-center">
                     <img src="assets/images/roomA.jpg" alt="" class="object--cover inner__img">
-                    <div class="media-body pt-1 pl-2">
+                    <div class="media-body  pl-2">
                       <p class="text-info font-weight-bold mb-0">Deluxe Double Room A</p>
                       <small class="mb-2 d-block">1 bed (Queen size)</small>
-                      <ul class="list-unstyled mb-0 w-75 card-columns d-lg-block d-none">
+                      <ul class="list-unstyled mb-0 card-columns d-md-flex  d-lg-block d-none">
                         <li class="d-flex align-items-center mb-1 text-muted">
-                          <span class="material-icons mr-1 text-muted"> wifi </span> Wi-Fi
+                          <span class="material-icons mr-1 text-muted"> wifi </span> 
+                          <span class="d-lg-block d-none">Wi-Fi</span> 
                         </li>
                         <li class="d-flex align-items-center mb-1 text-muted">
-                          <span class="material-icons mr-1 text-muted"> restaurant </span> Breakfast
+                          <span class="material-icons mr-1 text-muted"> restaurant </span> 
+                          <span class="d-lg-block d-none">Breakfast</span> 
                         </li>
                         <li class="d-flex align-items-center mb-1 text-muted">
-                          <span class="material-icons mr-1 text-muted"> tv </span> Television
+                          <span class="material-icons mr-1 text-muted"> tv </span> 
+                          <span class="d-lg-block d-none">Television</span>
+                        </li>
+                        <li class="d-flex align-items-center mb-1 text-muted mr-lg-n2">
+                          <span class="material-icons mr-1 text-muted"> ac_unit </span> 
+                          <span class="d-lg-block d-none">Air Conditioner</span>
                         </li>
                         <li class="d-flex align-items-center mb-1 text-muted">
-                          <span class="material-icons mr-1 text-muted"> ac_unit </span> Air Conditioner
+                          <span class="material-icons mr-1 text-muted"> room_service </span> 
+                          <span class="d-lg-block d-none">Room Service</span>
+
                         </li>
                         <li class="d-flex align-items-center mb-1 text-muted">
-                          <span class="material-icons mr-1 text-muted"> room_service </span> Room Service
-                        </li>
-                        <li class="d-flex align-items-center mb-1 text-muted">
-                          <span class="material-icons mr-1 text-muted"> smoke_free </span> Smoke Free
+                          <span class="material-icons mr-1 text-muted"> smoke_free </span> 
+                          <span class="d-lg-block d-none">Smoke Free</span>
                         </li>
                         <li class="d-flex align-items-center mb-1 text-muted invisible">
                           <span class="material-icons mr-1 text-muted"> smoke_free </span> Smoke Free
-                        </li>
-                      </ul>
-                      <ul class="list-unstyled mb-0 w-75 d-flex d-lg-none">
-                        <li class="d-flex align-items-center text-muted">
-                          <span class="material-icons mr-1 text-muted"> wifi </span>
-                        </li>
-                        <li class="d-flex align-items-center text-muted">
-                          <span class="material-icons mr-1 text-muted"> restaurant </span> 
-                        </li>
-                        <li class="d-flex align-items-center text-muted">
-                          <span class="material-icons mr-1 text-muted"> tv </span>
-                        </li>
-                        <li class="d-flex align-items-center text-muted">
-                          <span class="material-icons mr-1 text-muted"> ac_unit </span>
-                        </li>
-                        <li class="d-flex align-items-center text-muted">
-                          <span class="material-icons mr-1 text-muted"> room_service </span>
-                        </li>
-                        <li class="d-flex align-items-center text-muted">
-                          <span class="material-icons text-muted"> smoke_free </span>
+                          <span class="d-lg-block d-none">Smoke Free</span>
                         </li>
                       </ul>
                     </div>
                   </div>
                 </td>
-                <td class="pl-0"></td>
-                <td class="pl-0"></td>
-                <td class="pl-0"></td>
+                <td class="text-info text-center align-middle">
+                  <span class="material-icons"> person </span>
+                  <span class="material-icons"> person </span>
+                </td>
+                <td class="text-center align-middle">
+                  <p class="mb-0">TWD 1,490</p>
+                </td>
+                <td class="text-center align-middle">
+                  <div class="btn-group align-items-center" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-outline-info border-0 d-flex">
+                      <span class="material-icons"> remove </span>
+                    </button>
+                    <button type="button" class="btn btn-link text-decoration-none" disabled> 0 </button>
+                    <button type="button" class="btn btn-outline-info border-0 d-flex">
+                      <span class="material-icons"> add </span>
+                    </button>
+                  </div>
+                </td>
               </tr>
             </tbody>
           </table>

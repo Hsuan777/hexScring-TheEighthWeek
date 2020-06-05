@@ -1,0 +1,35 @@
+.section {
+  &__detailBanner {
+    .inner {
+      &__img {
+        border-radius: 4px;
+        &__primary {
+          height: 247px;
+          @include media-breakpoint-up(md) {
+            height: 268px;
+          }
+          @include media-breakpoint-up(lg) {
+            height: 434px;
+          }
+        }
+        &__secondary {
+          @include media-breakpoint-up(md) {
+            height: 132px;
+          }
+          @include media-breakpoint-up(lg) {
+            height: 213px;
+          }
+        }
+        &__third {
+          @include media-breakpoint-up(md) {
+            height: 93px;
+          }
+          @include media-breakpoint-up(lg) {
+            height: 151px;
+          }
+        }
+      }
+    }
+  }
+  
+}

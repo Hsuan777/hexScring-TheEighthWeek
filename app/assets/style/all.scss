@@ -51,9 +51,11 @@
 
 @import "mixin";
 @import "base";
-@import "custom";
-@import "index";
+@import "custom-tools";
 @import "checkbox";
+@import "pages/index";
+@import "pages/detail";
+@import "pages/result";
 
 
 

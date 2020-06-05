@@ -1,0 +1,30 @@
+.section{
+  &__subscribe {
+    height: 149px;
+    @include media-breakpoint-up(md) {
+      height: 320px;
+    }
+  }
+  &__searchResult {
+    // TODO:之後設定為固定，現在方便維護
+    margin-top: 58px;
+    .inner {
+      &__searchBtn {
+        transition: all 0.35s;
+        &__text {
+          position: absolute;
+          top: 0px;
+          left: 0px;
+        }
+      }
+    }
+    .lineSeparator {
+      &::before {
+        background-color: white;
+      }
+    }
+  }
+}
+
+
+
