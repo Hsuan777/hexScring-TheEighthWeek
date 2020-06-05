@@ -25,70 +25,7 @@
           }
         }
       }
-      &__img {
-        width: 150px;
-        height: 150px;
-        border-radius: 0;
-        @include media-breakpoint-up(sm) {
-          border-radius: 8px 0px 0px 8px;
-        }
-        @include media-breakpoint-up(lg) {
-          width: 255px;
-          height: 175px;
-        }
-      }
-      &__price {
-        position: relative;
-        font-size: 16px;
-        @include media-breakpoint-up(lg) {
-          font-size: 24px;
-          &::before {
-            position: absolute;
-            content: "per night";
-            font-size: 12px;
-            color: #00000099;
-            top: -15px;
-            right: 0;
-          }
-        }
-        &.active {
-          color: map-get($theme-colors, primary);
-          &::before {
-            top: -40px;
-          }
-        }
-        &__origin {
-          position: absolute;
-          font-size: 12px;
-          color: #00000099;
-          width: 100%;
-          top: -15px;
-          right: 0;
-          @include media-breakpoint-up(md) {
-            top: -20px;
-            font-size: 14px;
-          }
-          @include media-breakpoint-up(lg) {
-            font-size: 16px;
-          }
-        }
-      }
-    }
-  }
-  &__selectRoom{
-    .inner{
-      &__img {
-        width: 150px;
-        height: 150px;
-        border-radius: 0;
-        @include media-breakpoint-up(sm) {
-          border-radius: 8px 0px 0px 8px;
-        }
-        @include media-breakpoint-up(lg) {
-          width: 255px;
-          height: 175px;
-        }
-      }
+      
     }
   }
 }

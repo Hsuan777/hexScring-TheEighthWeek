@@ -76,6 +76,7 @@ current: result
     </section>
   </div>
 
+  <!-- mobile SEARCH  -->
   <div class="section__search__result container-fluid bg-secondary p-0 mb-2 mb-md-3 d-md-none">
     <ul class="nav no-gutters justify-content-center align-items-center">
       <li class="col-4">
@@ -96,7 +97,8 @@ current: result
       </nav>
     </ul>
   </div>
-
+  
+  <!-- Detail Banner -->
   <section class="section__detailBanner container mb-5 mb-lg-6">
     <div class="form-row mb-3">
 
@@ -163,21 +165,21 @@ current: result
         <button class="btn btn-link font-weight-bold text-decoration-none">EDIT DETAIL</button>
       </div>
       <div class="col-12">
-        <div class="table-responsive">
+        <div class="">
           <table class="table table-borderless">
             <thead>
               <tr class="border-bottom border-light">
-                <th scope="row" class="text-info font-weight-bold text-left pl-0 w-50">ROOM TYPE</th>
-                <th scope="row" class="text-info font-weight-bold text-center w-25">SLEEPS</th>
-                <th scope="row" class="text-info font-weight-bold text-center w-25">PRICE</th>
-                <th scope="row" class="text-info font-weight-bold text-center">ROOMS</th>
+                <th scope="row" class="text-info font-weight-bold text-left w-50 px-0">ROOM TYPE</th>
+                <th scope="row" class="text-info font-weight-bold text-center w-25 px-0">SLEEPS</th>
+                <th scope="row" class="text-info font-weight-bold text-center w-25 px-0">PRICE</th>
+                <th scope="row" class="text-info font-weight-bold text-center px-0">ROOMS</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td class="pl-0">
                   <div class="media align-items-center">
-                    <img src="assets/images/roomA.jpg" alt="" class="object--cover inner__img">
+                    <img src="assets/images/roomA.jpg" alt="" class="object--cover product__img">
                     <div class="media-body  pl-2">
                       <p class="text-info font-weight-bold mb-0">Deluxe Double Room A</p>
                       <small class="mb-2 d-block">1 bed (Queen size)</small>
@@ -215,15 +217,20 @@ current: result
                     </div>
                   </div>
                 </td>
-                <td class="text-info text-center align-middle">
+                <td class="text-info text-center text-nowrap align-middle">
                   <span class="material-icons"> person </span>
                   <span class="material-icons"> person </span>
                 </td>
                 <td class="text-center align-middle">
-                  <p class="mb-0">TWD 1,490</p>
+                  <p class="product__price active font-weight-bold mb-0 d-flex flex-column text-info text-nowrap mt-n3">
+                    <del class="product__price__origin text-black-50 mb-n1">TWD 1,600</del>
+                    <span>TWD
+                      <span class="product__price__title"> 1,490 </span>  
+                    </span>
+                  </p>
                 </td>
                 <td class="text-center align-middle">
-                  <div class="btn-group align-items-center" role="group" aria-label="Basic example">
+                  <div class="btn-group btn-group-sm align-items-center" role="group" aria-label="Basic example">
                     <button type="button" class="btn btn-outline-info border-0 d-flex">
                       <span class="material-icons"> remove </span>
                     </button>

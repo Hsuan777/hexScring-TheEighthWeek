@@ -106,7 +106,6 @@ current: result
           <!-- 搜尋地點名稱 -->
           <h2 class="mb-1 mb-md-3">Bangkok<sup class="text-primary">3,240</sup></h2>
           <!-- mobile 功能按鈕 -->
-          <!-- TODO:左右寬度不太對 -->
           <div class="btn-group d-md-none" role="group">
             <button
               class="lineSeparator btn btn-link py-2 px-5 text-info font-weight-bold d-flex align-items-center text-decoration-none rounded-0"
@@ -303,8 +302,8 @@ current: result
           <li class="inner__item pb-sm-3">
             <a href="detail.html" class="inner__link media text-decoration-none">
               <!-- TODO: 圖片可能為輪播 -->
-              <img src="assets/images/Rachada1.jpg" alt="" class="object--cover inner__img">
-              <div class="media-body p-1 p-lg-2">
+              <img src="assets/images/Rachada1.jpg" alt="" class="object--cover product__img">
+              <div class="media-body p-1 pt-lg-2 pl-lg-2">
                 <header class="d-flex flex-column flex-md-row justify-content-between align-items-start">
                   <!-- 項目名稱 -->
                   <div>
@@ -328,14 +327,14 @@ current: result
                 </header>
   
                 <!-- 房型 -->
-                <div class="d-flex flex-column mb-3 mb-sm-2">
+                <div class="d-flex flex-column">
                   <p class="text-muted mb-0 font-weight-bold">Deluxe Double Room</p>
                   <small class="text-black-50">2 guests・1 bed (Queen size)</small>
                 </div>
   
                 <!-- 標籤與價格 -->
                 <footer
-                  class="d-flex justify-content-end justify-content-md-between align-items-end align-items-lg-center">
+                  class="d-flex justify-content-end justify-content-md-between align-items-end align-items-lg-end">
                   <div class="d-none d-md-flex flex-column flex-xl-row">
                     <small class="inner__badge badge badge-pill badge-secondary font-weight-normal mb-1 mb-xl-0 mr-xl-1">
                       Free cancellation
@@ -344,10 +343,11 @@ current: result
                       No prepayment
                     </small>
                   </div>
-                  <h3 class="inner__price mb-0  mr-sm-0  active">
-                    <span class="text-info">TWD </span>
-                    <del class="inner__price__origin text-right">TWD 1,980</del>
-                    1,980
+                  <h3 class="product__price active mb-0 mr-sm-0 d-flex flex-column ">
+                    <p><del class="product__price__origin text-right text-black-50">TWD 1,980</del></p> 
+                    <span>TWD
+                      <span class="product__price__title"> 1,980 </span>  
+                    </span>
                   </h3>
                 </footer>
               </div>

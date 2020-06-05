@@ -31,5 +31,15 @@
       }
     }
   }
-  
+  &__selectRoom{
+    .product{
+      &__price {
+        &::before {
+          top: 45px;
+          right: 0;
+          left: 0;
+        }
+      }
+    }
+  }
 }
