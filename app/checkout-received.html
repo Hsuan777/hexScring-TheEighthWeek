@@ -1,0 +1,49 @@
+---
+title: Reservation Received
+layout: ./app/layout.ejs
+engine: ejs
+current: checkout-received
+---
+
+<main>
+  <div class="container mb-5">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-10">
+        <h2 class="mb-3 mb-lg-4">Reservation received!</h2>
+        <!-- User info -->
+        <dl class="row border-top border-light mb-0 py-3">
+          <dt class="col-sm-3">Guest</dt>
+          <dd class="col-sm-9 mb-2">David Lin</dd>
+          <dt class="col-sm-3">Email</dt>
+          <dd class="col-sm-9 mb-2 d-flex flex-column flex-md-row">david0520@mail.com.tw 
+            <a href="" class="ml-md-2"><small class="text-primary">Confirmation email sent to this address</small></a> 
+          </dd>
+          <dt class="col-sm-3">phone</dt>
+          <dd class="col-sm-9">+886 9 32 456 789</dd>
+        </dl>
+        <!-- Room -->
+        <dl class="row border-top border-light mb-0 py-3">
+          <dt class="col-sm-3">Room</dt>
+          <dd class="col-sm-9 mb-0">Deluxe Suite with Pool / 2 nights</dd>
+        </dl>
+        <!-- Date -->
+        <dl class="row border-top border-bottom border-light mb-3 py-3">
+          <dt class="col-sm-3">check-In</dt>
+          <dd class="col-sm-9 mb-2">Wednesday, 17 June 2020</dd>
+          <dt class="col-sm-3">check-Out</dt>
+          <dd class="col-sm-9">Friday, 19 June 2020</dd>
+        </dl>
+        <div class="d-flex flex-column flex-md-row justify-content-md-end">
+          <!-- btn-block會固定滿版 -->
+          <button class="btn btn-outline-primary d-flex justify-content-center py-2 px-4 mr-1 mb-1 mb-md-0 ">
+            EDIT RESERVATION
+          </button>
+          <button class="btn btn-primary py-2 px-4">
+            HOMEPAGE
+          </button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</main>
