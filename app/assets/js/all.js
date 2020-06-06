@@ -73,4 +73,12 @@ $(document).ready(() => {
     }
   });
   
+  $(".js-btn").click(function () {
+    $(this).find('.js-btn__info').toggleClass('invisible');
+    if($(this).find(".js-btn__more").text()!="expand_less"){
+      $(this).find(".js-btn__more").text("expand_less");
+    }else{
+      $(this).find(".js-btn__more").text("expand_more");
+    }
+  });
 });
