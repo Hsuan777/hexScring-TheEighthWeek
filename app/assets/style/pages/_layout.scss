@@ -37,6 +37,13 @@
       width: 255px;
       height: 175px;
     }
+    &__booking{
+      @include media-breakpoint-down(sm) {
+        width: 330px;
+        height: 226px;
+        border-radius: 8px 8px 0px 0px;
+      }
+    }
   }
   &__price {
     position: relative;

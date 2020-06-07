@@ -81,4 +81,15 @@ $(document).ready(() => {
       $(this).find(".js-btn__more").text("expand_more");
     }
   });
+  $( window ).resize(function() {
+    if ($( window ).width() < 576) {
+      $('.js-myBooking__item').addClass(' bg-secondary rounded--deepen');
+      $('.js-myBooking__item').removeClass('border-bottom');
+    } else {
+      $('.js-myBooking__item').removeClass('bg-secondary rounded--deepen border-bottom');
+    }
+    if ($( window ).width() > 576) {
+      $('.js-myBooking__item').addClass('border-bottom');
+    } 
+  });
 });
