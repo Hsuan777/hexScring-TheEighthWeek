@@ -36,37 +36,48 @@ current: index
   <section class="section__search container">
     <div class="row no-gutters justify-content-center">
       <div class="col-10 bg-secondary rounded--deepen">
-        <!-- TODO: flex-column設定下，高度不對 -->
         <ul class="list-unstyled d-flex flex-column flex-lg-row justify-content-lg-between p-3 mb-0">
-          <li class="input-group input-group-lg mr-0 mr-lg-2 mb-2 mb-lg-0">
-            <label for="destination" class="input-group-prepend mb-0">
-              <span class="material-icons input-group-text bg-white"> place </span>
-            </label>
-            <input type="text" id="destination" class="form-control border-left-0 pl-0 py-2 py-lg-0 h-100 " placeholder="Destination"
-              aria-label="Destination" aria-describedby="basic-addon1">
+          <!-- TODO:下拉式選單 -->
+          <li class="dropdown w-100 mr-2 mb-2 mb-lg-0">
+            <button class="btn btn-link btn-block bg-white text-black-50 border-0 py-2 d-flex text-decoration-none" type="button" id="dropdownMenuButton"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="material-icons text-info mr-2"> place </span> Destination
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
           </li>
-          <li class="input-group input-group-lg mr-0 mr-lg-2 mb-2 mb-lg-0">
-            <label for="dateRange" class="input-group-prepend mb-0">
-              <span class="material-icons input-group-text bg-white"> date_range </span>
-            </label>
-            <!-- TODO:日曆 JS -->
-            <input type="text" id="dateRange" class="form-control border-left-0 pl-0 py-2 py-lg-0 h-100 " placeholder="Check-in / Check-out"
-              aria-label="Check-in / Check-out" aria-describedby="basic-addon1">
+           <!-- TODO:日曆 JS -->
+          <li class="dropdown w-100 mr-2 mb-2 mb-lg-0">
+            <button class="btn btn-link btn-block bg-white text-black-50 border-0 py-2  d-flex text-decoration-none" type="button" id="dropdownMenuButton"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="material-icons text-info mr-2"> date_range </span>  Check-in / Check-out
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              
+            </div>
           </li>
-          <li class="input-group input-group-lg  mr-0 mr-lg-2 mb-2 mb-lg-0">
-            <label for="person" class="input-group-prepend mb-0 d-flex ">
-              <span class="material-icons input-group-text bg-white"> person </span>
-            </label>
-            <input type="number" id="person" class="form-control border-left-0 pl-0 py-2 py-lg-0 h-100 " placeholder="Guests"
-              aria-label="Guests" aria-describedby="basic-addon1">
+          <li class="dropdown w-100 mr-2 mb-2 mb-lg-0">
+            <button class="btn btn-link btn-block bg-white text-black-50 border-0 py-2  d-flex text-decoration-none" type="button" id="dropdownMenuButton"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="material-icons text-info mr-2"> person </span> Guests
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
           </li>
           <li>
-            <a href="result.html" class="btn btn-primary px-4 py-2 border-0 d-flex justify-content-center"> SEARCH </a>
+            <a href="result.html" class="btn btn-primary px-4 py-2 border-0 font-weight-bold d-flex justify-content-center"> SEARCH </a>
           </li>
         </ul>
       </div>
     </div>
   </section>
+  
 
   <!-- Top Choices -->
   <section class="section__topChoices container mb-5 mb-lg-7">
@@ -91,7 +102,6 @@ current: index
         </div>
       </div>
 
-      <!-- TODO: 寬度比例保持一致 -->
       <div class="swiper-container">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
@@ -100,7 +110,7 @@ current: index
               <div class="card-body pl-0 pt-1">
                 <p class="mb-1 text-info font-weight-bold">Hotel Aqua</p>
                 <p class="mb-1">
-                  <!-- TODO:參考 booking，以 SVG加入  -->
+                  <!-- TODO:參考 booking，以 SVG加入，但比例不太對  -->
                   <span class="text-info">★★★★★</span>
                   5.0
                   <small class="text-muted">・2k reviews</small>

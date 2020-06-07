@@ -30,7 +30,7 @@
 
 <body>
   <!-- TODO:fixed-top -->
-  <nav class="navbar navbar-expand-md navbar-light bg-white align-items-center justify-content-between">
+  <nav class="js-nav navbar navbar-expand-md navbar-light bg-white align-items-center justify-content-between fixed-top">
     <div class="container">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -56,10 +56,9 @@
             </div>
           </div>
           <a class="nav-item nav-link text-dark font-weight-bold mr-5" href="#">Sign up</a>
-          <a class="nav-item nav-link text-dark font-weight-bold d-md-block d-none" href="#">Login</a>
+          <a class="nav-item nav-link text-dark font-weight-bold d-md-block d-none" href="login.html">Login</a>
         </div>
       </div>
-
     </div>
   </nav>
 
@@ -68,32 +67,34 @@
 
   <footer>
     <!-- 頁尾 訂閱區塊 -->
-    <section class="section__subscribe bg-secondary d-flex align-items-center">
-      <div class="container">
-        <form class="row flex-column  align-items-center ">
-          <div class="col-lg-12 col-xl-8 mb-3 ">
-            <h3 class="h1 mb-0 text-center font-weight-bold d-md-block d-none">Subscribe for Exclusive Offer</h3>
-            <h3 class="h3 mb-0 text-center font-weight-bold d-md-none">Subscribe for Exclusive Offer</h3>
-            <!-- TODO:試著使用 label標籤在同樣寬度下會造成文字跑版 -->
-            <!-- <label for="subscribe" class="h3 mb-0 text-center font-weight-bold d-block d-md-none">Subscribe for Exclusive Offer</label> -->
-          </div>
-
-          <div class="col-12 col-md-10 col-lg-6 ">
-            <div class="input-group input-group-lg">
-              <input type="text" id="subscribe" placeholder="Your email address" class="form-control border-0 input-lg"
-                required>
-              <div class="input-group-append">
-                <input class="btn btn-primary btn-lg px-4" type="submit" value="SUBSCRIBE">
+    <div class="js-footer__subscribe">
+      <section class="section__subscribe bg-secondary d-flex align-items-center">
+        <div class="container">
+          <form class="row flex-column  align-items-center ">
+            <div class="col-lg-12 col-xl-8 mb-3 ">
+              <h3 class="h1 mb-0 text-center font-weight-bold d-md-block d-none">Subscribe for Exclusive Offer</h3>
+              <h3 class="h3 mb-0 text-center font-weight-bold d-md-none">Subscribe for Exclusive Offer</h3>
+              <!-- TODO:試著使用 label標籤在同樣寬度下會造成文字跑版 -->
+              <!-- <label for="subscribe" class="h3 mb-0 text-center font-weight-bold d-block d-md-none">Subscribe for Exclusive Offer</label> -->
+            </div>
+  
+            <div class="col-12 col-md-10 col-lg-6 ">
+              <div class="input-group input-group-lg">
+                <input type="text" id="subscribe" placeholder="Your email address" class="form-control border-0 input-lg"
+                  required>
+                <div class="input-group-append">
+                  <input class="btn btn-primary btn-lg px-4" type="submit" value="SUBSCRIBE">
+                </div>
               </div>
             </div>
-          </div>
-
-        </form>
-      </div>
-    </section>
+  
+          </form>
+        </div>
+      </section>
+    </div>
 
     <!-- 頁尾導覽列 -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+    <nav class="js-footer__nav navbar navbar-expand-lg navbar-light bg-white py-3">
       <div class="container">
         <!-- TODO:每頁不一樣 -->
         <ul
@@ -131,9 +132,7 @@
           </li>
         </ul>
       </div>
-
     </nav>
-
   </footer>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

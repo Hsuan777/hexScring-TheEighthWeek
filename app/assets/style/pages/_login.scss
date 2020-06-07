@@ -1,0 +1,14 @@
+.section{
+  &__login{
+    position: relative;
+    &__banner{
+      position: absolute;
+      background-image: url("../images/login.jpg");
+      height: 100vh;
+      top: 0;
+      bottom: 0;
+      left: 0;
+
+    }
+  }
+}
