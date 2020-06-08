@@ -24,26 +24,6 @@
         }
       }
     }
-    .list-group-item {
-      position: relative;
-      &::after {
-        position: absolute;
-        content: "";
-        width: 100%;
-        height: 2px;
-        bottom: 0;
-        left: 0;
-        background: #f1f0f8;
-      }
-    }
-    .list-group-item.active {
-      background-color: white;
-      color: map-get($theme-colors, primary);
-      transition: all 0.35s;
-      &::after {
-        background: map-get($theme-colors, primary);
-      }
-    }
   }
   &__destinations {
     .inner {
@@ -105,6 +85,11 @@
           height: 263px;
         }
       }
+    }
+  }
+  &__subscribe {
+    @include media-breakpoint-up(md) {
+      height: 320px;
     }
   }
 }

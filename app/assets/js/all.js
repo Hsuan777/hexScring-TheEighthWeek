@@ -94,12 +94,11 @@ $(document).ready(() => {
   });
 
   switch($('title').text()){
+    // case "Index":
+    //   $('.js-nav').addClass('fixed-top')
+    //   break; 
     case "Login":
-      $(".section__subscribe").addClass('d-none');
-      $(".js-footer__subscribe").addClass('d-none');
       $(".js-nav").addClass('bg-transparent');
-      $(".js-footer__nav").addClass('d-none');
-
       break; 
   }
   

@@ -1,5 +1,6 @@
 .section{
   &__resultList {
+    // margin-top: 200px;
     a.nav-link {
       color: map-get($theme-colors, info);
       &.active {

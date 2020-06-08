@@ -1,5 +1,5 @@
 ---
-title: index
+title: Index
 layout: ./app/layout.ejs
 engine: ejs
 current: index
@@ -37,47 +37,115 @@ current: index
     <div class="row no-gutters justify-content-center">
       <div class="col-10 bg-secondary rounded--deepen">
         <ul class="list-unstyled d-flex flex-column flex-lg-row justify-content-lg-between p-3 mb-0">
-          <!-- TODO:下拉式選單 -->
+          <!-- Destination btn -->
+          <!-- TODO:圖層被蓋過去了 -->
           <li class="dropdown w-100 mr-2 mb-2 mb-lg-0">
-            <button class="btn btn-link btn-block bg-white text-black-50 border-0 py-2 d-flex text-decoration-none" type="button" id="dropdownMenuButton"
-              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <button class="btn btn-link btn-block bg-white text-black-50 border-0 pl-2 py-2 d-flex text-decoration-none"
+              type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+              data-offset="0,10">
               <span class="material-icons text-info mr-2"> place </span> Destination
             </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
+            <div class="dropdown-menu w-100" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item d-flex justify-content-start pl-2" href="#">
+                <span class="material-icons mr-1"> star </span>
+                <p class="mb-0">Bangkok
+                  <small class="text-black-50 d-block">Thailand</small>
+                </p>
+              </a>
+              <a class="dropdown-item d-flex justify-content-start pl-2" href="#">
+                <span class="material-icons mr-1"> star </span>
+                <p class="mb-0">Kyoto
+                  <small class="text-black-50 d-block"> JAPAN</small>
+                </p>
+              </a>
+              <a class="dropdown-item d-flex justify-content-start pl-2" href="#">
+                <span class="material-icons mr-1"> star </span>
+                <p class="mb-0">Roma
+                  <small class="text-black-50 d-block">Italy</small>
+                </p>
+              </a>
+              <a class="dropdown-item d-flex justify-content-start pl-2" href="#">
+                <span class="material-icons mr-1"> star </span>
+                <p class="mb-0">Paris
+                  <small class="text-black-50 d-block">London</small>
+                </p>
+              </a>
+              <a class="dropdown-item d-flex justify-content-start pl-2" href="#">
+                <span class="material-icons mr-1"> star </span>
+                <p class="mb-0">Reykjavík
+                  <small class="text-black-50 d-block">iceland</small>
+                </p>
+              </a>
             </div>
           </li>
-           <!-- TODO:日曆 JS -->
+          <!-- TODO:日曆 JS -->
           <li class="dropdown w-100 mr-2 mb-2 mb-lg-0">
-            <button class="btn btn-link btn-block bg-white text-black-50 border-0 py-2  d-flex text-decoration-none" type="button" id="dropdownMenuButton"
-              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <span class="material-icons text-info mr-2"> date_range </span>  Check-in / Check-out
+            <button class="btn btn-link btn-block bg-white text-black-50 border-0 pl-2 py-2 d-flex text-decoration-none"
+              type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="material-icons text-info mr-2"> date_range </span> Check-in / Check-out
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              
+
             </div>
           </li>
+
+          <!-- Guests btn -->
           <li class="dropdown w-100 mr-2 mb-2 mb-lg-0">
-            <button class="btn btn-link btn-block bg-white text-black-50 border-0 py-2  d-flex text-decoration-none" type="button" id="dropdownMenuButton"
-              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <button class="btn btn-link btn-block bg-white text-black-50 border-0 pl-2 py-2 d-flex text-decoration-none"
+              type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+              data-offset="0,10">
               <span class="material-icons text-info mr-2"> person </span> Guests
             </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
+            <ul class="dropdown-menu list-unstyled mb-0 w-100" aria-labelledby="dropdownMenuButton">
+              <li class="dropdown-item d-flex justify-content-between align-items-center px-2">
+                <p class="mb-0">Adult</p>
+                <div class="btn-group btn-group-sm align-items-center" role="group" aria-label="Basic example">
+                  <button type="button" class="btn btn-outline-info border-0 d-flex">
+                    <span class="material-icons"> remove </span>
+                  </button>
+                  <button type="button" class="btn btn-link text-decoration-none" disabled> 2 </button>
+                  <button type="button" class="btn btn-outline-info border-0 pr-0 d-flex">
+                    <span class="material-icons"> add </span>
+                  </button>
+                </div>
+              </li>
+              <li class="dropdown-item d-flex justify-content-between align-items-center px-2">
+                <p class="mb-0">Child</p>
+                <div class="btn-group btn-group-sm align-items-center" role="group" aria-label="Basic example">
+                  <button type="button" class="btn btn-outline-info border-0 d-flex">
+                    <span class="material-icons"> remove </span>
+                  </button>
+                  <button type="button" class="btn btn-link text-decoration-none" disabled> 0 </button>
+                  <button type="button" class="btn btn-outline-info border-0 pr-0 d-flex">
+                    <span class="material-icons"> add </span>
+                  </button>
+                </div>
+              </li>
+              <li class="dropdown-item d-flex justify-content-between align-items-center px-2">
+                <p class="mb-0">Room</p>
+                <div class="btn-group btn-group-sm align-items-center" role="group" aria-label="Basic example">
+                  <button type="button" class="btn btn-outline-info border-0 d-flex">
+                    <span class="material-icons"> remove </span>
+                  </button>
+                  <button type="button" class="btn btn-link text-decoration-none" disabled> 1 </button>
+                  <button type="button" class="btn btn-outline-info border-0 pr-0 d-flex">
+                    <span class="material-icons"> add </span>
+                  </button>
+                </div>
+              </li>
+
+            </ul>
           </li>
+          <!-- Search btn -->
           <li>
-            <a href="result.html" class="btn btn-primary px-4 py-2 border-0 font-weight-bold d-flex justify-content-center"> SEARCH </a>
+            <a href="result.html"
+              class="btn btn-primary px-4 py-2 border-0 font-weight-bold d-flex justify-content-center"> SEARCH </a>
           </li>
         </ul>
       </div>
     </div>
   </section>
-  
+
 
   <!-- Top Choices -->
   <section class="section__topChoices container mb-5 mb-lg-7">
@@ -109,11 +177,14 @@ current: index
               <img src="assets/images/top1.jpg" alt="" class="inner__img object--cover rounded--deepen">
               <div class="card-body pl-0 pt-1">
                 <p class="mb-1 text-info font-weight-bold">Hotel Aqua</p>
-                <p class="mb-1">
-                  <!-- TODO:參考 booking，以 SVG加入，但比例不太對  -->
-                  <span class="text-info">★★★★★</span>
+                <p class="mb-1 text-muted d-flex align-items-center">
+                  <span class="material-icons text-info"> star </span>
+                  <span class="material-icons text-info"> star </span>
+                  <span class="material-icons text-info"> star </span>
+                  <span class="material-icons text-info"> star </span>
+                  <span class="material-icons text-info mr-1"> star </span>
                   5.0
-                  <small class="text-muted">・2k reviews</small>
+                  <small class="">・2k reviews</small>
                 </p>
                 <p class="mb-1">TWD 2,480<small class="text-muted ml-1"><del>TWD 3,980</del></small></p>
               </div>
@@ -124,8 +195,11 @@ current: index
               <img src="assets/images/top2.jpg" alt="" class="inner__img object--cover rounded--deepen">
               <div class="card-body pl-0 pt-1">
                 <p class="mb-1 text-info font-weight-bold">Mr. Kawasaki Inn</p>
-                <p class="mb-1">
-                  <span class="text-info">★★★★</span>
+                <p class="mb-1 text-muted d-flex align-items-center">
+                  <span class="material-icons text-info"> star </span>
+                  <span class="material-icons text-info"> star </span>
+                  <span class="material-icons text-info"> star </span>
+                  <span class="material-icons text-info mr-1"> star </span>
                   4.0
                   <small class="text-muted">・500 reviews</small>
                 </p>
@@ -138,8 +212,11 @@ current: index
               <img src="assets/images/top3.jpg" alt="" class="inner__img object--cover rounded--deepen">
               <div class="card-body pl-0 pt-1">
                 <p class="mb-1 text-info font-weight-bold">Weekly Paradise</p>
-                <p class="mb-1">
-                  <span class="text-info">★★★★</span>
+                <p class="mb-1 text-muted d-flex align-items-center">
+                  <span class="material-icons text-info"> star </span>
+                  <span class="material-icons text-info"> star </span>
+                  <span class="material-icons text-info"> star </span>
+                  <span class="material-icons text-info mr-1"> star </span>
                   4.0
                   <small class="text-muted">・470 reviews</small>
                 </p>
@@ -152,8 +229,11 @@ current: index
               <img src="assets/images/top4.jpg" alt="" class="inner__img object--cover  rounded--deepen">
               <div class="card-body pl-0 pt-1">
                 <p class="mb-1 text-info font-weight-bold">Beast Hotel</p>
-                <p class="mb-1">
-                  <span class="text-info">★★★★</span>
+                <p class="mb-1  text-muted d-flex align-items-center">
+                  <span class="material-icons text-info"> star </span>
+                  <span class="material-icons text-info"> star </span>
+                  <span class="material-icons text-info"> star </span>
+                  <span class="material-icons text-info mr-1"> star </span>
                   4.0
                   <small class="text-muted">・283 reviews</small>
                 </p>
@@ -163,12 +243,14 @@ current: index
           </div>
         </div>
         <!-- Add Arrows -->
+        <!-- TODO:位置再往外 -->
         <button class="custom__swiper-button-next swiper-button-next btn btn-secondary btn-sm rounded-circle"> </button>
       </div>
     </div>
   </section>
 
   <!-- Popular Destinations -->
+  <!-- TODO:可以循環，但如何透露一點? -->
   <section class="section__destinations container mb-5 mb-lg-7">
     <h2 class="mb-3 d-md-block d-none">Popular Destinations</h2>
     <h3 class="mb-3 d-md-none">Popular Destinations</h3>
@@ -286,5 +368,25 @@ current: index
 
   </section>
 
+  <!-- 訂閱區塊 -->
+  <section class="section__subscribe bg-secondary d-flex align-items-center py-3">
+    <div class="container">
+      <form class="row flex-column  align-items-center ">
+        <div class="col-lg-12 col-xl-8 mb-3 ">
+          <h3 class="h1 mb-0 text-center font-weight-bold d-md-block d-none">Subscribe for Exclusive Offer</h3>
+          <h3 class="mb-0 text-center font-weight-bold d-md-none">Subscribe for Exclusive Offer</h3>
+        </div>
+        <div class="col-12 col-md-10 col-lg-6 ">
+          <div class="input-group">
+            <input type="text" id="subscribe" placeholder="Your email address" class="form-control py-2 h-100 border-0"
+              required>
+            <div class="input-group-append">
+              <input class="btn btn-primary border-0 px-4" type="submit" value="SUBSCRIBE">
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
 
 </main>

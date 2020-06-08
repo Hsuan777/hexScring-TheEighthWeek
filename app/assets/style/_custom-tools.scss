@@ -37,10 +37,11 @@
   &::before{
     position: absolute;
     content: '';
-    top: 12.5px;
+    top: 10%;
+    bottom:10%;
     right: -1px;
     width: 1px;
-    height: 33px;
+    height: 80%;
     background-color: map-get($theme-colors , secondary );
   }
 }

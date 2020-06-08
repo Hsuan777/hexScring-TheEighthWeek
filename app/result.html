@@ -8,76 +8,145 @@ current: result
 
   <!-- SEARCH -->
   <div class="bg-secondary d-md-block d-none">
-    <section class="section__search__result container mb-2 mb-md-3">
-      <ul class="list-unstyled d-flex justify-content-between py-3">
-        <!-- Destination -->
-        <li class="inner__searchBtn input-group input-group-lg mr-1 mr-lg-2">
-          <label for="destination" class="input-group-prepend mb-0">
-            <span class="material-icons input-group-text bg-white"> place </span>
-          </label>
-          <button type="button" id="destination" class="form-control h-100 border-left-0 text-left"
-            aria-label="Destination" aria-describedby="basic-addon1">
-            <div class="inner__searchBtn__text">
-              <small class="text-info font-weight-bold">Destination</small>
-              <p class="text-muted">Bangkok, Thailand</p>
-            </div>
-          </button>
-        </li>
-
-        <!-- Date Range -->
-        <li class="inner__searchBtn input-group input-group-lg mr-1 mr-lg-2">
-          <label for="dateRange" class="input-group-prepend mb-0">
-            <span class="material-icons input-group-text bg-white"> date_range </span>
-          </label>
-          <!-- TODO:日曆 JS -->
-          <button type="button" class="form-control h-100 border-left-0 text-left d-lg-block d-none" aria-label="Check-in / Check-out"
-            aria-describedby="basic-addon1">
-            <div class="inner__searchBtn__text">
-              <small class="text-info font-weight-bold">CHECK-IN</small>
-              <p class="text-muted">17 June</p>
-            </div>
-          </button>
-          <button type="button" class="form-control h-100 border-left-0 text-left d-lg-block d-none rounded-right" aria-label="Check-in / Check-out"
-            aria-describedby="basic-addon1">
-            <div class="inner__searchBtn__text">
-              <small class="text-info font-weight-bold">CHECK-OUT</small>
-              <p class="text-muted">19 June</p>
-            </div>
-          </button>
-          <button type="button" class="form-control h-100 border-left-0 text-left d-lg-none" aria-label="Check-in / Check-out"
-            aria-describedby="basic-addon1">
-            <div class="inner__searchBtn__text">
-              <small class="text-info font-weight-bold">CHECK-IN / OUT</small>
-              <p class="text-muted">17 June - 19 June</p>
-            </div>
-          </button>
-        </li>
-
-        <!-- GUESTS -->
-        <li class="inner__searchBtn input-group input-group-lg mr-1 mr-lg-2">
-          <label for="person" class="input-group-prepend mb-0">
-            <span class="material-icons input-group-text bg-white"> person </span>
-          </label>
-          <button type="button" id="person" class="form-control h-100 border-left-0 text-left" aria-label="Guests"
-            aria-describedby="basic-addon1">
-            <div class="inner__searchBtn__text">
-              <small class="text-info font-weight-bold">GUESTS</small>
-              <p class="text-muted">2 adults・1 room</p>
-            </div>
-          </button>
-        </li>
-
-        <li>
-          <button type="button" class="btn btn-primary py-2 px-4 border-0 d-lg-block d-none"> SEARCH </button>
-          <button type="button" class="btn btn-primary py-2 px-4 border-0 btn-block d-lg-none"> SEARCH </button>
-        </li>
-      </ul>
-
+    <section class="section__searchResult container mb-3">
+      <div class="row">
+        <div class="col">
+          <ul class="list-unstyled d-flex py-2 py-lg-3 mb-0">
+            <!-- Destination btn -->
+            <li class="dropdown w-100 mr-1 mr-xl-2">
+              <button class="btn btn-link btn-block bg-white border-0 pl-1 pl-xl-2 py-1 d-flex align-items-center text-decoration-none"
+                type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                data-offset="0,10">
+                <span class="material-icons text-info mr-1 mr-xl-2"> place </span> 
+                <p class="mb-0 text-muted text-left text-nowrap d-flex flex-column">
+                  <small class="text-info font-weight-bold">Destination</small>
+                  Bangkok, Thailand
+                </p>
+              </button>
+              <div class="dropdown-menu w-100" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item d-flex justify-content-start pl-2" href="#">
+                  <span class="material-icons mr-1"> star </span>
+                  <p class="mb-0">Bangkok
+                    <small class="text-black-50 d-block">Thailand</small>
+                  </p>
+                </a>
+                <a class="dropdown-item d-flex justify-content-start pl-2" href="#">
+                  <span class="material-icons mr-1"> star </span>
+                  <p class="mb-0">Kyoto
+                    <small class="text-black-50 d-block"> JAPAN</small>
+                  </p>
+                </a>
+                <a class="dropdown-item d-flex justify-content-start pl-2" href="#">
+                  <span class="material-icons mr-1"> star </span>
+                  <p class="mb-0">Roma
+                    <small class="text-black-50 d-block">Italy</small>
+                  </p>
+                </a>
+                <a class="dropdown-item d-flex justify-content-start pl-2" href="#">
+                  <span class="material-icons mr-1"> star </span>
+                  <p class="mb-0">Paris
+                    <small class="text-black-50 d-block">London</small>
+                  </p>
+                </a>
+                <a class="dropdown-item d-flex justify-content-start pl-2" href="#">
+                  <span class="material-icons mr-1"> star </span>
+                  <p class="mb-0">Reykjavík
+                    <small class="text-black-50 d-block">iceland</small>
+                  </p>
+                </a>
+              </div>
+            </li>
+            <!-- TODO:日曆 JS -->
+            <li class="dropdown w-100 mr-1 mr-xl-2">
+              <button class="btn btn-link btn-block bg-white border-0 pl-1 pl-xl-2 py-1 d-flex align-items-center text-decoration-none"
+                type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="0,10">
+                <span class="material-icons text-info mr-1 mr-xl-2"> date_range </span>
+                <p class="mb-0 text-muted text-left text-nowrap d-flex flex-column d-xl-none">
+                  <small class="text-info font-weight-bold">CHECK-IN / OUT</small>
+                  17 June - 19 June
+                </p>
+                <div class="d-xl-block d-none">
+                  <div class="d-flex justify-content-between">
+                    <p class="lineSeparator mb-0 text-muted text-left d-flex flex-column pr-5">
+                      <small class="text-info font-weight-bold d-xl-block d-none">CHECK-IN</small>
+                      17 June
+                    </p>
+                    <p class="mb-0 ml-2 text-muted text-left d-flex flex-column">
+                      <small class="text-info font-weight-bold d-xl-block d-none">CHECK-OUT</small>
+                      19 June
+                    </p>
+                  </div>
+                </div>
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+  
+              </div>
+            </li>
+  
+            <!-- Guests btn -->
+            <li class="dropdown w-100 mr-1 mr-xl-2">
+              <button class="btn btn-link btn-block bg-white border-0 pl-1 pl-xl-2 py-1 d-flex align-items-center text-decoration-none"
+                type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                data-offset="0,10">
+                <span class="material-icons text-info mr-1 mr-xl-2"> person </span> 
+                <p class="mb-0 text-muted text-nowrap d-flex flex-column">
+                  <small class="text-info text-left font-weight-bold">Guests</small>
+                  2 adults・1 room
+                </p>
+              </button>
+              <ul class="dropdown-menu list-unstyled mb-0 w-100" aria-labelledby="dropdownMenuButton">
+                <li class="dropdown-item d-flex justify-content-between align-items-center px-2">
+                  <p class="mb-0">Adult</p>
+                  <div class="btn-group btn-group-sm align-items-center" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-outline-info border-0 d-flex">
+                      <span class="material-icons"> remove </span>
+                    </button>
+                    <button type="button" class="btn btn-link text-decoration-none" disabled> 2 </button>
+                    <button type="button" class="btn btn-outline-info border-0 pr-0 d-flex">
+                      <span class="material-icons"> add </span>
+                    </button>
+                  </div>
+                </li>
+                <li class="dropdown-item d-flex justify-content-between align-items-center px-2">
+                  <p class="mb-0">Child</p>
+                  <div class="btn-group btn-group-sm align-items-center" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-outline-info border-0 d-flex">
+                      <span class="material-icons"> remove </span>
+                    </button>
+                    <button type="button" class="btn btn-link text-decoration-none" disabled> 0 </button>
+                    <button type="button" class="btn btn-outline-info border-0 pr-0 d-flex">
+                      <span class="material-icons"> add </span>
+                    </button>
+                  </div>
+                </li>
+                <li class="dropdown-item d-flex justify-content-between align-items-center px-2">
+                  <p class="mb-0">Room</p>
+                  <div class="btn-group btn-group-sm align-items-center" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-outline-info border-0 d-flex">
+                      <span class="material-icons"> remove </span>
+                    </button>
+                    <button type="button" class="btn btn-link text-decoration-none" disabled> 1 </button>
+                    <button type="button" class="btn btn-outline-info border-0 pr-0 d-flex">
+                      <span class="material-icons"> add </span>
+                    </button>
+                  </div>
+                </li>
+  
+              </ul>
+            </li>
+            <!-- Search btn -->
+            <li>
+              <a href="result.html"
+                class="btn btn-primary px-4 py-2 border-0 font-weight-bold d-flex justify-content-center"> SEARCH </a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </section>
   </div>
 
   <!-- mobile SEARCH  -->
-  <div class="section__search__result container-fluid bg-secondary p-0 mb-2 mb-md-3 d-md-none">
+  <div class="section__searchResult container-fluid bg-secondary p-0 mb-2 mb-md-3 d-md-none">
     <ul class="nav no-gutters justify-content-center align-items-center">
       <li class="col-4">
         <button class="btn btn-link text-decoration-none text-reset btn-block lineSeparator p-2">
@@ -327,14 +396,14 @@ current: result
                 </header>
   
                 <!-- 房型 -->
-                <div class="d-flex flex-column">
+                <div class="d-flex flex-column mb-1">
                   <p class="text-muted mb-0 font-weight-bold">Deluxe Double Room</p>
                   <small class="text-black-50">2 guests・1 bed (Queen size)</small>
                 </div>
   
                 <!-- 標籤與價格 -->
                 <footer
-                  class="d-flex justify-content-end justify-content-md-between align-items-end align-items-lg-end">
+                  class="d-flex justify-content-end justify-content-md-between align-items-end mt-xl-n1">
                   <div class="d-none d-md-flex flex-column flex-xl-row">
                     <small class="inner__badge badge badge-pill badge-secondary font-weight-normal mb-1 mb-xl-0 mr-xl-1">
                       Free cancellation
@@ -343,8 +412,8 @@ current: result
                       No prepayment
                     </small>
                   </div>
-                  <h3 class="product__price active mb-0 mr-sm-0 d-flex flex-column ">
-                    <p><del class="product__price__origin text-right text-black-50">TWD 1,980</del></p> 
+                  <h3 class="product__price active mb-0 mr-sm-0 d-flex flex-column">
+                    <del class="product__price__origin text-right text-black-50">TWD 1,980</del>
                     <span>TWD
                       <span class="product__price__title"> 1,980 </span>  
                     </span>
@@ -565,8 +634,26 @@ current: result
         </div>
       </div>
     </div>
-
   </section>
 
-
+  <!-- 訂閱區塊 -->
+  <section class="bg-secondary py-3">
+    <div class="container">
+      <form class="row justify-content-center align-items-center">
+        <div class="col-md-5">
+          <h2 class="mb-0 font-weight-bold d-md-block d-none">Subscribe for Exclusive Offer</h2>
+          <h3 class="mb-0 font-weight-bold text-center text-md-left d-md-none mb-2 mb-md-0">Subscribe for Exclusive Offer</h3>
+        </div>
+        <div class="col-md-7">
+          <div class="input-group">
+            <input type="text" id="subscribe" placeholder="Your email address" class="form-control py-2 h-100 border-0"
+              required>
+            <div class="input-group-append">
+              <input class="btn btn-primary border-0 px-2 px-md-4" type="submit" value="SUBSCRIBE">
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
 </main>
