@@ -6,96 +6,157 @@ current: detail
 ---
 <main>
 
-  <!-- SEARCH Result-->
+  <!-- SEARCH -->
   <div class="bg-secondary d-md-block d-none">
-    <section class="section__searchResult container mb-2 mb-md-3">
-      <ul class="list-unstyled d-flex justify-content-between py-3">
-        <!-- Destination -->
-        <li class="inner__searchBtn input-group input-group-lg mr-1 mr-lg-2">
-          <label for="destination" class="input-group-prepend mb-0">
-            <span class="material-icons input-group-text bg-white"> place </span>
-          </label>
-          <button type="button" id="destination" class="form-control h-100 border-left-0 text-left"
-            aria-label="Destination" aria-describedby="basic-addon1">
-            <div class="inner__searchBtn__text">
-              <small class="text-info font-weight-bold">Destination</small>
-              <p class="text-muted">Bangkok, Thailand</p>
-            </div>
-          </button>
-        </li>
+    <section class="section__searchResult container mb-3">
+      <div class="row">
+        <div class="col">
+          <ul class="list-unstyled d-flex py-2 py-lg-3 mb-0">
+            <!-- Destination btn -->
+            <li class="dropdown w-100 mr-1 mr-xl-2">
+              <button
+                class="btn btn-link btn-block bg-white border-0 pl-1 pl-xl-2 py-1 d-flex align-items-center text-decoration-none"
+                type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                data-offset="0,10">
+                <span class="material-icons text-info mr-1 mr-xl-2"> place </span>
+                <p class="mb-0 text-muted text-left text-nowrap d-flex flex-column">
+                  <small class="text-info font-weight-bold">Destination</small>
+                  Bangkok, Thailand
+                </p>
+              </button>
+              <div class="dropdown-menu w-100" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item d-flex justify-content-start pl-2" href="#">
+                  <span class="material-icons mr-1"> star </span>
+                  <p class="mb-0">Bangkok
+                    <small class="text-black-50 d-block">Thailand</small>
+                  </p>
+                </a>
+                <a class="dropdown-item d-flex justify-content-start pl-2" href="#">
+                  <span class="material-icons mr-1"> star </span>
+                  <p class="mb-0">Kyoto
+                    <small class="text-black-50 d-block"> JAPAN</small>
+                  </p>
+                </a>
+                <a class="dropdown-item d-flex justify-content-start pl-2" href="#">
+                  <span class="material-icons mr-1"> star </span>
+                  <p class="mb-0">Roma
+                    <small class="text-black-50 d-block">Italy</small>
+                  </p>
+                </a>
+                <a class="dropdown-item d-flex justify-content-start pl-2" href="#">
+                  <span class="material-icons mr-1"> star </span>
+                  <p class="mb-0">Paris
+                    <small class="text-black-50 d-block">London</small>
+                  </p>
+                </a>
+                <a class="dropdown-item d-flex justify-content-start pl-2" href="#">
+                  <span class="material-icons mr-1"> star </span>
+                  <p class="mb-0">Reykjavík
+                    <small class="text-black-50 d-block">iceland</small>
+                  </p>
+                </a>
+              </div>
+            </li>
+            <!-- TODO:日曆 JS -->
+            <li class="dropdown w-100 mr-1 mr-xl-2">
+              <button
+                class="btn btn-link btn-block bg-white border-0 pl-1 pl-xl-2 py-1 d-flex align-items-center text-decoration-none"
+                type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                data-offset="0,10">
+                <span class="material-icons text-info mr-1 mr-xl-2"> date_range </span>
+                <p class="mb-0 text-muted text-left text-nowrap d-flex flex-column d-xl-none">
+                  <small class="text-info font-weight-bold">CHECK-IN / OUT</small>
+                  17 June - 19 June
+                </p>
+                <div class="d-xl-block d-none">
+                  <div class="d-flex justify-content-between">
+                    <p class="lineSeparator mb-0 text-muted text-left d-flex flex-column pr-5">
+                      <small class="text-info font-weight-bold d-xl-block d-none">CHECK-IN</small>
+                      17 June
+                    </p>
+                    <p class="mb-0 ml-2 text-muted text-left d-flex flex-column">
+                      <small class="text-info font-weight-bold d-xl-block d-none">CHECK-OUT</small>
+                      19 June
+                    </p>
+                  </div>
+                </div>
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 
-        <!-- Date Range -->
-        <li class="inner__searchBtn input-group input-group-lg mr-1 mr-lg-2">
-          <label for="dateRange" class="input-group-prepend mb-0">
-            <span class="material-icons input-group-text bg-white"> date_range </span>
-          </label>
-          <!-- TODO:日曆 JS -->
-          <button type="button" class="form-control h-100 border-left-0 text-left d-lg-block d-none"
-            aria-label="Check-in / Check-out" aria-describedby="basic-addon1">
-            <div class="inner__searchBtn__text">
-              <small class="text-info font-weight-bold">CHECK-IN</small>
-              <p class="text-muted">17 June</p>
-            </div>
-          </button>
-          <button type="button" class="form-control h-100 border-left-0 text-left d-lg-block d-none rounded-right"
-            aria-label="Check-in / Check-out" aria-describedby="basic-addon1">
-            <div class="inner__searchBtn__text">
-              <small class="text-info font-weight-bold">CHECK-OUT</small>
-              <p class="text-muted">19 June</p>
-            </div>
-          </button>
-          <button type="button" class="form-control h-100 border-left-0 text-left d-lg-none"
-            aria-label="Check-in / Check-out" aria-describedby="basic-addon1">
-            <div class="inner__searchBtn__text">
-              <small class="text-info font-weight-bold">CHECK-IN / OUT</small>
-              <p class="text-muted">17 June - 19 June</p>
-            </div>
-          </button>
-        </li>
+              </div>
+            </li>
 
-        <!-- GUESTS -->
-        <li class="inner__searchBtn input-group input-group-lg mr-1 mr-lg-2">
-          <label for="person" class="input-group-prepend mb-0">
-            <span class="material-icons input-group-text bg-white"> person </span>
-          </label>
-          <button type="button" id="person" class="form-control h-100 border-left-0 text-left" aria-label="Guests"
-            aria-describedby="basic-addon1">
-            <div class="inner__searchBtn__text">
-              <small class="text-info font-weight-bold">GUESTS</small>
-              <p class="text-muted">2 adults・1 room</p>
-            </div>
-          </button>
-        </li>
+            <!-- Guests btn -->
+            <li class="dropdown w-100 mr-1 mr-xl-2">
+              <button
+                class="btn btn-link btn-block bg-white border-0 pl-1 pl-xl-2 py-1 d-flex align-items-center text-decoration-none"
+                type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                data-offset="0,10">
+                <span class="material-icons text-info mr-1 mr-xl-2"> person </span>
+                <p class="mb-0 text-muted text-nowrap d-flex flex-column">
+                  <small class="text-info text-left font-weight-bold">Guests</small>
+                  2 adults・1 room
+                </p>
+              </button>
+              <ul class="dropdown-menu list-unstyled mb-0 w-100" aria-labelledby="dropdownMenuButton">
+                <li class="dropdown-item d-flex justify-content-between align-items-center px-2">
+                  <p class="mb-0">Adult</p>
+                  <div class="btn-group btn-group-sm align-items-center" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-outline-info border-0 d-flex">
+                      <span class="material-icons"> remove </span>
+                    </button>
+                    <button type="button" class="btn btn-link text-decoration-none" disabled> 2 </button>
+                    <button type="button" class="btn btn-outline-info border-0 pr-0 d-flex">
+                      <span class="material-icons"> add </span>
+                    </button>
+                  </div>
+                </li>
+                <li class="dropdown-item d-flex justify-content-between align-items-center px-2">
+                  <p class="mb-0">Child</p>
+                  <div class="btn-group btn-group-sm align-items-center" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-outline-info border-0 d-flex">
+                      <span class="material-icons"> remove </span>
+                    </button>
+                    <button type="button" class="btn btn-link text-decoration-none" disabled> 0 </button>
+                    <button type="button" class="btn btn-outline-info border-0 pr-0 d-flex">
+                      <span class="material-icons"> add </span>
+                    </button>
+                  </div>
+                </li>
+                <li class="dropdown-item d-flex justify-content-between align-items-center px-2">
+                  <p class="mb-0">Room</p>
+                  <div class="btn-group btn-group-sm align-items-center" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-outline-info border-0 d-flex">
+                      <span class="material-icons"> remove </span>
+                    </button>
+                    <button type="button" class="btn btn-link text-decoration-none" disabled> 1 </button>
+                    <button type="button" class="btn btn-outline-info border-0 pr-0 d-flex">
+                      <span class="material-icons"> add </span>
+                    </button>
+                  </div>
+                </li>
 
-        <li>
-          <button type="button" class="btn btn-primary py-2 px-4 border-0 d-lg-block d-none"> SEARCH </button>
-          <button type="button" class="btn btn-primary py-2 px-4 border-0 btn-block d-lg-none"> SEARCH </button>
-        </li>
-      </ul>
-
+              </ul>
+            </li>
+            <!-- Search btn -->
+            <li>
+              <a href="result-detail.html"
+                class="btn btn-primary px-4 py-2 border-0 font-weight-bold d-flex justify-content-center"> SEARCH </a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </section>
   </div>
 
   <!-- mobile SEARCH  -->
-  <div class="section__search__result container-fluid bg-secondary p-0 mb-2 mb-md-3 d-md-none">
-    <ul class="nav no-gutters justify-content-center align-items-center">
-      <li class="col-4">
-        <button class="btn btn-link text-decoration-none text-reset btn-block lineSeparator p-2">
-          <small>Bangkok</small>
-        </button>
-      </li>
-      <li class="col-4">
-        <button class="btn btn-link text-decoration-none text-reset btn-block lineSeparator p-2 text-nowrap">
-          <small>17 June - 19 June</small>
-        </button>
-      </li>
-      <li class="col-4">
-        <button class="btn btn-link text-decoration-none text-reset btn-block lineSeparator p-2 text-nowrap">
-          <small>2 adults・1 room</small>
-        </button>
-      </li>
-      </nav>
-    </ul>
+  <div class="section__searchResult container-fluid bg-secondary p-0 mb-2 mb-md-3 d-md-none">
+    <div class="container">
+      <a href="result.html" class="btn btn-secondary btn-block py-2 d-flex align-items-center">
+        <span class="material-icons mr-2"> arrow_back </span>
+        <small>Bangkok・17 June - 19 June・2 adults・1 room</small>
+      </a>
+    </div>
   </div>
 
   <!-- Detail Banner -->
@@ -138,8 +199,10 @@ current: detail
             4.0 (283)
           </p>
         </div>
-        <p class="text--muted text-primary mb-3 d-md-block d-none">318 Phaya Thai Road, Ratchathewi, Phaya Thai, 10400 Bangkok, Thailand</p>
-        <small class="text-primary mb-3 d-md-none d-block">318 Phaya Thai Road, Ratchathewi, Phaya Thai, 10400 Bangkok, Thailand</small>
+        <p class="text--muted text-primary mb-3 d-md-block d-none">318 Phaya Thai Road, Ratchathewi, Phaya Thai, 10400
+          Bangkok, Thailand</p>
+        <small class="text-primary mb-3 d-md-none d-block">318 Phaya Thai Road, Ratchathewi, Phaya Thai, 10400 Bangkok,
+          Thailand</small>
         <p class="text-muted mb-0">
           The Rachada Hotel is an establishment that provides paid lodging on a short-term basis. Facilities provided
           may range from a modest-quality mattress in a small room to large suites with bigger, higher-quality beds, a
@@ -151,16 +214,16 @@ current: detail
   </section>
 
   <section class="section__selectRoom container">
+    <h3 class="mb-2 mb-md-3">Select your room</h3>
     <div class="row ">
-      <div class="col-12 mb-5">
-        <h3 class="mb-3">Select your room</h3>
-        <button class="btn btn-secondary mr-1 d-md-inline-block d-none">
+      <div class="col-12 mb-md-5">
+        <button class="btn btn-secondary d-md-inline-block d-none mr-1">
           <div class="text-muted">Bangkok, Thailand</div>
         </button>
-        <button class="btn btn-secondary mr-1 d-md-inline-block d-none">
+        <button class="btn btn-secondary d-md-inline-block d-none mr-1">
           <div class="text-muted">17 June - 19 June・2 nights</div>
         </button>
-        <button class="btn btn-secondary mr-3 d-md-inline-block d-none">
+        <button class="btn btn-secondary d-md-inline-block d-none mr-3 ">
           <div class="text-muted">2 adults・1 room</div>
         </button>
         <button class="btn btn-link font-weight-bold text-decoration-none d-md-inline-block d-none">EDIT DETAIL</button>
@@ -309,7 +372,10 @@ current: detail
             <tr class="border-bottom border-light">
               <td class="pl-0">
                 <div class="media align-items-center">
-                  <img src="assets/images/Rachada1.jpg" alt="" class="object--cover product__img">
+                  <a href="" data-toggle="modal" data-target="#selectRoom">
+                    <img src="assets/images/Rachada1.jpg" alt="" class="object--cover product__img">
+
+                  </a>
                   <div class="media-body  pl-2">
                     <p class="text-info font-weight-bold mb-0">Deluxe Suite with Pool</p>
                     <small class="mb-2 d-block">1 bed (Queen size)</small>
@@ -346,7 +412,7 @@ current: detail
                         <span class="material-icons mr-1 text-muted"> smoke_free </span>
                         <span class="d-lg-block d-none">Smoke Free</span>
                       </li>
-                    
+
                     </ul>
                   </div>
                 </div>
@@ -528,7 +594,6 @@ current: detail
                   <span class="material-icons"> remove </span>
                 </button>
                 <button type="button" class="btn btn-link text-decoration-none" disabled> 0 </button>
-                <!-- TODO:Modal 預定黑底視窗 -->
                 <button type="button" class="btn btn-outline-info border-0 d-flex">
                   <span class="material-icons"> add </span>
                 </button>
@@ -543,6 +608,29 @@ current: detail
         </ul>
       </div>
     </div>
+
+    <!-- selectRoom Modal -->
+    <div class="modal fade" id="selectRoom" tabindex="-1" role="dialog"
+      aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content d-flex">
+          <!-- bg 透明 -->
+          <div class="modal-body d-flex align-items-center p-3">
+            <div class="d-flex flex-column">
+              <small class="text-white-50">1 room・2 night</small>
+              <h3 class="mb-3 text-white">TWD 3,960</h3>
+            </div>
+            <button type="button" class="btn btn-secondary text-white px-4 bg-transparent py-2" data-dismiss="modal" aria-label="Close">
+              CANCEL
+            </button>
+            <a href="" class="btn btn-primary px-4 py-2">
+              RESERVE
+            </a>
+          </div>
+          
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- 訂閱區塊 -->
@@ -551,7 +639,8 @@ current: detail
       <form class="row justify-content-center align-items-center">
         <div class="col-md-5">
           <h2 class="mb-0 font-weight-bold d-md-block d-none">Subscribe for Exclusive Offer</h2>
-          <h3 class="mb-0 font-weight-bold text-center text-md-left d-md-none mb-2 mb-md-0">Subscribe for Exclusive Offer</h3>
+          <h3 class="mb-0 font-weight-bold text-center text-md-left d-md-none mb-2 mb-md-0">Subscribe for Exclusive
+            Offer</h3>
         </div>
         <div class="col-md-7">
           <div class="input-group">

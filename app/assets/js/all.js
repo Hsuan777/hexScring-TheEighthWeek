@@ -94,9 +94,6 @@ $(document).ready(() => {
   });
 
   switch($('title').text()){
-    // case "Index":
-    //   $('.js-nav').addClass('fixed-top')
-    //   break; 
     case "Login":
       $(".js-nav").addClass('bg-transparent');
       break; 
