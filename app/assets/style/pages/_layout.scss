@@ -44,24 +44,26 @@
   &__price {
     position: relative;
     font-size: 16px;
-    @include media-breakpoint-up(md) {
-      font-size: 24px;
-      &::before {
-        position: absolute;
-        content: "per night";
-        font-size: 12px;
-        font-weight: normal;
-        color: #00000099;
-        top: -15px;
-        right: 0;
+    &__title{
+      @include media-breakpoint-up(md) {
+        font-size: 24px;
+        &::before {
+          position: absolute;
+          content: "per night";
+          font-size: 12px;
+          font-weight: normal;
+          color: #00000099;
+          top: -15px;
+          right: 0;
+        }
       }
     }
     &.active {
-      &::before {
-        top: -20px;
-      }
       .product__price__title{
         color: map-get($theme-colors, primary);
+        &::before {
+          top: -20px;
+        }
       }
     }
     &__origin {
