@@ -4,24 +4,66 @@ layout: ./app/layout.ejs
 engine: ejs
 current: login
 ---
-<!-- TODO:應該是 modal -->
+<!-- Logo -->
+<nav class="navbar navbar-expand-md navbar-light align-items-center justify-content-between py-3 fixed-top">
+  <div class="container">
+    <a class="navbar-brand py-0" href="index.html">
+      <h1 class="logo mb-0">ALOHA</h1>
+    </a>
+  </div>
+</nav>
+
 <main>
   <section class="section__login container-fluid">
     <div class="row">
-      <div class="col-7 image--cover section__login__banner d-lg-block d-none">
-        
-      </div>
-      <div class="container mt-7 pt-7">
-        <div class="row">
-          <div class="col-8 d-lg-block d-none">
-            <h2 class="h1 mb-0 font-weight-bold">An ideal hotel makes a wonderful Trip.</h2>
-            <p class="text-muted">Discover your dream destination and hotel on ALOHA.com</p>
-            <a href="" class="btn btn-info  d-inline-flex align-items-center">
+      <div class="section__login__banner image--cover col-md-12 col-lg-7">
+        <!-- 平板登入版型 -->
+        <div class="section__login__info container d-lg-none">
+          <div class="row justify-content-center">
+            <div class="col-12 col-md-6">
+              <h3 class="font-weight-bold">Login</h3>
+              <form action="" class="mb-3">
+                <div class="form-group ">
+                  <label for="userNameLogin" class="mb-0">Name</label>
+                  <input type="text" id="userNameLogin" class="form-control form-control-lg">
+                </div>
+                <div class="form-group ">
+                  <label for="userEmail" class="mb-0">Email</label>
+                  <input type="email" id="userNameLogin" class="form-control form-control-lg">
+                </div>
+                <small class="mb-2 d-block">By signing in or creating an account, you agree with our
+                  <a href="">Terms & Conditions</a> and
+                  <a href="">Privacy Statement</a>
+                </small>
+                <div class="form-group">
+                  <input type="checkbox" id="userRemember" class="checkbox">
+                  <label for="userRemember" class="checkbox__label"> Remember me</label>
+                </div>
+                <input type="submit" class="btn btn-primary btn-block py-2 mb-1" value="LOGIN">
+                <p class="text-muted text-center">Don’t have an account yet? <span
+                    class="text-primary font-weight-bold">Sign up</span></p>
+              </form>
+            </div>
+            <a href="" class="section__login__info__location btn btn-info d-inline-flex align-items-center px-2 text-nowrap">
               <span class="material-icons mr-1"> location_on </span>
               Osaka Castel, Japan
             </a>
           </div>
-          <div class="col-12 col-lg-4">
+        </div>
+      </div>
+      <!-- PC 登入版型 -->
+      <div class="section__login__info container d-lg-block d-none">
+        <div class="row">
+          <div class="col-8">
+            <h2 class="h1 mb-0 font-weight-bold">An ideal hotel makes a wonderful Trip.</h2>
+            <p class="text-muted">Discover your dream destination and hotel on ALOHA.com</p>
+            <a href="" class="section__login__info__location btn btn-info  d-inline-flex align-items-center">
+              <span class="material-icons mr-1"> location_on </span>
+              Osaka Castel, Japan
+            </a>
+          </div>
+          <!-- TODO: mobile是 modal 其他是網頁 -->
+          <div class="col-4">
             <h3 class="font-weight-bold">Login</h3>
             <form action="" class="mb-3">
               <div class="form-group ">
@@ -37,15 +79,15 @@ current: login
                 <a href="">Privacy Statement</a>
               </small>
               <div class="form-group">
-                <input type="checkbox" id="userRemember" class="checkbox" >
+                <input type="checkbox" id="userRemember" class="checkbox">
                 <label for="userRemember" class="checkbox__label"> Remember me</label>
               </div>
               <input type="submit" class="btn btn-primary btn-block py-2 mb-1" value="LOGIN">
-              <p class="text-muted text-center">Don’t have an account yet? <span class="text-primary font-weight-bold">Sign up</span></p>
+              <p class="text-muted text-center">Don’t have an account yet? <span
+                  class="text-primary font-weight-bold">Sign up</span></p>
             </form>
           </div>
         </div>
-
       </div>
     </div>
   </section>

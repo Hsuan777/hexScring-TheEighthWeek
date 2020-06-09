@@ -4,11 +4,32 @@
     &__banner{
       position: absolute;
       background-image: url("../images/login.jpg");
-      height: 100vh;
+      min-height: 800px;
+      // height: 100vh;
       top: 0;
       bottom: 0;
       left: 0;
-
+      right: 0;
     }
+    &__info{
+      position: relative;
+      margin-top: 96px;
+      @include media-breakpoint-up(lg){
+        margin-top: 176px;
+      }
+      &__location{
+        position: absolute;
+        bottom: -60%;
+        left: 50%;
+        transform: translateX(-50%);
+        @include media-breakpoint-up(lg){
+          bottom: -40%;
+          left: 0;
+          transform: translateX(0);
+        }
+        
+      }
+    }
+    
   }
 }

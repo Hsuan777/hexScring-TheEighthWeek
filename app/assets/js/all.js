@@ -95,7 +95,9 @@ $(document).ready(() => {
 
   switch($('title').text()){
     case "Login":
-      $(".js-nav").addClass('bg-transparent');
+      // $(".js-nav").addClass('bg-transparent');
+      $(".js-nav").hide();
+      $(".js-footer__nav").hide();
       break; 
   }
   

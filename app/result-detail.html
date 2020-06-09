@@ -374,7 +374,6 @@ current: detail
                 <div class="media align-items-center">
                   <a href="" data-toggle="modal" data-target="#selectRoom">
                     <img src="assets/images/Rachada1.jpg" alt="" class="object--cover product__img">
-
                   </a>
                   <div class="media-body  pl-2">
                     <p class="text-info font-weight-bold mb-0">Deluxe Suite with Pool</p>
@@ -551,7 +550,9 @@ current: detail
           <li class="card border-bottom-0 mb-1">
             <div class="card-body p-0">
               <div class="media align-items-center">
-                <img src="assets/images/Rachada1.jpg" alt="" class="object--cover product__img">
+                <a href="" data-toggle="modal" data-target="#selectRoom">
+                  <img src="assets/images/Rachada1.jpg" alt="" class="object--cover product__img">
+                </a>
                 <div class="media-body px-1">
                   <p class="text-info font-weight-bold mb-0">Deluxe Suite with Pool</p>
                   <small class="mb-1 d-block">1 bed (Queen size)</small>
@@ -593,7 +594,7 @@ current: detail
                 <button type="button" class="btn btn-outline-info border-0 d-flex">
                   <span class="material-icons"> remove </span>
                 </button>
-                <button type="button" class="btn btn-link text-decoration-none" disabled> 0 </button>
+                <button type="button" class="btn btn-link text-decoration-none" disabled> 1 </button>
                 <button type="button" class="btn btn-outline-info border-0 d-flex">
                   <span class="material-icons"> add </span>
                 </button>
@@ -610,26 +611,26 @@ current: detail
     </div>
 
     <!-- selectRoom Modal -->
-    <div class="modal bottom fade" id="selectRoom" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    <div class="modal bottom fade" id="selectRoom" tabindex="-1" role="dialog" aria-labelledby="selectRoom"
       aria-hidden="true">
       <div class="modal-dialog " role="document">
         <div class="modal-content d-flex">
           <div class="container">
-            <!-- bg 透明 -->
-            <div class="modal-body d-flex justify-content-between align-items-center px-0 py-3">
-              <div class="d-flex flex-column">
+            <div class="modal-body d-flex justify-content-between align-items-md-center px-0 py-3 flex-column flex-md-row">
+              <div class="d-flex flex-column justify-content-center align-items-end align-items-md-start mb-3 mb-md-0">
                 <small class="text-white-50">1 room・2 night</small>
-                <h3 class="mb-3 text-white">TWD 3,960</h3>
+                <h3 class="text-white mb-0">TWD 3,960</h3>
               </div>
-              <div class="">
-                <button type="button" class="btn btn-secondary text-white px-4 bg-transparent py-2" data-dismiss="modal"
-                  aria-label="Close">
+              <div class="d-flex">
+                <button type="button" class="btn btn-secondary font-weight-bold text-white bg-transparent w-100 ml-md-auto mr-1 px-4 py-2"
+                  data-dismiss="modal" aria-label="Close">
                   CANCEL
                 </button>
-                <a href="" class="btn btn-primary px-4 py-2">
+                <a href="received.html" class="btn btn-primary font-weight-bold btn-block px-4 py-2">
                   RESERVE
                 </a>
               </div>
+              
             </div>
           </div>
         </div>
