@@ -13,8 +13,6 @@
           }
         }
         &__secondary {
-          max-width: 467px;
-          
           @include media-breakpoint-up(md) {
             height: 132px;
           }
@@ -31,6 +29,18 @@
           }
         }
       }
+    }
+    .custom__swiper-button-next{
+      top: 50%;
+      background-color:transparent;
+      border: 0;
+      color:white;
+    }
+    .custom__swiper-button-prev{
+      top: 50%;
+      background-color:transparent;
+      border: 0;
+      color:white;
     }
   }
   &__selectRoom{

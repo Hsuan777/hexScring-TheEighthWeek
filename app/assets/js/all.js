@@ -1,5 +1,4 @@
 
-
 $(document).ready(() => {
   var swiper__Choices = new Swiper('.section__topChoices .swiper-container', {
     slidesPerView: 1,
@@ -51,7 +50,7 @@ $(document).ready(() => {
       },
     }
   });
-  var swiper__Choices = new Swiper('.section__resultList__sort.swiper-container', {
+  var swiper__resultListSort = new Swiper('.section__resultList__sort.swiper-container', {
     slidesPerView: 3,
     slidesPerGroup: 3,
     spaceBetween: 0,
@@ -72,6 +71,21 @@ $(document).ready(() => {
       },
     }
   });
+  var swiper__detailBanner = new Swiper('.section__detailBanner .swiper-container', {
+    slidesPerView: 1,
+    slidesPerGroup: 1,
+    spaceBetween: 0,
+    loop: false,
+    loopFillGroupWithBlank: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
 
   $(".js-btn").click(function () {
     $(this).find('.js-btn__info').toggleClass('invisible');
@@ -81,6 +95,7 @@ $(document).ready(() => {
       $(this).find(".js-btn__more").text("expand_more");
     }
   });
+  
   $(window).resize(function () {
     if ($(window).width() < 576) {
       $('.js-myBooking__item').addClass(' bg-secondary rounded--deepen');
@@ -113,6 +128,5 @@ $(document).ready(() => {
       $(".js-nav__login").text('David Lin').addClass('dropdown-toggle login__navImage');
       break;
   }
-
+  
 });
-

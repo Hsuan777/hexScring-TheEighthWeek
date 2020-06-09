@@ -160,30 +160,60 @@ current: detail
   </div>
 
   <!-- Detail Banner -->
+  <!-- TODO:高度還差一點 -->
   <section class="section__detailBanner container mb-5 mb-lg-6">
-    <div class="row mb-3 d-md-flex d-md-block d-none">
+    <!-- swiper 輪播 -->
+    <div class="swiper-container d-md-none mb-2">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="assets/images/Rachada1.jpg" alt="" class="object--cover inner__img__primary w-100 rounded">
+          
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/images/Rachada2.jpg" alt="" class="object--cover inner__img__primary w-100 rounded">
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/images/Rachada3.jpg" alt="" class="object--cover inner__img__primary w-100 rounded">
+         
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/images/Rachada4.jpg" alt="" class="object--cover inner__img__primary w-100 rounded">
+        </div>
+
+      </div>
+      <!-- Add Arrows -->
+      <button class="custom__swiper-button-next swiper-button-next btn btn-secondary btn-sm rounded-circle"> </button>
+      <button class="custom__swiper-button-prev swiper-button-prev btn btn-secondary btn-sm rounded-circle"> </button>
+    </div>
+
+    <!-- md 以上顯示 -->
+    <div class="form-row mb-3 d-md-flex d-md-block d-none">
       <div class="col-7">
         <img src="assets/images/Rachada1.jpg" alt="" class="object--cover inner__img__primary w-100 rounded">
       </div>
       <div class="col-5">
         <img src="assets/images/Rachada2.jpg" alt=""
-          class="object--cover inner__img__secondary w-100 rounded mb-25 mb-lg-1">
-        <div class="row">
+          class="object--cover inner__img__secondary rounded mb-1 w-100 mb-lg-1">
+        <div class="form-row">
           <div class="col-6">
             <img src="assets/images/Rachada3.jpg" alt="" class="object--cover inner__img__secondary w-100 rounded">
           </div>
           <div class="col-6">
-            <!-- TODO:高度不太對 -->
             <img src="assets/images/Rachada4.jpg" alt=""
-              class="object--cover inner__img__third w-100 rounded mb-25 mb-lg-1">
-            <button class="btn btn-info btn-sm btn-block py-lg-2 font-weight-bold">
+              class="object--cover inner__img__third w-100 rounded mb-1 mb-lg-1">
+            <button class="btn btn-info btn-sm btn-block py-1 py-lg-2 font-weight-bold border-0">
               <span class="d-lg-block d-none">SEE ALL 10 PHOTOS</span>
-              <small class="d-lg-none">SEE ALL 10 PHOTOS</small>
+              <small class="d-lg-none d-flex justify-content-center">SEE ALL 10 PHOTOS</small>
             </button>
           </div>
         </div>
       </div>
+      
+
+
     </div>
+
+    <!-- 旅館描述 -->
     <div class="row">
       <div class="col-12 col-md-9 col-lg-7">
         <div class="d-flex flex-column flex-md-row">

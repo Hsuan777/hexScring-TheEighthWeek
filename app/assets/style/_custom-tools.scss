@@ -70,6 +70,16 @@
     font-weight: bold;
   }
 }
+.custom__swiper-button-prev{
+  width: 40px;
+  height: 40px;
+  top: 30%;
+  transform: translateX(-25%);
+  &::after {
+    font-size: 16px;
+    font-weight: bold;
+  }
+}
 
 // 欄位設定
 .card-columns {

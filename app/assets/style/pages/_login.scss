@@ -4,8 +4,8 @@
     &__banner{
       position: absolute;
       background-image: url("../images/login.jpg");
-      min-height: 800px;
-      // height: 100vh;
+      // min-height: 800px;
+      height: 100vh;
       top: 0;
       bottom: 0;
       left: 0;
@@ -19,7 +19,7 @@
       }
       &__location{
         position: absolute;
-        bottom: -60%;
+        bottom: -20%;
         left: 50%;
         transform: translateX(-50%);
         @include media-breakpoint-up(lg){
