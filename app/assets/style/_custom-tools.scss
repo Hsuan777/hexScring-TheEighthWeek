@@ -1,12 +1,25 @@
 .logo {
   @include hidden-text(96px, 24px, url("../images/ic-logo-aloha.svg"));
 }
-.login{
-  &__navImage{
-    width: 24;
-    height: 24px;
+.login {
+  &__navImage {
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 24px;
+      height: 24px;
+      background-image: url("../images/sung-wang-g4DgCF90EM4-unsplash.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-radius: 50%;
+      border:2px solid map-get($theme-colors , primary );
+      top: 0;
+      left: -32px;
+    }
   }
-  &__memberImage{
+  &__memberImage {
     width: 64px;
     height: 64px;
   }
@@ -21,10 +34,9 @@
 .object--cover {
   object-fit: cover;
 }
-.rounded--deepen{
+.rounded--deepen {
   border-radius: 8px;
 }
-
 
 // modal
 .modal--fluid {
@@ -33,17 +45,17 @@
 }
 
 // 分隔線
-.lineSeparator{
+.lineSeparator {
   position: relative;
-  &::before{
+  &::before {
     position: absolute;
-    content: '';
+    content: "";
     top: 10%;
-    bottom:10%;
+    bottom: 10%;
     right: -1px;
     width: 1px;
     height: 80%;
-    background-color: map-get($theme-colors , secondary );
+    background-color: map-get($theme-colors, secondary);
   }
 }
 
@@ -65,8 +77,6 @@
     column-count: 2;
   }
 }
-
-
 
 // input[type="range"]::-webkit-slider-runnable-track{
 //   background-color: map-get($theme-colors , primary );

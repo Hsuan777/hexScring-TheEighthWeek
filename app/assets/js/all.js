@@ -52,8 +52,8 @@ $(document).ready(() => {
     }
   });
   var swiper__Choices = new Swiper('.section__resultList__sort.swiper-container', {
-    slidesPerView:3,
-    slidesPerGroup : 3,
+    slidesPerView: 3,
+    slidesPerGroup: 3,
     spaceBetween: 0,
     loop: false,
     loopFillGroupWithBlank: true,
@@ -68,37 +68,51 @@ $(document).ready(() => {
     breakpoints: {
       1199: {
         slidesPerView: 4,
-        slidesPerGroup : 4,
+        slidesPerGroup: 4,
       },
     }
   });
-  
+
   $(".js-btn").click(function () {
     $(this).find('.js-btn__info').toggleClass('invisible');
-    if($(this).find(".js-btn__more").text()!="expand_less"){
+    if ($(this).find(".js-btn__more").text() != "expand_less") {
       $(this).find(".js-btn__more").text("expand_less");
-    }else{
+    } else {
       $(this).find(".js-btn__more").text("expand_more");
     }
   });
-  $( window ).resize(function() {
-    if ($( window ).width() < 576) {
+  $(window).resize(function () {
+    if ($(window).width() < 576) {
       $('.js-myBooking__item').addClass(' bg-secondary rounded--deepen');
       $('.js-myBooking__item').removeClass('border-bottom');
     } else {
       $('.js-myBooking__item').removeClass('bg-secondary rounded--deepen border-bottom');
     }
-    if ($( window ).width() > 576) {
+    if ($(window).width() > 576) {
       $('.js-myBooking__item').addClass('border-bottom');
-    } 
+    }
   });
 
-  switch($('title').text()){
+  switch ($('title').text()) {
+
+    case "Index":
+      $(".js-nav").addClass('fixed-top');
+      break;
+    case "Result":
+      $(".js-nav").addClass('fixed-top');
+      break;
+    case "Result - Detail":
+      $(".js-nav").addClass('fixed-top');
+      break;
     case "Login":
-      // $(".js-nav").addClass('bg-transparent');
       $(".js-nav").hide();
       $(".js-footer__nav").hide();
-      break; 
+      break;
+    case "My Booking":
+      $(".js-nav__signUp").hide();
+      $(".js-nav__login").text('David Lin').addClass('dropdown-toggle login__navImage');
+      break;
   }
-  
+
 });
+
