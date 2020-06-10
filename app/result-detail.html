@@ -57,12 +57,10 @@ current: detail
                 </a>
               </div>
             </li>
-            <!-- TODO:日曆 JS -->
+            <!-- 日曆 -->
             <li class="dropdown w-100 mr-1 mr-xl-2">
-              <button
-                class="btn btn-link btn-block bg-white border-0 pl-1 pl-xl-2 py-1 d-flex align-items-center text-decoration-none"
-                type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                data-offset="0,10">
+              <button class="btn btn-link btn-block bg-white border-0 pl-1 pl-xl-2 py-1 d-flex align-items-center text-decoration-none"
+                type="button" id="dropdownCalendarButton" data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false" data-offset="0,10">
                 <span class="material-icons text-info mr-1 mr-xl-2"> date_range </span>
                 <p class="mb-0 text-muted text-left text-nowrap d-flex flex-column d-xl-none">
                   <small class="text-info font-weight-bold">CHECK-IN / OUT</small>
@@ -81,8 +79,143 @@ current: detail
                   </div>
                 </div>
               </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-
+              <div class="js-calendar__mobileDropdown dropdown-menu mt-1" aria-labelledby="dropdownCalendarButton">
+                <div class="calendar d-flex flex-column flex-lg-row">
+                  <!-- 2020 六月 -->
+                  <div class="calendar__month lineSeparator px-1">
+                    <button class="calendar__monthPrev btn btn-outline-info d-flex border-0">
+                      <span class="material-icons"> chevron_left </span>
+                    </button>
+                    <p class="text-center text-info font-weight-bold w-100 mb-0 py-1">JUNE 2020</p>
+                    <table class="js-calendar__mobileTable table table-borderless mb-0">
+                      <thead >
+                        <tr>
+                          <th scope="row"> S </th>
+                          <th scope="row"> M </th>
+                          <th scope="row"> T </th>
+                          <th scope="row"> W </th>
+                          <th scope="row"> T </th>
+                          <th scope="row"> F </th>
+                          <th scope="row"> S </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td> </td>
+                          <td class="calendar__day"> 1 </td>
+                          <td class="calendar__day"> 2 </td>
+                          <td class="calendar__day"> 3 </td>
+                          <td class="calendar__day"> 4 </td>
+                          <td class="calendar__day"> 5 </td>
+                          <td class="calendar__day"> 6 </td>
+                        </tr>
+                        <tr>
+                          <td class="calendar__day"> 7 </td>
+                          <td class="calendar__day"> 8 </td>
+                          <td class="calendar__day text-primary"> 9 </td>
+                          <td class="calendar__day"> 10 </td>
+                          <td class="calendar__day"> 11 </td>
+                          <td class="calendar__day"> 12 </td>
+                          <td class="calendar__day"> 13 </td>
+                        </tr>
+                        <tr>
+                          <td class="calendar__day">14</td>
+                          <td class="calendar__day">15</td>
+                          <td class="calendar__day">16</td>
+                          <td class="calendar__day calendar__selectDate">17</td>
+                          <td class="calendar__day calendar__selectDate">18</td>
+                          <td class="calendar__day calendar__selectDate">19</td>
+                          <td class="calendar__day calendar__selectDate">20</td>
+                        </tr>
+                        <tr>
+                          <td class="calendar__day">21</td>
+                          <td class="calendar__day">22</td>
+                          <td class="calendar__day">23</td>
+                          <td class="calendar__day">24</td>
+                          <td class="calendar__day">25</td>
+                          <td class="calendar__day">26</td>
+                          <td class="calendar__day">27</td>
+                        </tr>
+                        <tr>
+                          <td class="calendar__day">28</td>
+                          <td class="calendar__day">29</td>
+                          <td class="calendar__day">30</td>
+                          <td class=""></td>
+                          <td class=""></td>
+                          <td class=""></td>
+                          <td class=""></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- 2020 七月 -->
+                  <div class="calendar__month px-1">
+                    <button class="calendar__monthNext btn btn-outline-info d-flex border-0">
+                      <span class=" material-icons"> chevron_right </span>
+                    </button>
+                    <p class="text-center text-info font-weight-bold w-100 mb-0 py-1">JULY 2020</p>
+                    <table class="js-calendar__mobileTable table table-borderless mb-0">
+                      <thead >
+                        <tr>
+                          <th scope="row"> S </th>
+                          <th scope="row"> M </th>
+                          <th scope="row"> T </th>
+                          <th scope="row"> W </th>
+                          <th scope="row"> T </th>
+                          <th scope="row"> F </th>
+                          <th scope="row"> S </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td> </td>
+                          <td> </td>
+                          <td> </td>
+                          <td class="calendar__day"> 1 </td>
+                          <td class="calendar__day"> 2 </td>
+                          <td class="calendar__day"> 3 </td>
+                          <td class="calendar__day"> 4 </td>
+                        </tr>
+                        <tr>
+                          <td class="calendar__day">5</td>
+                          <td class="calendar__day">6</td>
+                          <td class="calendar__day">7</td>
+                          <td class="calendar__day">8</td>
+                          <td class="calendar__day">9</td>
+                          <td class="calendar__day">10</td>
+                          <td class="calendar__day">11</td>
+                        </tr>
+                        <tr>
+                          <td class="calendar__day">12</td>
+                          <td class="calendar__day">13</td>
+                          <td class="calendar__day">14</td>
+                          <td class="calendar__day">15</td>
+                          <td class="calendar__day">16</td>
+                          <td class="calendar__day">17</td>
+                          <td class="calendar__day">18</td>
+                        </tr>
+                        <tr>
+                          <td class="calendar__day">19</td>
+                          <td class="calendar__day">20</td>
+                          <td class="calendar__day">21</td>
+                          <td class="calendar__day">22</td>
+                          <td class="calendar__day">23</td>
+                          <td class="calendar__day">24</td>
+                          <td class="calendar__day">25</td>
+                        </tr>
+                        <tr>
+                          <td class="calendar__day">26</td>
+                          <td class="calendar__day">27</td>
+                          <td class="calendar__day">28</td>
+                          <td class="calendar__day">29</td>
+                          <td class="calendar__day">30</td>
+                          <td class="calendar__day">31</td>
+                          <td class=""></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
               </div>
             </li>
 

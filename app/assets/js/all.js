@@ -106,6 +106,14 @@ $(document).ready(() => {
     if ($(window).width() > 576) {
       $('.js-myBooking__item').addClass('border-bottom');
     }
+
+    if ($(window).width() < 992){
+      $('.js-calendar__mobileDropdown').addClass('w-100');
+      $('.js-calendar__mobileTable').addClass('table-sm');
+    } else{
+      $('.js-calendar__mobileDropdown').removeClass('w-100');
+      $('.js-calendar__mobileTable').removeClass('table-sm');
+    }
   });
 
   switch ($('title').text()) {
