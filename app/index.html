@@ -33,19 +33,18 @@ current: index
   </section>
 
   <!-- SEARCH -->
-  <section class="section__search container">
+  <section class="section__search container mb-5">
     <div class="row no-gutters justify-content-center">
-      <div class="rounded--deepen col-10 bg-secondary">
+      <div class="rounded--deepen col-12 col-md-10 bg-secondary">
         <ul class="list-unstyled d-flex flex-column flex-lg-row justify-content-lg-between p-3 mb-0">
           <!-- Destination btn -->
-          <!-- TODO:圖層被蓋過去了 -->
           <li class="dropdown w-100 mr-2 mb-2 mb-lg-0">
             <button class="btn btn-link btn-block bg-white text-black-50 border-0 pl-2 py-2 d-flex text-decoration-none"
-              type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+              type="button" id="dropdownDestinationButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
               data-offset="0,10">
               <span class="material-icons text-info mr-2"> place </span> Destination
             </button>
-            <div class="dropdown-menu w-100" aria-labelledby="dropdownMenuButton">
+            <div class="dropdown-menu w-100" aria-labelledby="dropdownDestinationButton">
               <a class="dropdown-item d-flex justify-content-start pl-2" href="#">
                 <span class="material-icons mr-1"> star </span>
                 <p class="mb-0">Bangkok
@@ -78,13 +77,13 @@ current: index
               </a>
             </div>
           </li>
-          <!-- TODO:日曆 JS -->
+          
+          <!-- TODO:日曆版型 -->
           <li class="dropdown w-100 mr-2 mb-2 mb-lg-0">
-            <button class="btn btn-link btn-block bg-white d-flex text-black-50 text-nowrap border-0 pl-2 py-2 text-decoration-none"
-              type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <button class="btn btn-link btn-block bg-white d-flex text-black-50 text-nowrap border-0 pl-2 py-2 text-decoration-none" type="button" id="dropdownCalendarButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="0,10">
               <span class="material-icons text-info mr-2"> date_range </span>CHECK-IN / OUT
             </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <div class="dropdown-menu" aria-labelledby="dropdownCalendarButton">
               <div class="date">
                 <header class="d-flex align-items-center">
                   <!-- TODO:用定位 -->
@@ -105,7 +104,7 @@ current: index
                   </thead>
                   <tbody>
                     <tr>
-                      <td>  </td>
+                      <td> </td>
                       <td> 1 </td>
                       <td> 2 </td>
                       <td> 3 </td>
@@ -125,18 +124,18 @@ current: index
                   </tbody>
                 </table>
               </div>
-              
+
             </div>
           </li>
 
           <!-- Guests btn -->
           <li class="dropdown w-100 mr-2 mb-2 mb-lg-0">
             <button class="btn btn-link btn-block bg-white text-black-50 border-0 pl-2 py-2 d-flex text-decoration-none"
-              type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+              type="button" id="dropdownGuestsButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
               data-offset="0,10">
               <span class="material-icons text-info mr-2"> person </span> Guests
             </button>
-            <ul class="dropdown-menu list-unstyled mb-0 w-100" aria-labelledby="dropdownMenuButton">
+            <ul class="dropdown-menu list-unstyled mb-0 w-100" aria-labelledby="dropdownGuestsButton">
               <li class="dropdown-item d-flex justify-content-between align-items-center px-2">
                 <p class="mb-0">Adult</p>
                 <div class="btn-group btn-group-sm align-items-center" role="group" aria-label="Basic example">
@@ -210,82 +209,82 @@ current: index
         </div>
       </div>
 
-      <div class="swiper-container">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div class="card border-0">
-              <img src="assets/images/top1.jpg" alt="" class="inner__img object--cover rounded--deepen">
-              <div class="card-body pl-0 pt-1">
-                <p class="mb-1 text-info font-weight-bold">Hotel Aqua</p>
-                <p class="mb-1 text-muted d-flex align-items-center">
-                  <span class="material-icons text-info"> star </span>
-                  <span class="material-icons text-info"> star </span>
-                  <span class="material-icons text-info"> star </span>
-                  <span class="material-icons text-info"> star </span>
-                  <span class="material-icons text-info mr-1"> star </span>
-                  5.0
-                  <small class="">・2k reviews</small>
-                </p>
-                <p class="mb-1">TWD 2,480<small class="text-muted ml-1"><del>TWD 3,980</del></small></p>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="card border-0">
-              <img src="assets/images/top2.jpg" alt="" class="inner__img object--cover rounded--deepen">
-              <div class="card-body pl-0 pt-1">
-                <p class="mb-1 text-info font-weight-bold">Mr. Kawasaki Inn</p>
-                <p class="mb-1 text-muted d-flex align-items-center">
-                  <span class="material-icons text-info"> star </span>
-                  <span class="material-icons text-info"> star </span>
-                  <span class="material-icons text-info"> star </span>
-                  <span class="material-icons text-info mr-1"> star </span>
-                  4.0
-                  <small class="text-muted">・500 reviews</small>
-                </p>
-                <p class="mb-1">TWD 3,380</p>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="card border-0">
-              <img src="assets/images/top3.jpg" alt="" class="inner__img object--cover rounded--deepen">
-              <div class="card-body pl-0 pt-1">
-                <p class="mb-1 text-info font-weight-bold">Weekly Paradise</p>
-                <p class="mb-1 text-muted d-flex align-items-center">
-                  <span class="material-icons text-info"> star </span>
-                  <span class="material-icons text-info"> star </span>
-                  <span class="material-icons text-info"> star </span>
-                  <span class="material-icons text-info mr-1"> star </span>
-                  4.0
-                  <small class="text-muted">・470 reviews</small>
-                </p>
-                <p class="mb-1">TWD 4,780</p>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="card border-0">
-              <img src="assets/images/top4.jpg" alt="" class="inner__img object--cover  rounded--deepen">
-              <div class="card-body pl-0 pt-1">
-                <p class="mb-1 text-info font-weight-bold">Beast Hotel</p>
-                <p class="mb-1  text-muted d-flex align-items-center">
-                  <span class="material-icons text-info"> star </span>
-                  <span class="material-icons text-info"> star </span>
-                  <span class="material-icons text-info"> star </span>
-                  <span class="material-icons text-info mr-1"> star </span>
-                  4.0
-                  <small class="text-muted">・283 reviews</small>
-                </p>
-                <p class="mb-1">TWD 1,980</p>
-              </div>
+    </div>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="card border-0">
+            <img src="assets/images/top1.jpg" alt="" class="inner__img object--cover rounded--deepen">
+            <div class="card-body pl-0 pt-1">
+              <p class="mb-1 text-info font-weight-bold">Hotel Aqua</p>
+              <p class="mb-1 text-muted d-flex align-items-center">
+                <span class="material-icons text-info"> star </span>
+                <span class="material-icons text-info"> star </span>
+                <span class="material-icons text-info"> star </span>
+                <span class="material-icons text-info"> star </span>
+                <span class="material-icons text-info mr-1"> star </span>
+                5.0
+                <small class="">・2k reviews</small>
+              </p>
+              <p class="mb-1">TWD 2,480<small class="text-muted ml-1"><del>TWD 3,980</del></small></p>
             </div>
           </div>
         </div>
-        <!-- Add Arrows -->
-        <!-- TODO:位置再往外 -->
-        <button class="custom__swiper-button-next swiper-button-next btn btn-secondary btn-sm rounded-circle"> </button>
+        <div class="swiper-slide">
+          <div class="card border-0">
+            <img src="assets/images/top2.jpg" alt="" class="inner__img object--cover rounded--deepen">
+            <div class="card-body pl-0 pt-1">
+              <p class="mb-1 text-info font-weight-bold">Mr. Kawasaki Inn</p>
+              <p class="mb-1 text-muted d-flex align-items-center">
+                <span class="material-icons text-info"> star </span>
+                <span class="material-icons text-info"> star </span>
+                <span class="material-icons text-info"> star </span>
+                <span class="material-icons text-info mr-1"> star </span>
+                4.0
+                <small class="text-muted">・500 reviews</small>
+              </p>
+              <p class="mb-1">TWD 3,380</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card border-0">
+            <img src="assets/images/top3.jpg" alt="" class="inner__img object--cover rounded--deepen">
+            <div class="card-body pl-0 pt-1">
+              <p class="mb-1 text-info font-weight-bold">Weekly Paradise</p>
+              <p class="mb-1 text-muted d-flex align-items-center">
+                <span class="material-icons text-info"> star </span>
+                <span class="material-icons text-info"> star </span>
+                <span class="material-icons text-info"> star </span>
+                <span class="material-icons text-info mr-1"> star </span>
+                4.0
+                <small class="text-muted">・470 reviews</small>
+              </p>
+              <p class="mb-1">TWD 4,780</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card border-0">
+            <img src="assets/images/top4.jpg" alt="" class="inner__img object--cover  rounded--deepen">
+            <div class="card-body pl-0 pt-1">
+              <p class="mb-1 text-info font-weight-bold">Beast Hotel</p>
+              <p class="mb-1  text-muted d-flex align-items-center">
+                <span class="material-icons text-info"> star </span>
+                <span class="material-icons text-info"> star </span>
+                <span class="material-icons text-info"> star </span>
+                <span class="material-icons text-info mr-1"> star </span>
+                4.0
+                <small class="text-muted">・283 reviews</small>
+              </p>
+              <p class="mb-1">TWD 1,980</p>
+            </div>
+          </div>
+        </div>
       </div>
+      <!-- Add Arrows -->
+      <!-- TODO:位置再往外 -->
+      <button class="custom__swiper-button-next swiper-button-next btn btn-secondary btn-sm rounded-circle"> </button>
     </div>
   </section>
 

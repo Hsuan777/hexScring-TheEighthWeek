@@ -6,10 +6,13 @@
     background-image: url("../images/index-banner.jpg");
   }
   &__search {
-    transform: translateY(-25%);
-    @include media-breakpoint-up(lg) {
-      transform: translateY(-50%);
-    }
+    // transform: translateY 會影響 BS元件圖層 ?!
+    // transform: translateY(-25%);
+    // @include media-breakpoint-up(lg) {
+    //   transform: translateY(-50%);
+    // }
+    margin-top: -52px;
+    // margin-bottom: 66px;
   }
   &__topChoices {
     .inner {
