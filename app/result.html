@@ -14,10 +14,11 @@ current: result
           <ul class="list-unstyled d-flex py-2 py-lg-3 mb-0">
             <!-- Destination btn -->
             <li class="dropdown w-100 mr-1 mr-xl-2">
-              <button class="btn btn-link btn-block bg-white border-0 pl-1 pl-xl-2 py-1 d-flex align-items-center text-decoration-none"
-                type="button" id="dropdownDestinationButton" data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false"
-                >
-                <span class="material-icons text-info mr-1 mr-xl-2"> place </span> 
+              <button
+                class="btn btn-link btn-block bg-white border-0 pl-1 pl-xl-2 py-1 d-flex align-items-center text-decoration-none"
+                type="button" id="dropdownDestinationButton" data-toggle="dropdown" data-display="static"
+                aria-haspopup="true" aria-expanded="false">
+                <span class="material-icons text-info mr-1 mr-xl-2"> place </span>
                 <p class="mb-0 text-muted text-left text-nowrap d-flex flex-column">
                   <small class="text-info font-weight-bold">Destination</small>
                   Bangkok, Thailand
@@ -58,8 +59,10 @@ current: result
             </li>
             <!-- 日曆 -->
             <li class="dropdown w-100 mr-1 mr-xl-2">
-              <button class="btn btn-link btn-block bg-white border-0 pl-1 pl-xl-2 py-1 d-flex align-items-center text-decoration-none"
-                type="button" id="dropdownCalendarButton" data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false" data-offset="0,10">
+              <button
+                class="btn btn-link btn-block bg-white border-0 pl-1 pl-xl-2 py-1 d-flex align-items-center text-decoration-none"
+                type="button" id="dropdownCalendarButton" data-toggle="dropdown" data-display="static"
+                aria-haspopup="true" aria-expanded="false" data-offset="0,10">
                 <span class="material-icons text-info mr-1 mr-xl-2"> date_range </span>
                 <p class="mb-0 text-muted text-left text-nowrap d-flex flex-column d-xl-none">
                   <small class="text-info font-weight-bold">CHECK-IN / OUT</small>
@@ -87,7 +90,7 @@ current: result
                     </button>
                     <p class="text-center text-info font-weight-bold w-100 mb-0 py-1">JUNE 2020</p>
                     <table class="js-calendar__mobileTable table table-borderless mb-0">
-                      <thead >
+                      <thead>
                         <tr>
                           <th scope="row"> S </th>
                           <th scope="row"> M </th>
@@ -154,7 +157,7 @@ current: result
                     </button>
                     <p class="text-center text-info font-weight-bold w-100 mb-0 py-1">JULY 2020</p>
                     <table class="js-calendar__mobileTable table table-borderless mb-0">
-                      <thead >
+                      <thead>
                         <tr>
                           <th scope="row"> S </th>
                           <th scope="row"> M </th>
@@ -217,13 +220,14 @@ current: result
                 </div>
               </div>
             </li>
-  
+
             <!-- Guests btn -->
             <li class="dropdown w-100 mr-1 mr-xl-2">
-              <button class="btn btn-link btn-block bg-white border-0 pl-1 pl-xl-2 py-1 d-flex align-items-center text-decoration-none"
-                type="button" id="dropdownGuestsButton" data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false"
-                >
-                <span class="material-icons text-info mr-1 mr-xl-2"> person </span> 
+              <button
+                class="btn btn-link btn-block bg-white border-0 pl-1 pl-xl-2 py-1 d-flex align-items-center text-decoration-none"
+                type="button" id="dropdownGuestsButton" data-toggle="dropdown" data-display="static"
+                aria-haspopup="true" aria-expanded="false">
+                <span class="material-icons text-info mr-1 mr-xl-2"> person </span>
                 <p class="mb-0 text-muted text-nowrap d-flex flex-column">
                   <small class="text-info text-left font-weight-bold">Guests</small>
                   2 adults・1 room
@@ -379,25 +383,21 @@ current: result
 
             <!-- Budget -->
             <p class="text-info font-weight-bold">Budget</p>
-            <!-- TODO:範圍拉條調整 -->
             <ul class="list-unstyled mb-3 pb-3 border-bottom border-white">
-              <li class="form-group">
-                <input type="range" class="form-control-range" value="100" id="budgetRange">
+              <li class="custom__rangeGroup form-group pb-2">
+                <input type="range" class=" form-control-range" min="-50" max="50" step="1" value="-30"
+                  id="budgetRange">
+                <input type="range" class=" form-control-range" min="-50" max="50" step="1" value="20" id="budgetRange">
               </li>
-              <li class="input-group input-group-lg">
-                <button type="button" class="inner__btn form-control border-left-0 p-0 text-left" aria-label="Min Price"
-                  aria-describedby="basic-addon1">
-                  <div class="inner__btn__text">
-                    <small class="text-small text-info font-weight-bold">MIN PRICE</small>
-                    <p class="text-muted mb-0">TWD 800</p>
-                  </div>
+              <li class="btn-group justify-content-between align-items-center w-100">
+                <button type="button" class="btn btn-secondary bg-white text-left border-0 mr-1">
+                  <small class="d-block font-weight-bold">MIN PRICE</small>
+                  <span class="d-block text-muted">TWD 800</span>
                 </button>
-                <button type="button" class="inner__btn form-control border-left-0 p-0 text-left" aria-label="MAX Price"
-                  aria-describedby="basic-addon1">
-                  <div class="inner__btn__text">
-                    <small class="text-small text-info font-weight-bold">MAX PRICE</small>
-                    <p class="text-muted mb-0">TWD 4,000+</p>
-                  </div>
+                <p class="mb-0"> - </p>
+                <button type="button" class="btn btn-secondary bg-white text-left border-0 ml-1">
+                  <small class="d-block font-weight-bold">MAX PRICE</small>
+                  <span class="d-block text-muted">TWD 4,000+</span>
                 </button>
               </li>
             </ul>
@@ -407,36 +407,47 @@ current: result
             <ul class="list-unstyled mb-3 pb-3 border-bottom border-white">
               <li class="form-check pl-0 mb-1">
                 <input class="checkbox form-check-input" type="checkbox" value="" id="fiveRating">
-                <label class="checkbox__label form-check-label" for="fiveRating">
-                  <span class="text-info">★★★★★</span>
+                <label class="checkbox__label form-check-label d-flex align-items-center" for="fiveRating">
+                  <!-- <span class="text-info">★★★★★</span> -->
+                  <span class="material-icons text-info"> star </span>
+                  <span class="material-icons text-info"> star </span>
+                  <span class="material-icons text-info"> star </span>
+                  <span class="material-icons text-info"> star </span>
+                  <span class="material-icons text-info mr-1"> star </span>
                   5.0
                 </label>
               </li>
               <li class="form-check pl-0 mb-1">
                 <input class="checkbox form-check-input" type="checkbox" value="" id="fourRating">
-                <label class="checkbox__label form-check-label" for="fourRating">
-                  <span class="text-info">★★★★</span>
+                <label class="checkbox__label form-check-label d-flex align-items-center" for="fourRating">
+                  <span class="material-icons text-info"> star </span>
+                  <span class="material-icons text-info"> star </span>
+                  <span class="material-icons text-info"> star </span>
+                  <span class="material-icons text-info mr-1"> star </span>
                   4.0
                 </label>
               </li>
               <li class="form-check pl-0 mb-1">
                 <input class="checkbox form-check-input" type="checkbox" value="" id="threeRating">
-                <label class="checkbox__label form-check-label" for="threeRating">
-                  <span class="text-info">★★★</span>
+                <label class="checkbox__label form-check-label d-flex align-items-center" for="threeRating">
+                  <span class="material-icons text-info"> star </span>
+                  <span class="material-icons text-info"> star </span>
+                  <span class="material-icons text-info mr-1"> star </span>
                   3.0
                 </label>
               </li>
               <li class="form-check pl-0 mb-1">
                 <input class="checkbox form-check-input" type="checkbox" value="" id="twoRating">
-                <label class="checkbox__label form-check-label" for="twoRating">
-                  <span class="text-info">★★</span>
+                <label class="checkbox__label form-check-label d-flex align-items-center" for="twoRating">
+                  <span class="material-icons text-info"> star </span>
+                  <span class="material-icons text-info mr-1"> star </span>
                   2.0
                 </label>
               </li>
               <li class="form-check pl-0 mb-1">
                 <input class="checkbox form-check-input" type="checkbox" value="" id="oneRating">
-                <label class="checkbox__label form-check-label" for="oneRating">
-                  <span class="text-info">★</span>
+                <label class="checkbox__label form-check-label d-flex align-items-center" for="oneRating">
+                  <span class="material-icons text-info mr-1"> star </span>
                   1.0
                 </label>
               </li>
@@ -528,18 +539,18 @@ current: result
                     <span>4.0 (283)</span>
                   </p>
                 </header>
-  
+
                 <!-- 房型 -->
                 <div class="d-flex flex-column mb-1">
                   <p class="text-muted mb-0 font-weight-bold">Deluxe Double Room</p>
                   <small class="text-black-50">2 guests・1 bed (Queen size)</small>
                 </div>
-  
+
                 <!-- 標籤與價格 -->
-                <footer
-                  class="d-flex justify-content-end justify-content-md-between align-items-end mt-xl-n1">
+                <footer class="d-flex justify-content-end justify-content-md-between align-items-end mt-xl-n1">
                   <div class="d-none d-md-flex flex-column flex-xl-row">
-                    <small class="inner__badge badge badge-pill badge-secondary font-weight-normal mb-1 mb-xl-0 mr-xl-1">
+                    <small
+                      class="inner__badge badge badge-pill badge-secondary font-weight-normal mb-1 mb-xl-0 mr-xl-1">
                       Free cancellation
                     </small>
                     <small class="inner__badge badge badge-pill badge-secondary font-weight-normal">
@@ -549,7 +560,7 @@ current: result
                   <h3 class="product__price active mb-0 mr-sm-0 d-flex flex-column">
                     <del class="product__price__origin text-right text-black-50">TWD 1,980</del>
                     <span>TWD
-                      <span class="product__price__title"> 1,980 </span>  
+                      <span class="product__price__title"> 1,980 </span>
                     </span>
                   </h3>
                 </footer>
@@ -664,25 +675,22 @@ current: result
 
               <!-- Budget -->
               <p class="text-info font-weight-bold">Budget</p>
-              <!-- TODO:範圍拉條調整 -->
               <ul class="list-unstyled mb-3 pb-3 border-bottom border-white">
-                <li class="form-group">
-                  <input type="range" class="form-control-range" value="100" id="mobile__budgetRange">
+                <li class="custom__rangeGroup form-group pb-2">
+                  <input type="range" class=" form-control-range" min="-50" max="50" step="1" value="-30"
+                    id="budgetRange">
+                  <input type="range" class=" form-control-range" min="-50" max="50" step="1" value="20"
+                    id="budgetRange">
                 </li>
-                <li class="input-group input-group-lg">
-                  <button type="button" class="inner__btn form-control border-left-0 p-0 text-left"
-                    aria-label="Min Price" aria-describedby="basic-addon1">
-                    <div class="inner__btn__text">
-                      <small class="text-small text-info font-weight-bold">MIN PRICE</small>
-                      <p class="text-muted mb-0">TWD 800</p>
-                    </div>
+                <li class="btn-group justify-content-between align-items-center w-100">
+                  <button type="button" class="btn btn-secondary bg-white text-left border-0 mr-1">
+                    <small class="d-block font-weight-bold">MIN PRICE</small>
+                    <span class="d-block text-muted">TWD 800</span>
                   </button>
-                  <button type="button" class="inner__btn form-control border-left-0 p-0 text-left"
-                    aria-label="MAX Price" aria-describedby="basic-addon1">
-                    <div class="inner__btn__text">
-                      <small class="text-small text-info font-weight-bold">MAX PRICE</small>
-                      <p class="text-muted mb-0">TWD 4,000+</p>
-                    </div>
+                  <p class="mb-0"> - </p>
+                  <button type="button" class="btn btn-secondary bg-white text-left border-0 ml-1">
+                    <small class="d-block font-weight-bold">MAX PRICE</small>
+                    <span class="d-block text-muted">TWD 4,000+</span>
                   </button>
                 </li>
               </ul>
@@ -691,43 +699,54 @@ current: result
               <p class="text-info font-weight-bold">Rating</p>
               <ul class="list-unstyled mb-3 pb-3 border-bottom border-white">
                 <li class="form-check pl-0 mb-1">
-                  <input class="checkbox form-check-input" type="checkbox" value="" id="mobile__fiveRating">
-                  <label class="checkbox__label form-check-label" for="mobile__fiveRating">
-                    <span class="text-info">★★★★★</span>
+                  <input class="checkbox form-check-input" type="checkbox" value="" id="fiveRating">
+                  <label class="checkbox__label form-check-label d-flex align-items-center" for="fiveRating">
+                    <!-- <span class="text-info">★★★★★</span> -->
+                    <span class="material-icons text-info"> star </span>
+                    <span class="material-icons text-info"> star </span>
+                    <span class="material-icons text-info"> star </span>
+                    <span class="material-icons text-info"> star </span>
+                    <span class="material-icons text-info mr-1"> star </span>
                     5.0
                   </label>
                 </li>
                 <li class="form-check pl-0 mb-1">
-                  <input class="checkbox form-check-input" type="checkbox" value="" id="mobile__fourRating">
-                  <label class="checkbox__label form-check-label" for="mobile__fourRating">
-                    <span class="text-info">★★★★</span>
+                  <input class="checkbox form-check-input" type="checkbox" value="" id="fourRating">
+                  <label class="checkbox__label form-check-label d-flex align-items-center" for="fourRating">
+                    <span class="material-icons text-info"> star </span>
+                    <span class="material-icons text-info"> star </span>
+                    <span class="material-icons text-info"> star </span>
+                    <span class="material-icons text-info mr-1"> star </span>
                     4.0
                   </label>
                 </li>
                 <li class="form-check pl-0 mb-1">
-                  <input class="checkbox form-check-input" type="checkbox" value="" id="mobile__threeRating">
-                  <label class="checkbox__label form-check-label" for="mobile__threeRating">
-                    <span class="text-info">★★★</span>
+                  <input class="checkbox form-check-input" type="checkbox" value="" id="threeRating">
+                  <label class="checkbox__label form-check-label d-flex align-items-center" for="threeRating">
+                    <span class="material-icons text-info"> star </span>
+                    <span class="material-icons text-info"> star </span>
+                    <span class="material-icons text-info mr-1"> star </span>
                     3.0
                   </label>
                 </li>
                 <li class="form-check pl-0 mb-1">
-                  <input class="checkbox form-check-input" type="checkbox" value="" id="mobile__twoRating">
-                  <label class="checkbox__label form-check-label" for="mobile__twoRating">
-                    <span class="text-info">★★</span>
+                  <input class="checkbox form-check-input" type="checkbox" value="" id="twoRating">
+                  <label class="checkbox__label form-check-label d-flex align-items-center" for="twoRating">
+                    <span class="material-icons text-info"> star </span>
+                    <span class="material-icons text-info mr-1"> star </span>
                     2.0
                   </label>
                 </li>
                 <li class="form-check pl-0 mb-1">
-                  <input class="checkbox form-check-input" type="checkbox" value="" id="mobile__oneRating">
-                  <label class="checkbox__label form-check-label" for="mobile__oneRating">
-                    <span class="text-info">★</span>
+                  <input class="checkbox form-check-input" type="checkbox" value="" id="oneRating">
+                  <label class="checkbox__label form-check-label d-flex align-items-center" for="oneRating">
+                    <span class="material-icons text-info mr-1"> star </span>
                     1.0
                   </label>
                 </li>
                 <li class="form-check pl-0">
-                  <input class="checkbox form-check-input" type="checkbox" value="" id="mobile__Unrated">
-                  <label class="checkbox__label form-check-label" for="mobile__Unrated">
+                  <input class="checkbox form-check-input" type="checkbox" value="" id="Unrated">
+                  <label class="checkbox__label form-check-label" for="Unrated">
                     Unrated
                   </label>
                 </li>
@@ -777,7 +796,8 @@ current: result
       <form class="row justify-content-center align-items-center">
         <div class="col-md-5">
           <h2 class="mb-0 font-weight-bold d-md-block d-none">Subscribe for Exclusive Offer</h2>
-          <h3 class="mb-0 font-weight-bold text-center text-md-left d-md-none mb-2 mb-md-0">Subscribe for Exclusive Offer</h3>
+          <h3 class="mb-0 font-weight-bold text-center text-md-left d-md-none mb-2 mb-md-0">Subscribe for Exclusive
+            Offer</h3>
         </div>
         <div class="col-md-7">
           <div class="input-group">

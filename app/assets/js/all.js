@@ -134,6 +134,13 @@ $(document).ready(() => {
     case "My Booking":
       $(".js-nav__signUp").hide();
       $(".js-nav__login").text('David Lin').addClass('dropdown-toggle login__navImage');
+      $(window).resize(function () {
+        if ($(window).width() < 576) {
+          $(".js-nav__login").text('').removeClass('dropdown-toggle');
+        } else {
+          $(".js-nav__login").text('David Lin').addClass('dropdown-toggle');
+        }
+      });
       break;
   }
   

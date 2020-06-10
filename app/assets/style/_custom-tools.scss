@@ -14,9 +14,12 @@
       background-position: center;
       background-repeat: no-repeat;
       border-radius: 50%;
-      border:2px solid map-get($theme-colors , primary );
-      top: 0;
+      border: 2px solid map-get($theme-colors, primary);
+      top: 0px;
       left: -32px;
+      @include media-breakpoint-up(md){
+        top: 0;
+      }
     }
   }
   &__memberImage {
@@ -60,35 +63,63 @@
 }
 
 // swiper 按鈕
-.custom__swiper-button-next {
-  width: 40px;
-  height: 40px;
-  top: 30%;
-  transform: translateX(25%);
-  &::after {
-    font-size: 16px;
-    font-weight: bold;
+.custom {
+  &__swiper-button-next {
+    width: 40px;
+    height: 40px;
+    top: 30%;
+    transform: translateX(25%);
+    &::after {
+      font-size: 16px;
+      font-weight: bold;
+    }
   }
-}
-.custom__swiper-button-prev{
-  width: 40px;
-  height: 40px;
-  top: 30%;
-  transform: translateX(-25%);
-  &::after {
-    font-size: 16px;
-    font-weight: bold;
+  &__swiper-button-prev {
+    width: 40px;
+    height: 40px;
+    top: 30%;
+    transform: translateX(-25%);
+    &::after {
+      font-size: 16px;
+      font-weight: bold;
+    }
   }
-}
+  &__rangeGroup {
+    // 調整中
+    position: relative;
+    input[type=range] {
+      position: absolute;
+      appearance: none;    /* 重置預設背景拉條 */
+      // overflow: hidden; /* 多的隱藏，但效果不是想要的 */
+      height: 8px;
+      outline: none;       /* 避免點選會有藍線或虛線 */
+      background: none;
+      pointer-events: none;/* 取消可拖曳按鈕，因為點下去不知道哪個按鈕要動 */
+      // 滑動軌道
+      &::-webkit-slider-runnable-track {
+        background-color: map-get($theme-colors, primary);
+        border-radius: 8px;
+        height: 2px;
+      }
+      // 滑動拉霸
+      &::-webkit-slider-thumb {
+        appearance: none;
+        position: relative;
+        top: -7px;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: map-get($theme-colors, primary);
+        pointer-events: auto
+        // ::-webkit-slider-thumb:before似乎沒有效果
+      }
 
+    }
+  }
+}
 // 欄位設定
 .card-columns {
   @include media-breakpoint-up(lg) {
     column-count: 2;
   }
 }
-
-// input[type="range"]::-webkit-slider-runnable-track{
-//   background-color: map-get($theme-colors , primary );
-//   border-radius: 8px;
-// }
