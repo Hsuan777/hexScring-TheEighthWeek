@@ -32,7 +32,6 @@
     font-size: 18px;
   }
 }
-
 // 圖片類
 .image--cover {
   background-size: cover;
@@ -45,11 +44,8 @@
 .rounded--deepen {
   border-radius: 8px;
 }
-
-// modal
-.modal--fluid {
-  max-width: 100%;
-  margin: 0;
+.rounded-top--deepen {
+  border-radius: 8px 8px 0 0;
 }
 
 // 分隔線
@@ -69,6 +65,7 @@
 
 // swiper 按鈕
 .custom {
+  // TODO: swiper-container帶有 overflow:hidden，會蓋掉按鈕
   &__swiper-button-next {
     width: 40px;
     height: 40px;
@@ -128,3 +125,26 @@
     column-count: 2;
   }
 }
+
+// 會跑版
+// .swiper-container {
+//   overflow: visible;
+// }
+// $slide: ".swiper-slide";
+// .swiper-slide {
+//   opacity: 0;
+//   visibility: hidden;
+//   transition: opacity 200ms ease-in-out, visibility 200ms ease-in-out;
+//   &-active {
+//     opacity: 1;
+//     visibility: visible;
+
+//     @for $i from 1 through 3 {
+//       & + #{$slide} {
+//         opacity: 1;
+//         visibility: visible;
+//       }
+//       $slide: "#{$slide} + .swiper-slide";
+//     }
+//   }
+// }

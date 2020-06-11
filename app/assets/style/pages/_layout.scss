@@ -1,26 +1,49 @@
-.section{
-  &__searchResult {
-    margin-top: 72px;
-    .inner {
-      &__searchBtn {
-        transition: all 0.35s;
-        &__text {
-          position: absolute;
-          top: 0px;
-          left: 0px;
+.section {
+  &__login {
+    position: relative;
+    &__banner {
+      position: absolute;
+      background-image: url("../images/login.jpg");
+      // min-height: 800px;
+      height: 100vh;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+    &__info {
+      position: relative;
+      @include media-breakpoint-up(md){
+        margin-top: 96px;
+      }
+      @include media-breakpoint-up(lg) {
+        margin-top: 176px;
+      }
+      &__location {
+        position: absolute;
+        bottom: -20%;
+        left: 50%;
+        transform: translateX(-50%);
+        @include media-breakpoint-up(lg) {
+          bottom: -40%;
+          left: 0;
+          transform: translateX(0);
         }
       }
     }
+  }
+  &__searchResult {
+    margin-top: 72px;
     .lineSeparator {
       &::before {
-        @include media-breakpoint-down(md){
+        @include media-breakpoint-down(md) {
           background-color: white;
         }
       }
     }
   }
 }
-.product{
+.product {
   &__img {
     width: 150px;
     height: 150px;
@@ -32,7 +55,7 @@
       width: 255px;
       height: 175px;
     }
-    &__booking{
+    &__booking {
       @include media-breakpoint-down(sm) {
         width: 100%;
         height: 226px;
@@ -43,7 +66,7 @@
   &__price {
     position: relative;
     font-size: 16px;
-    &__title{
+    &__title {
       @include media-breakpoint-up(md) {
         font-size: 24px;
         &::before {
@@ -58,7 +81,7 @@
       }
     }
     &.active {
-      .product__price__title{
+      .product__price__title {
         color: map-get($theme-colors, primary);
         &::before {
           top: -20px;

@@ -353,6 +353,7 @@ current: detail
           <h2 class="mb-0 mr-2">Rachada Hotel</h2>
 
           <p class="text-muted mb-0 d-flex align-items-center">
+            <!-- TODO:參考booking 但部分效果不是很好 -->
             <svg aria-hidden="true" class="mr-1" focusable="false" height="19" width="43" viewBox="0 0 52 12"
               role="presentation">
               <path
@@ -535,7 +536,7 @@ current: detail
             <tr class="border-bottom border-light">
               <td class="pl-0">
                 <div class="media align-items-center">
-                  <a href="" data-toggle="modal" data-target="#selectRoom">
+                  <a href="" data-toggle="modal" data-target="#modal-selectRoom">
                     <img src="assets/images/Rachada1.jpg" alt="" class="object--cover product__img">
                   </a>
                   <div class="media-body  pl-2">
@@ -713,7 +714,7 @@ current: detail
           <li class="card border-bottom-0 mb-1">
             <div class="card-body p-0">
               <div class="media align-items-center">
-                <a href="" data-toggle="modal" data-target="#selectRoom">
+                <a href="" data-toggle="modal" data-target="#modal-selectRoom">
                   <img src="assets/images/Rachada1.jpg" alt="" class="object--cover product__img">
                 </a>
                 <div class="media-body px-1">
@@ -774,10 +775,9 @@ current: detail
     </div>
 
     <!-- selectRoom Modal -->
-    <div class="modal bottom fade" id="selectRoom" tabindex="-1" role="dialog" aria-labelledby="selectRoom"
-      aria-hidden="true">
-      <div class="modal-dialog " role="document">
-        <div class="modal-content d-flex">
+    <div class="modal--bottom modal--fluid modal fade" id="modal-selectRoom" tabindex="-1" role="dialog" aria-labelledby="selectRoom" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content bg-info">
           <div class="container">
             <div class="modal-body d-flex justify-content-between align-items-md-center px-0 py-3 flex-column flex-md-row">
               <div class="d-flex flex-column justify-content-center align-items-end align-items-md-start mb-3 mb-md-0">

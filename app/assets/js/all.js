@@ -96,6 +96,7 @@ $(document).ready(() => {
     }
   });
   
+  
   $(window).resize(function () {
     if ($(window).width() < 576) {
       $('.js-myBooking__item').addClass(' bg-secondary rounded--deepen');
