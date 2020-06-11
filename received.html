@@ -24,7 +24,7 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
 
 
-  <title><%- title %></title>
+  <title>Reservation Details</title>
   <link rel="stylesheet" href="assets/style/all.css">
 </head>
 
@@ -114,7 +114,78 @@
   </nav>
 
 
-  <%- contents %>
+  
+<main>
+  <button type="button" class="js-btn btn btn-secondary btn-block rounded-0 d-md-none p-2" data-toggle="collapse" data-target="#bookingDetails">
+    <div class="d-flex justify-content-between align-items-center">
+      <p class="js-btn__info mb-0">Total<span class="text-info font-weight-bold ml-1">TWD 4,633</span></p>
+      <p class="d-flex align-items-center mb-0 text-primary font-weight-bold">
+        DETAIL
+        <span class="js-btn__more material-icons"> expand_more </span></p>
+    </div>
+  </button>
+  <div id="bookingDetails" class="card bg-secondary p-3 border-0 collapse">
+    <div class="card-header border-light  bg-secondary pt-0 px-0 pb-3">
+      <p class="text-info font-weight-bold">Booking details</p>
+      <p class="text-muted mb-1">17 June 2020 - 19 June 2020・2 nights</p>
+      <p class="text-muted mb-1">2 adults・1 room</p>
+      <p class="text-muted mb-0">Rachada Hotel</p>
+    </div>
+    <div class="card-body px-0 py-3">
+      <p class="text-info font-weight-bold">Price summary</p>
+      <p class="text-muted mb-1 d-flex justify-content-between">Deluxe Suite with Pool <span>TWD 3,960</span></p>
+      <p class="text-muted mb-1 d-flex justify-content-between">VAT (7%)<span>TWD 277</span></p>
+      <p class="text-muted mb-1 d-flex justify-content-between">Property service charge<span>TWD 396</span></p>
+    </div>
+    <div class="card-footer border-light bg-secondary px-0 pt-3 pb-0">
+      <p class="d-flex justify-content-between mb-0">Total<span class="text-info font-weight-bold">TWD
+          4,633</span></p>
+    </div>
+  </div>
+  <div class="container mt-3 mt-md-0">
+    <div class="row justify-content-center">
+      <div class="col-md-6 col-lg-4">
+        <h2 class="mb-3">Reservation details</h2>
+        <form action="">
+          <div class="form-group ">
+            <label for="userName" class="mb-0">Name</label>
+            <input type="text" id="userName" class="form-control form-control-lg">
+          </div>
+          <div class="form-group ">
+            <label for="userEmail" class="mb-0">Email</label>
+            <input type="email" id="userEmail" class="form-control form-control-lg">
+          </div>
+          <div class="form-group mb-3">
+            <label for="userPhone" class="mb-0">Phone (optional)</label>
+            <input type="number" id="userPhone" class="form-control form-control-lg">
+          </div>
+          <a href="received-success.html" class="btn btn-primary btn-block btn-lg mb-1 py-2">RESERVE</a>
+          <p class="text--muted text-primary text-center  ">Reserve now, pay at stay</p>
+        </form>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card bg-secondary p-3 border-0 collapse d-md-block d-none">
+          <div class="card-header border-light  bg-secondary pt-0 px-0 pb-3">
+            <p class="text-info font-weight-bold">Booking details</p>
+            <p class="text-muted mb-1">17 June 2020 - 19 June 2020・2 nights</p>
+            <p class="text-muted mb-1">2 adults・1 room</p>
+            <p class="text-muted mb-0">Rachada Hotel</p>
+          </div>
+          <div class="card-body px-0 py-3">
+            <p class="text-info font-weight-bold">Price summary</p>
+            <p class="text-muted mb-1 d-flex justify-content-between">Deluxe Suite with Pool <span>TWD 3,960</span></p>
+            <p class="text-muted mb-1 d-flex justify-content-between">VAT (7%)<span>TWD 277</span></p>
+            <p class="text-muted mb-1 d-flex justify-content-between">Property service charge<span>TWD 396</span></p>
+          </div>
+          <div class="card-footer border-light bg-secondary px-0 pt-3 pb-0">
+            <p class="d-flex justify-content-between mb-0">Total<span class="text-info font-weight-bold">TWD
+                4,633</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
 
   <footer>
     

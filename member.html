@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="robots" content="HTML，CSS，RWD，前端，線上課程，網頁設計">
+
+  <!-- AOS CDN  -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Open Sans Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Raleway Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@700&display=swap"
+    rel="stylesheet">
+
+  <!-- Google icon -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+
+
+  <title>My Booking</title>
+  <link rel="stylesheet" href="assets/style/all.css">
+</head>
+
+<body>
+  <nav class="js-nav navbar navbar-expand-md navbar-light align-items-center justify-content-between bg-white py-2">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Logo -->
+      <a class="navbar-brand py-0" href="index.html">
+        <h1 class="logo mb-0">ALOHA</h1>
+      </a>
+      <!-- mobile 顯示 Login -->
+      <div class="navbar-nav d-md-none">
+        <a class="js-nav__login nav-item nav-link text-dark font-weight-bold" data-toggle="modal" data-target="#mobileLogin">Login</a>
+      </div>
+      <!-- 其他選項 -->
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ml-auto">
+          <div class="btn-group mr-5">
+            <button type="button" class="btn btn-link dropdown-toggle d-flex align-items-center text-decoration-none "
+              data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false">
+              <span class="material-icons text-dark"> language </span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-lg-right">
+              <button class="dropdown-item" type="button">繁體中文</button>
+              <button class="dropdown-item" type="button">日本語</button>
+            </div>
+          </div>
+          <a class="js-nav__signUp nav-item nav-link text-dark font-weight-bold mr-5" href="#">Sign up</a>
+          <a class="nav-item nav-link text-dark font-weight-bold d-md-block d-none" href="login.html">
+            <span class="js-nav__login">Login</span> 
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- mobile Login modal -->
+    <div class="modal fade" id="mobileLogin" tabindex="-1" role="dialog" aria-labelledby="filter" aria-hidden="true">
+      <div class="modal--fluid modal-dialog" role="document">
+        <div class="modal-content rounded-0">
+          <div class="modal-header border-0 rounded-0">
+            <h4 class="text-info modal-title d-flex align-items-center">
+              Login
+            </h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="section__login__info container d-lg-none">
+            <div class="row justify-content-center">
+              <div class="col-12 col-md-6">
+                <h3 class="font-weight-bold">Login</h3>
+                <form action="" class="mb-3">
+                  <div class="form-group ">
+                    <label for="userNameLogin" class="mb-0">Name</label>
+                    <input type="text" id="userNameLogin" class="form-control form-control-lg">
+                  </div>
+                  <div class="form-group ">
+                    <label for="userEmail" class="mb-0">Email</label>
+                    <input type="email" id="userNameLogin" class="form-control form-control-lg">
+                  </div>
+                  <small class="mb-2 d-block">By signing in or creating an account, you agree with our
+                    <a href="">Terms & Conditions</a> and
+                    <a href="">Privacy Statement</a>
+                  </small>
+                  <div class="form-group">
+                    <input type="checkbox" id="userRemember" class="checkbox">
+                    <label for="userRemember" class="checkbox__label"> Remember me</label>
+                  </div>
+                  <!-- <input type="submit" class="btn btn-primary btn-block py-2 mb-1" value="LOGIN"> -->
+                  <a href="member.html" class="btn btn-primary btn-block py-2 mb-1">LOGIN</a>
+                  <p class="text-muted text-center">Don’t have an account yet? <span
+                      class="text-primary font-weight-bold">Sign up</span></p>
+                </form>
+              </div>
+              <a href="" class="section__login__info__location btn btn-info d-inline-flex align-items-center px-2 text-nowrap">
+                <span class="material-icons mr-1"> location_on </span>
+                Osaka Castel, Japan
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <main>
+  <div class="container">
+    <div class="row flex-row flex-lg-row-reverse">
+      <!-- Member -->
+      <section class="col-12 col-lg-4 mb-5">
+        <div class="d-flex align-items-center mb-3">
+          <h3 class="mb-0 d-flex align-items-center">Profile</h3>
+          <span class="badge badge-pill badge-primary d-flex align-items-center ml-1 px-1 font-weight-normal">
+            <span class="material-icons mr-1 "> done </span>
+            VERIFIED
+          </span>
+           <button class="btn btn-link ml-auto font-weight-bold">EDIT</button>
+        </div>
+        <!-- phone、PC -->
+        <div class="card p-2 p-lg-3 bg-secondary border-0 d-sm-block d-md-none d-lg-block">
+          <div class="card-header d-flex justify-content-between p-0 border-0 bg-secondary">
+            <p class="text-info font-weight-bold">User details</p>
+            <img src="assets/images/sung-wang-g4DgCF90EM4-unsplash.jpg" alt="" class="object--cover login__memberImage rounded--deepen">
+          </div>
+          <div class="card-body p-0 mt-n2">
+            <ul class="list-unstyled">
+              <li class="text-muted mb-2">David Lin</li>
+              <li class="text-muted mb-2">david0520@mail.com.tw</li>
+              <li class="text-muted mb-2">+886 9 32 456 789</li>
+            </ul>
+            <p class="text-info font-weight-bold">Payment methods</p>
+            <div class="d-flex justify-content-between">
+              <button class="btn btn-link text-left p-2 bg-white mr-1 w-50 text-decoration-none">
+                <ul class="list-unstyled mb-0">
+                  <li class="text-muted">xxxx-xxxx-7890</li>
+                  <li class="text-muted">DAVID LIN</li>
+                  <li class="text-muted d-flex justify-content-between align-items-center">08/2029 
+                    <i class="ml-auto text-info fab fa-cc-visa"></i>
+                  </li>
+                </ul>
+              </button>
+              <button href="#" class="btn btn-link p-2 bg-white d-flex justify-content-center align-items-center w-50 text-decoration-none">
+                <span class="material-icons d-flex btn-primary rounded-circle p-1"> add </span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- table -->
+        <div class="card border-0 p-2 p-lg-3 bg-secondary d-none d-md-block d-lg-none">
+          <div class="row justify-content-between ">
+            <div class="col-6">
+              <p class="text-info font-weight-bold">User details</p>
+              <div class="d-flex">
+                <img src="assets/images/sung-wang-g4DgCF90EM4-unsplash.jpg" alt="" class="login__memberImage object--cover rounded--deepen mr-2">
+                <ul class="list-unstyled mb-0">
+                  <li class="text-muted mb-2">David Lin</li>
+                  <li class="text-muted mb-2">david0520@mail.com.tw</li>
+                  <li class="text-muted mb-2">+886 9 32 456 789</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-6">
+              <p class="text-info font-weight-bold">Payment methods</p>
+              <div class="d-flex justify-content-between">
+                <button class="btn btn-link text-left p-2 bg-white mr-1 w-50 text-decoration-none">
+                  <ul class="list-unstyled mb-0">
+                    <li class="text-muted">xxxx-xxxx-7890</li>
+                    <li class="text-muted">DAVID LIN</li>
+                    <li class="text-muted d-flex justify-content-between align-items-center">08/2029 <i class="ml-auto text-info fab fa-cc-visa"></i></li>
+                  </ul>
+                </button>
+                <button href="#" class="btn btn-link p-2 bg-white d-flex justify-content-center align-items-center w-50">
+                  <span class="material-icons d-flex btn-primary rounded-circle p-1"> add </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- My Bookings -->
+      <section class="col-12 col-lg-8">
+        <h3 class="mb-3">My Bookings</h3>
+        <div class="list-group flex-row mb-3" id="list-tab" role="tablist">
+          <a class="list-group-item list-group-item-action text-center border-0 rounded-0 h4 font-weight-bold active"
+            id="list-home-list" data-toggle="list" href="#upcoming" role="tab" aria-controls="upcoming">
+            Upcoming
+          </a>
+          <a class="list-group-item list-group-item-action text-center border-0 rounded-0 h4 font-weight-bold"
+            id="list-profile-list" data-toggle="list" href="#list-completed" role="tab" aria-controls="completed">
+            Completed
+          </a>
+        </div>
+        <ul class="list-unstyled mb-0">
+          <li class="js-myBooking__item media flex-column flex-md-row align-items-center mb-3 pb-3 border-bottom border-dark">
+            <!-- TODO:是否改成 .col-比較好? -->
+            <img src="assets/images/Rachada1.jpg" alt="" class="object--cover product__img product__img__booking">
+            <div class="media-body w-100 d-flex flex-column flex-md-row justify-content-between align-items-start pl-2 pt-2">
+              <ul class="list-unstyled mb-3 mb-md-0">
+                <li class="d-flex mb-1">
+                  <span class="material-icons text-info mr-1"> airline_seat_individual_suite </span>
+                  <p class="mb-0 d-flex flex-column font-weight-bold text-info">Rachada Hotel
+                    <span class="text-muted font-weight-normal">Deluxe Suite with Pool</span>
+                  </p>
+                </li>
+                <li class="d-flex mb-1">
+                  <span class="material-icons text-info mr-1"> date_range </span>
+                  <p class="mb-0 d-flex flex-column font-weight-bold text-info">17 June 2020 - 19 June 2020
+                    <span class="text-muted font-weight-normal">2 nights・2 adults</span>
+                  </p>
+                </li>
+                <li class="d-flex mb-1">
+                  <span class="material-icons text-info mr-1"> attach_money </span>
+                  <p class="mb-0 d-flex flex-column font-weight-bold text-info">TWD 4,633
+                    <span class="text-muted font-weight-normal">includes taxes and charges</span>
+                  </p>
+                </li>
+              </ul>
+              <button class="btn btn-link btn-sm pt-0 font-weight-bold text-decoration-none">VIEW DETAILS</button>
+            </div>
+          </li>
+          <li class="js-myBooking__item media flex-column flex-md-row align-items-center pb-3">
+            <img src="assets/images/Chatuchack1.jpg" alt="" class="object--cover product__img product__img__booking">
+            <div class="media-body w-100 d-flex flex-column flex-md-row justify-content-between align-items-start pl-2 pt-2">
+              <ul class="list-unstyled mb-0">
+                <li class="d-flex mb-1">
+                  <span class="material-icons text-info mr-1"> airline_seat_individual_suite </span>
+                  <p class="mb-0 d-flex flex-column font-weight-bold text-info">WOW Life Hotel
+                    <span class="text-muted font-weight-normal">Standard Double Room</span>
+                  </p>
+                </li>
+                <li class="d-flex mb-1">
+                  <span class="material-icons text-info mr-1"> date_range </span>
+                  <p class="mb-0 d-flex flex-column font-weight-bold text-info">8 Sep 2020 - 15 Sep 2020
+                    <span class="text-muted font-weight-normal">7 nights・2 adults</span>
+                  </p>
+                </li>
+                <li class="d-flex mb-1">
+                  <span class="material-icons text-info mr-1"> attach_money </span>
+                  <p class="mb-0 d-flex flex-column font-weight-bold text-info">TWD 13,084
+                    <span class="text-muted font-weight-normal">includes taxes and charges</span>
+                  </p>
+                </li>
+                
+
+              </ul>
+              <button class="btn btn-link btn-sm pt-0 font-weight-bold text-decoration-none">VIEW DETAILS</button>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+    </div>
+  </div>
+</main>
+
+  <footer>
+    
+
+    <!-- 頁尾導覽列 -->
+    <nav class="js-footer__nav navbar navbar-expand-lg navbar-light bg-white py-3">
+      <div class="container">
+        <ul
+          class="navbar-nav flex-column-reverse flex-column-md flex-md-row justify-content-center justify-content-md-between align-items-center w-100">
+          <li>
+            <p class="nav-item text-muted h5 mb-0 ">© 2020 ALOHA, Inc. All rights reserved.</p>
+          </li>
+          <li class="d-flex ml-md-6">
+            <a class="nav-item text-muted nav-link h5 mb-0 mr-3" href="#">FAQs</a>
+            <a class="nav-item text-muted nav-link h5 mb-0 mr-3" href="#">Terms of use</a>
+            <a class="nav-item text-muted nav-link h5 mb-0" href="#">Privacy policy</a>
+          </li>
+          <!-- language -->
+          <li class="btn-group ml-auto d-lg-block d-none">
+            <button type="button" class="btn btn-link dropdown-toggle d-flex align-items-center text-decoration-none"
+              data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false">
+              <span class="material-icons text-dark"> language </span>
+              <small class="ml-1 text-dark">English</small>
+            </button>
+            <div class="dropdown-menu dropdown-menu-lg-right">
+              <button class="dropdown-item" type="button">繁體中文</button>
+              <button class="dropdown-item" type="button">日本語</button>
+            </div>
+          </li>
+          <!-- $ -->
+          <li class="btn-group d-lg-block d-none">
+            <button type="button" class="btn btn-link dropdown-toggle d-flex align-items-center text-decoration-none"
+              data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false">
+              <span class="material-icons text-dark"> attach_money </span>
+              <small class="ml-1 text-dark">TWD</small>
+            </button>
+            <div class="dropdown-menu dropdown-menu-lg-right">
+              <button class="dropdown-item" type="button">US</button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+    integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+    integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+    crossorigin="anonymous"></script>
+
+  <!-- swiper -->
+  <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+
+  <!-- AOS JS CDN -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+  <script src="https://kit.fontawesome.com/74aada8adf.js" crossorigin="anonymous"></script>
+  <script src="assets/js/all.js"></script>
+  <!-- <script src="assets/js/vendors.js"></script> -->
+</body>
+
+</html>
