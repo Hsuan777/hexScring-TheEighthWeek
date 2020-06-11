@@ -7937,9 +7937,8 @@ th, td {
 .rounded--deepen {
   border-radius: 8px; }
 
-.modal--fluid {
-  max-width: 100%;
-  margin: 0; }
+.rounded-top--deepen {
+  border-radius: 8px 8px 0 0; }
 
 .lineSeparator {
   position: relative; }
@@ -8035,31 +8034,30 @@ th, td {
     background-color: #6C51E2;
     color: white; }
 
-.modal.bottom .modal-dialog {
-  /* fixed會從左邊開始 */
-  position: fixed;
-  /* 從下面開始 */
-  right: 0;
-  left: 0;
-  bottom: 0;
-  margin: auto;
-  max-width: 100%; }
-
-.modal-content {
-  border: none;
-  background-color: rgba(0, 0, 0, 0.871);
-  border-radius: 8px 8px 0px 0px;
-  -webkit-box-shadow: 0px -4px 8px #00000029;
-          box-shadow: 0px -4px 8px #00000029; }
-
-.modal-header {
+.modal .modal-header {
   border-bottom: 0; }
 
-.modal-footer {
+.modal .modal-footer {
   border-top: 0; }
 
-.btn:focus {
+.modal .btn:focus {
   border: 0; }
+
+.modal--bottom .modal-dialog {
+  /* 預設 position: relative; */
+  /* fixed會從左邊開始，是因為 modal設定 top:0 ; left:0 */
+  position: fixed;
+  /* 調整位置 - 置底 */
+  right: 0;
+  left: 0;
+  bottom: 0; }
+
+.modal--bottom .modal-content {
+  border-radius: 4px 4px 0 0; }
+
+.modal--fluid .modal-dialog {
+  max-width: 100%;
+  margin: 0; }
 
 .calendar {
   position: relative; }
@@ -8086,16 +8084,41 @@ th, td {
       background-color: #6C51E2;
       color: white; }
 
+.section__login {
+  position: relative; }
+  .section__login__banner {
+    position: absolute;
+    background-image: url("../images/login.jpg");
+    height: 100vh;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0; }
+  .section__login__info {
+    position: relative; }
+    @media (min-width: 768px) {
+      .section__login__info {
+        margin-top: 96px; } }
+    @media (min-width: 992px) {
+      .section__login__info {
+        margin-top: 176px; } }
+    .section__login__info__location {
+      position: absolute;
+      bottom: -20%;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+              transform: translateX(-50%); }
+      @media (min-width: 992px) {
+        .section__login__info__location {
+          bottom: -40%;
+          left: 0;
+          -webkit-transform: translateX(0);
+              -ms-transform: translateX(0);
+                  transform: translateX(0); } }
+
 .section__searchResult {
   margin-top: 72px; }
-  .section__searchResult .inner__searchBtn {
-    -webkit-transition: all 0.35s;
-    -o-transition: all 0.35s;
-    transition: all 0.35s; }
-    .section__searchResult .inner__searchBtn__text {
-      position: absolute;
-      top: 0px;
-      left: 0px; }
   @media (max-width: 991.98px) {
     .section__searchResult .lineSeparator::before {
       background-color: white; } }
@@ -8296,36 +8319,5 @@ th, td {
 
 .section__selectRoom .product__price.active .product__price__title::before {
   top: 45px; }
-
-.section__login {
-  position: relative; }
-  .section__login__banner {
-    position: absolute;
-    background-image: url("../images/login.jpg");
-    height: 100vh;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0; }
-  .section__login__info {
-    position: relative;
-    margin-top: 96px; }
-    @media (min-width: 992px) {
-      .section__login__info {
-        margin-top: 176px; } }
-    .section__login__info__location {
-      position: absolute;
-      bottom: -20%;
-      left: 50%;
-      -webkit-transform: translateX(-50%);
-          -ms-transform: translateX(-50%);
-              transform: translateX(-50%); }
-      @media (min-width: 992px) {
-        .section__login__info__location {
-          bottom: -40%;
-          left: 0;
-          -webkit-transform: translateX(0);
-              -ms-transform: translateX(0);
-                  transform: translateX(0); } }
 
 /*# sourceMappingURL=all.css.map */
