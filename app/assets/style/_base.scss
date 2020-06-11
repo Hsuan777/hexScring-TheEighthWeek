@@ -29,11 +29,11 @@ h1, h2, h3, h4{
   font-family: 'Raleway', serif;
   color: #000000DE;
 } 
-
-// TODO:檢查是否有地方不正確使用 small標籤
+// BS4帶有顏色變淺效果
 .text-muted{
   font-size: 14px;
 }
+// 為了 14px
 .text--muted{
   font-size: 14px;
 }

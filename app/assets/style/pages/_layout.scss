@@ -1,3 +1,43 @@
+.logo {
+  @include hidden-text(96px, 24px, url("../images/ic-logo-aloha.svg"));
+}
+
+
+.login {
+  &__navImage {
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 24px;
+      height: 24px;
+      background-image: url("../images/sung-wang-g4DgCF90EM4-unsplash.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-radius: 50%;
+      border: 2px solid map-get($theme-colors, primary);
+      top: 0px;
+      left: -32px;
+      @include media-breakpoint-up(md){
+        top: 0;
+      }
+    }
+  }
+  &__memberImage {
+    width: 64px;
+    height: 64px;
+  }
+}
+
+
+.icon{
+  &__rating{
+    font-size: 18px;
+  }
+}
+
+
 .section {
   &__login {
     position: relative;
