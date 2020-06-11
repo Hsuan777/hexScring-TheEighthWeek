@@ -44,7 +44,7 @@ $(document).ready(function () {
         slidesPerView: 2,
         slidesPerGroup: 1
       },
-      768: {
+      1199: {
         slidesPerView: 3,
         slidesPerGroup: 3
       }
@@ -98,13 +98,8 @@ $(document).ready(function () {
   $(window).resize(function () {
     if ($(window).width() < 576) {
       $('.js-myBooking__item').addClass(' bg-secondary rounded--deepen');
-      $('.js-myBooking__item').removeClass('border-bottom');
     } else {
-      $('.js-myBooking__item').removeClass('bg-secondary rounded--deepen border-bottom');
-    }
-
-    if ($(window).width() > 576) {
-      $('.js-myBooking__item').addClass('border-bottom');
+      $('.js-myBooking__item').removeClass('bg-secondary rounded--deepen');
     }
 
     if ($(window).width() < 992) {
@@ -136,13 +131,15 @@ $(document).ready(function () {
 
     case "My Booking":
       $(".js-nav__signUp").hide();
-      $(".js-nav__login").text('David Lin').addClass('dropdown-toggle login__navImage');
-      $(window).resize(function () {
-        if ($(window).width() < 576) {
-          $(".js-nav__login").text('').removeClass('dropdown-toggle');
-        } else {
-          $(".js-nav__login").text('David Lin').addClass('dropdown-toggle');
-        }
+      $(".js-nav__login").hide();
+      $(".js-nav__hasLogin").addClass('d-block');
+      $(".js-nav__hasLogin__userName").text('David Lin'); // $(".js-nav__mobileLogin").addClass('d-block');
+
+      $(window).resize(function () {// if ($(window).width() < 768) {
+        //   $(".js-nav__login").text('').removeClass('dropdown-toggle');
+        // } else {
+        //   $(".js-nav__login").text('David Lin').addClass('dropdown-toggle');
+        // }
       });
       break;
   }

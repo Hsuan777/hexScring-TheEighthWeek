@@ -36,34 +36,50 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <!-- Logo -->
-      <a class="navbar-brand py-0" href="index.html">
+      <a class="navbar-brand py-0 text-center" href="index.html">
         <h1 class="logo mb-0">ALOHA</h1>
       </a>
+
       <!-- mobile 顯示 Login -->
       <div class="navbar-nav d-md-none">
+        <!-- 未登入 -->
         <a class="js-nav__login nav-item nav-link text-dark font-weight-bold" data-toggle="modal"
-          data-target="#mobileLogin">Login</a>
+          data-target="#mobileLogin"> <span class="login__userName">Login</span> </a>
+        <!-- 已登入 -->
+        <button class="js-nav__hasLogin nav-item nav-link btn btn-link login__navImage d-none" data-toggle="dropdown"
+          data-display="static">
+        </button>
       </div>
       <!-- 其他選項 -->
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav ml-auto">
-          <div class="btn-group mr-5">
-            <!-- TODO:下拉感覺怪 -->
-            <button type="button" class="btn btn-link dropdown-toggle d-flex align-items-center text-decoration-none"
-              data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown">
+            <a id="language" class="nav-link dropdown-toggle d-flex align-items-center mr-5" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static">
               <span class="material-icons text-dark"> language </span>
-            </button>
-            <div class="dropdown-menu dropdown-menu-lg-right">
+            </a>
+            <div class="dropdown-menu dropdown-menu-md-right mr-md-5" aria-labelledby="language">
               <a href="#" class="dropdown-item">繁體中文</a>
               <a href="#" class="dropdown-item">日本語</a>
             </div>
-          </div>
-          <a class="js-nav__signUp nav-item nav-link text-dark font-weight-bold mr-5" href="#">Sign up</a>
-          <a class="nav-item nav-link text-dark font-weight-bold d-md-block d-none" href="login.html">
-            <span class="js-nav__login">Login</span>
-          </a>
-        </div>
+          </li>
+          <li class="nav-item">
+            <a class="js-nav__signUp nav-link text-dark font-weight-bold mr-5" href="#">Sign up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark font-weight-bold d-md-block d-none" href="login.html">
+              <span class="js-nav__login">Login</span>
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a id="hasLogin" class="js-nav__hasLogin nav-link dropdown-toggle ml-4 d-none" aria-labelledby="hasLogin" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static">
+              <span class="js-nav__hasLogin__userName login__navImage"></span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-md-right" aria-labelledby="hasLogin">
+              <a href="index.html" class="dropdown-item">Sign out</a>
+            </div>
+          </li>
       </div>
+      </ul>
     </div>
 
   </nav>
@@ -556,8 +572,8 @@
                 </label>
               </li>
               <li class="form-check pl-0">
-                <input class="checkbox form-check-input" type="checkbox" value="" id="Unrated">
-                <label class="checkbox__label form-check-label" for="Unrated">
+                <input class="checkbox form-check-input" type="checkbox" value="" id="unrated">
+                <label class="checkbox__label form-check-label" for="unrated">
                   Unrated
                 </label>
               </li>
@@ -1241,7 +1257,7 @@
               <ul class="list-unstyled mb-3 pb-3 border-bottom border-white">
                 <li class="form-check pl-0 mb-1">
                   <input class="checkbox form-check-input" type="checkbox" value="" id="fiveRating">
-                  <label class="checkbox__label form-check-label d-flex align-items-center" for="fiveRating">
+                  <label class="checkbox__label form-check-label d-flex align-items-center" for="mobile__fiveRating">
                     <!-- <span class="text-info">★★★★★</span> -->
                     <span class="material-icons text-info"> star </span>
                     <span class="material-icons text-info"> star </span>
@@ -1253,7 +1269,7 @@
                 </li>
                 <li class="form-check pl-0 mb-1">
                   <input class="checkbox form-check-input" type="checkbox" value="" id="fourRating">
-                  <label class="checkbox__label form-check-label d-flex align-items-center" for="fourRating">
+                  <label class="checkbox__label form-check-label d-flex align-items-center" for="mobile__fourRating">
                     <span class="material-icons text-info"> star </span>
                     <span class="material-icons text-info"> star </span>
                     <span class="material-icons text-info"> star </span>
@@ -1263,7 +1279,7 @@
                 </li>
                 <li class="form-check pl-0 mb-1">
                   <input class="checkbox form-check-input" type="checkbox" value="" id="threeRating">
-                  <label class="checkbox__label form-check-label d-flex align-items-center" for="threeRating">
+                  <label class="checkbox__label form-check-label d-flex align-items-center" for="mobile__threeRating">
                     <span class="material-icons text-info"> star </span>
                     <span class="material-icons text-info"> star </span>
                     <span class="material-icons text-info mr-1"> star </span>
@@ -1272,7 +1288,7 @@
                 </li>
                 <li class="form-check pl-0 mb-1">
                   <input class="checkbox form-check-input" type="checkbox" value="" id="twoRating">
-                  <label class="checkbox__label form-check-label d-flex align-items-center" for="twoRating">
+                  <label class="checkbox__label form-check-label d-flex align-items-center" for="mobile__twoRating">
                     <span class="material-icons text-info"> star </span>
                     <span class="material-icons text-info mr-1"> star </span>
                     2.0
@@ -1280,13 +1296,13 @@
                 </li>
                 <li class="form-check pl-0 mb-1">
                   <input class="checkbox form-check-input" type="checkbox" value="" id="oneRating">
-                  <label class="checkbox__label form-check-label d-flex align-items-center" for="oneRating">
+                  <label class="checkbox__label form-check-label d-flex align-items-center" for="mobile__oneRating">
                     <span class="material-icons text-info mr-1"> star </span>
                     1.0
                   </label>
                 </li>
                 <li class="form-check pl-0">
-                  <input class="checkbox form-check-input" type="checkbox" value="" id="Unrated">
+                  <input class="checkbox form-check-input" type="checkbox" value="" id="mobile__unrated">
                   <label class="checkbox__label form-check-label" for="Unrated">
                     Unrated
                   </label>
@@ -1323,10 +1339,10 @@
               </ul>
             </form>
           </div>
-          <div class="rounded-top--deepen modal-footer justify-content-between bg-info">
+          <div class="rounded-top--deepen modal-footer justify-content-start bg-info">
             <!-- 搜尋資料筆數 -->
             <h3 class="text-white-50">Find 1,245 results</h3>
-            <div class="d-flex">
+            <div class="d-flex w-100">
               <button type="button" class="btn btn-secondary w-100 font-weight-bold text-white bg-transparent mr-1 px-4 py-2">
                 CLEAR
               </button>

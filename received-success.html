@@ -36,34 +36,50 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <!-- Logo -->
-      <a class="navbar-brand py-0" href="index.html">
+      <a class="navbar-brand py-0 text-center" href="index.html">
         <h1 class="logo mb-0">ALOHA</h1>
       </a>
+
       <!-- mobile 顯示 Login -->
       <div class="navbar-nav d-md-none">
+        <!-- 未登入 -->
         <a class="js-nav__login nav-item nav-link text-dark font-weight-bold" data-toggle="modal"
-          data-target="#mobileLogin">Login</a>
+          data-target="#mobileLogin"> <span class="login__userName">Login</span> </a>
+        <!-- 已登入 -->
+        <button class="js-nav__hasLogin nav-item nav-link btn btn-link login__navImage d-none" data-toggle="dropdown"
+          data-display="static">
+        </button>
       </div>
       <!-- 其他選項 -->
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav ml-auto">
-          <div class="btn-group mr-5">
-            <!-- TODO:下拉感覺怪 -->
-            <button type="button" class="btn btn-link dropdown-toggle d-flex align-items-center text-decoration-none"
-              data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown">
+            <a id="language" class="nav-link dropdown-toggle d-flex align-items-center mr-5" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static">
               <span class="material-icons text-dark"> language </span>
-            </button>
-            <div class="dropdown-menu dropdown-menu-lg-right">
+            </a>
+            <div class="dropdown-menu dropdown-menu-md-right mr-md-5" aria-labelledby="language">
               <a href="#" class="dropdown-item">繁體中文</a>
               <a href="#" class="dropdown-item">日本語</a>
             </div>
-          </div>
-          <a class="js-nav__signUp nav-item nav-link text-dark font-weight-bold mr-5" href="#">Sign up</a>
-          <a class="nav-item nav-link text-dark font-weight-bold d-md-block d-none" href="login.html">
-            <span class="js-nav__login">Login</span>
-          </a>
-        </div>
+          </li>
+          <li class="nav-item">
+            <a class="js-nav__signUp nav-link text-dark font-weight-bold mr-5" href="#">Sign up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark font-weight-bold d-md-block d-none" href="login.html">
+              <span class="js-nav__login">Login</span>
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a id="hasLogin" class="js-nav__hasLogin nav-link dropdown-toggle ml-4 d-none" aria-labelledby="hasLogin" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static">
+              <span class="js-nav__hasLogin__userName login__navImage"></span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-md-right" aria-labelledby="hasLogin">
+              <a href="index.html" class="dropdown-item">Sign out</a>
+            </div>
+          </li>
       </div>
+      </ul>
     </div>
 
   </nav>
