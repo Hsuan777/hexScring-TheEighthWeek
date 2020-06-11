@@ -13,7 +13,7 @@
         border-bottom: 4px solid map-get($theme-colors, secondary);
         @include media-breakpoint-up(sm) {
           margin: 0px;
-          border-bottom: 1px solid map-get($theme-colors, dark);
+          border-bottom: 1px solid map-get($theme-colors, secondary);
         }
       }
       &__link {
