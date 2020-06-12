@@ -132,17 +132,6 @@ $(document).ready(() => {
       $(".js-nav__login").hide();
       $(".js-nav__hasLogin").addClass('d-block');
       $(".js-nav__hasLogin__userName").text('David Lin');
-
-      // $(".js-nav__mobileLogin").addClass('d-block');
-
-      $(window).resize(function () {
-        // if ($(window).width() < 768) {
-        //   $(".js-nav__login").text('').removeClass('dropdown-toggle');
-        // } else {
-        //   $(".js-nav__login").text('David Lin').addClass('dropdown-toggle');
-        // }
-      });
       break;
   }
-  
 });
